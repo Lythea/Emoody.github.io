@@ -1,0 +1,23 @@
+<ion-content class="body"[fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-img src="assets/Logo.png"></ion-img>
+      <ion-title style="margin-top:15%;color:#ffffff;margin-right:2%;">E-Moody</ion-title>
+
+    </ion-header>
+    <div class="container">
+      <ion-label class="welcome"><h1>WELCOME!</h1> </ion-label>
+      <form class ="form" method="post" action="http://localhost/newmobileapp/src/app/Backend/getAcc.php" form [formGroup]="login">
+      <ion-list >
+        <ion-item lines="none">
+          <ion-label class="label"position="stacked">G-SUITE EMAIL:</ion-label>
+          <ion-input placeholder="G-SUITE ACCOUNT" id="email"name="email" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label class="label" position="stacked">PASSWORD:</ion-label>
+          <ion-input  placeholder="SR-CODE" id="password"name="password"formControlName="password"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-button color="#11013F" name ="button1"(click)="submit(login.value)" [disabled]="login.invalid">LOGIN</ion-button>
+      </form>
+    </div>
+  </ion-content>

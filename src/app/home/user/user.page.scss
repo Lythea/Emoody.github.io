@@ -1,0 +1,43 @@
+.menu
+{
+  margin-top:15%;
+  text-align: center;
+  height:20%;
+  width:90%;
+  align-items:center;
+  margin-left:5%;
+  margin-right:5%;
+}
+
+ion-datetime{
+  margin-left:5%;
+  margin-right:5%;
+  width:90%;
+  height:70%;
+  border-radius:25px;
+}
+ion-content  {
+  --ion-background-color:#FFDA29;
+
+}
+ion-menu{
+  background-color:#FFDA29
+}
+ion-menu-button{
+  --ion-background-color:#FFDA29;
+}
+ion-button{
+  background-color:#250381;
+  color:#ffffff;
+}
+h2{
+  color:#ffffff;
+}
+ion-button{
+  margin-top:10%;
+  border-radius:25px;
+  width:70%;
+  height:30%;
+  background-color:#11013F;
+  color:#ffffff;
+}

@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-app>
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Menu Content</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">This is the menu content.</ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+      <ion-header class="basehead">
+        <ion-toolbar style="background-color:#FFDA29">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title></ion-title>
+        </ion-toolbar>
+      </ion-header>
+    </div>
+    <div class="menu">
+      <h1>E-MOODY</h1>
+      <h3>ADMINISTRATIVE <br> VERSION</h3>
+      <div class="bmain">
+      <ion-button color="#11013F" class="b1"(click)="next()">VIEW USERS DATA</ion-button>
+      <br>
+      <ion-button color="#11013F" class="b2" (click)="begin()">VIEW OTHER <br>SIGNIFICANT DATA</ion-button>
+    </div>
+    </div>
+  </ion-app>
+</ion-content>

@@ -1,0 +1,55 @@
+
+.logo{
+  margin-bottom:20%;
+  text-align:center;
+  height:20%;
+}
+.container{
+  text-align:center;
+  margin-top:10%;
+}
+h1{
+  height:10%;
+  font-size:50px;
+  color:#FFDA29;
+}
+.label{
+  font-size:18px;
+  color:#ffffff;
+}
+ion-list{
+  width:85%;
+  margin-right:5%;
+  margin-left:5%;
+  margin-top:15%;
+}
+ion-title{
+  text-align:center;
+}
+ion-img{
+  width:50%;
+  margin-left:25%;
+  margin-right:30%;
+  height:70%;
+  margin-top:10%;
+}
+ion-input{
+  border-style:solid;
+  border-width:2px;
+  border-radius:10px;
+  height:30px;
+  text-indent:10px;
+  background-color:#ffffff;
+  color:#000000;
+}
+ion-content{
+  --ion-background-color:#250381;
+
+}
+ion-button{
+  margin-top:10%;
+  border-radius:25px;
+  width:40%;
+  background-color:#11013F;
+  color:#FFDA29;
+}
