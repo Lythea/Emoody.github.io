@@ -11,11 +11,11 @@ import { of } from 'rxjs';
 })
 export class HomePage implements OnInit{
   login: any = FormGroup;
-  data: any;
+  data = [];
 user: any;
 pass: any;
-email: string;
-password: string;
+email: any;
+password: any;
   constructor(private router: Router,private http: HttpClient, private fb: FormBuilder) {
   }
   ngOnInit(): void{
@@ -24,7 +24,7 @@ password: string;
       password:['',Validators.required]
     });
   }
-
+  /*
   submit(data: any): void{
   this.http.post<any>('http://localhost/newmobileapp/src/app/Backend/getAcc.php',data)
   .pipe(catchError(error=>of(`Data: ${error}`))).subscribe(
@@ -35,5 +35,25 @@ password: string;
       console.log('No Data');
     }}
   );
+  }
+  */
+  try(data: any): void{
+    const formData = new FormData();
+    formData.append('key1',data.email);
+    formData.append('key2',data.password);
+    const xhttp = new XMLHttpRequest();
+    xhttp.open('POST','http://localhost/newmobileapp/src/app/Backend/getAcc.php',true);
+    xhttp.onreadystatechange = function(){
+      if (xhttp.readyState ===4 && xhttp.status ===200){
+        const returnData = xhttp.responseText;
+        console.log(returnData);
+      }else if(this.readyState=== 0 && this.status ===404){
+        console.log('error');
+      }};
+      xhttp.send(formData);
+  }
+  recData(){
+    const var1 = '<? = json_encode($data)>?';
+    console.log(var1);
   }
 }
