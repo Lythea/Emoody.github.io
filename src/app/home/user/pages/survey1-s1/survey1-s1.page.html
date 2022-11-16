@@ -1,0 +1,51 @@
+<ion-content>
+  <ion-app>
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Menu Content</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">This is the menu content.</ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content" >
+      <ion-header class="basehead">
+        <ion-toolbar style="background-color:#FFDA29">
+          <ion-buttons slot="start">
+            <ion-menu-button ></ion-menu-button>
+          </ion-buttons>
+          <ion-title  class=" header"></ion-title>
+        </ion-toolbar>
+      </ion-header>
+    </div>
+  </ion-app>
+  <h1>Daily Question!</h1>
+    <div class="menu">
+
+      <ion-list style="width:90%;">
+        <ion-item >
+          <ion-label>Question1</ion-label>
+          <input type='checkbox' [(ngModel)]="data1s1" (ngModelChange)="val1($event)">
+        </ion-item>
+        <ion-item >
+          <ion-label>Question2</ion-label>
+          <input type='checkbox' [(ngModel)]="data2s1" (ngModelChange)="val2($event)">
+        </ion-item>
+        <ion-item >
+          <ion-label>Question3</ion-label>
+          <input type='checkbox' [(ngModel)]="data3s1" (ngModelChange)="val3($event)">
+        </ion-item>
+        <ion-item >
+          <ion-label>Question4</ion-label>
+          <input type='checkbox' [(ngModel)]="data4s1" (ngModelChange)="val4($event)">
+        </ion-item>
+        <ion-item >
+          <ion-label>Question5</ion-label>
+          <input type='checkbox' [(ngModel)]="data5s1" (ngModelChange)="val5($event)">
+        </ion-item>
+      </ion-list>
+      <ion-button color="#250381"(click)="next()">Next</ion-button>
+    </div>
+
+
+</ion-content>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { HttpClient } from '@angular/common/http';
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -37,23 +38,50 @@ password: any;
   );
   }
   */
+ b1(): void{
+    this.router.navigate(['admin']);
+  }
   try(data: any): void{
     const formData = new FormData();
     formData.append('key1',data.email);
     formData.append('key2',data.password);
+
     const xhttp = new XMLHttpRequest();
-    xhttp.open('POST','http://localhost/newmobileapp/src/app/Backend/getAcc.php',true);
+    xhttp.open('POST','http://localhost/newmobileapp/src/app/Backend/getAcc.php',true);//Connect to data
     xhttp.onreadystatechange = function(){
-      if (xhttp.readyState ===4 && xhttp.status ===200){
+      if (xhttp.readyState ===4 && xhttp.status ===200){ // Returned Response Data
         const returnData = xhttp.responseText;
-        console.log(returnData);
+        const  fdata = JSON.parse(returnData);
       }else if(this.readyState=== 0 && this.status ===404){
         console.log('error');
       }};
       xhttp.send(formData);
+  };
+
+  b2(): void{
+    this.router.navigate(['user']);
   }
-  recData(){
-    const var1 = '<? = json_encode($data)>?';
-    console.log(var1);
-  }
+    try1(data: any): void{
+      const formData = new FormData();
+      formData.append('user', data.email);
+      formData.append('pass', data.password);
+      fetch('http://localhost/newmobileapp/src/app/Backend/getAcc.php', {
+      method: 'POST',
+      body: formData
+      })
+    .then(response => response.json())
+    .then(value => {
+      if(value.data[0].profile ==='user'){
+        localStorage.setItem('id', value.data[0].id);
+        this.router.navigate(['user']);
+        console.log('Logging in as User');
+      }else if(value.data[0].profile ==='admin'){
+        this.router.navigate(['admin']);
+        console.log('Logging in as Admin');
+      }else {
+        console.log('Error');
+      }
+    });
+    }
 }
+

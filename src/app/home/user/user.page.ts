@@ -18,7 +18,19 @@ export class UserPage implements OnInit {
   ngOnInit() {
   }
   begin(): void{
-    this.router.navigate(['survey1']);
+    const formData = new FormData();
+    const id = localStorage.getItem('id');
+    formData.append('id', id);
+    formData.append('date', this.formattedString);
+    fetch('http://localhost/newmobileapp/src/app/Backend/regData1.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(value => {
+      console.log(value.data);
+    });
+    this.router.navigate(['survey1-s1']);
   }
   achieve(): void{
     this.router.navigate(['badges']);

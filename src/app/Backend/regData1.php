@@ -13,17 +13,14 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
   }
 
-  $user = $_POST['user'];
-  $pass = $_POST['pass'];
-$id = '1';
-    $sql = "SELECT id,profile FROM datalogin WHERE gmail ='$user' and pass = '$pass'";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-      $data = $result->fetch_all(MYSQLI_ASSOC);
-      echo json_encode(['data' => $data]);
-    } else {
-      echo json_encode(['data'=> 'Not Found!']);
-  }
+  $date = $_POST['date'];
+  $id = $_POST['id'];
+  $sql = "INSERT into dataset1 (id,date) VALUES ('$id','$date')";
+  $result = $conn->query($sql);
+    if($result===TRUE){
+      echo json_encode(['data' => 'Data Registered']);
+    }else
+      echo json_encode(['data' => 'Error']);
 $conn->close();
 exit();
 ?>
