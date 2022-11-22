@@ -1,9 +1,47 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>emoji</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Menu Content</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">This is the menu content.</ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+      <ion-header class="basehead">
+        <ion-toolbar style="background-color:#FFDA29">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title class="header"></ion-title>
+        </ion-toolbar>
+      </ion-header>
+    </div>
+
+    <div class="content">
+        <ion-label><h1>HOW ARE YOU?</h1></ion-label>
+        <hr class="t1">
+      <div class="emoji">
+        <div class="emojis">
+        <ion-img id ="e1" class="happy" (click)="happy()" src="assets/Logo.png"></ion-img>
+        <ion-img id ="e2" class="sad" (click)="sad()" src="assets/Logo.png"></ion-img>
+        <ion-img id ="e3" class="afraid" (click)="afraid()" src="assets/Logo.png"></ion-img>
+        <ion-img id ="e4" class="disgusted" (click)="disgusted()" src="assets/Logo.png"></ion-img>
+        <ion-img id ="e5" class="angry" (click)="angry()" src="assets/Logo.png"></ion-img>
+      </div>
+      </div>
+      <div class="label">
+        <ion-label style="font-size:13px;margin-left:27px;">HAPPY</ion-label>
+        <ion-label style="font-size:13px;margin-left:37px;">SAD </ion-label>
+        <ion-label style="font-size:13px;margin-left:25px;">AFRAID</ion-label>
+        <ion-label style="font-size:13px;margin-left:15px;">DISGUSTED </ion-label>
+        <ion-label style="font-size:13px;margin-left:3px;">ANGRY</ion-label>
+      </div>
+      <div class="scale">
+        <ion-label>How 'Emoji' are you?</ion-label>
+        <ion-range id="range" [min]="1" [max]="10" [value]="5" [pin]="true" [ticks]="true" [snaps]="true" disabled=""></ion-range>
+        <ion-button class="btns" color="#11013F" (click)="begin()">NEXT</ion-button>
+      </div>
+  </div>
 
 </ion-content>

@@ -1,5 +1,6 @@
 <ion-content>
 <ion-app>
+  <div class="head">
   <ion-menu contentId="main-content">
     <ion-header>
       <ion-toolbar color="tertiary">
@@ -17,21 +18,30 @@
         <ion-title  class=" header"></ion-title>
       </ion-toolbar>
     </ion-header>
-
+  </div>
   </div>
   <div class="menu">
-
-    <ion-item style="width:90%;color:#000000">
-
-      <ion-label>Date</ion-label>
-      <ion-text slot="end">{{formattedString}}</ion-text>
-    </ion-item>
-    <ion-datetime style="margin-top:5%;" [presentation]="selectedMode" #datetime *ngIf="showPicker" [value]="dateValue" (ionChange)="dateChanged(datetime.value)"></ion-datetime>
-    <br>
-    <ion-button color="#11013F" (click)="begin()">BEGIN MOOD TRACKING</ion-button>
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-text slot="end">{{formattedString}}</ion-text>
+        <hr>
+      </ion-item>
+    <div class="column">
+      <div class="item1">
+        <ion-datetime [presentation]="selectedMode" #datetime *ngIf="showPicker" [value]="dateValue" (ionChange)="setToday()"></ion-datetime><!--(ionChange)="dateChanged(datetime.value)-->
+      </div>
+    </div>
+      <div class="item2">
+        <div class="btnpos">
+          <ion-button class="btns" color="#FFDA29" (click)="socio()">SOCIO-ECONOMICAL SURVEY</ion-button>
+          <ion-button class="btns" color="#FFDA29" (click)="begin()">BEGIN MOOD TRACKING</ion-button>
+          <ion-button class="btns" color="#FFDA29" (click)="health()">HEALTH INDEX</ion-button>
+        </div>
+      </div>
+  </div>
     <br>
     <!-- <ion-button (click)="achieve()">Achievements</ion-button>-->
 
-  </div>
+
 </ion-app>
 </ion-content>

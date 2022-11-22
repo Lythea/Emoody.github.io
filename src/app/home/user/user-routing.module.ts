@@ -18,10 +18,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/success/success.module').then( m => m.SuccessPageModule)
   },
   {
-    path: 'survey3',
-    loadChildren: () => import('./pages/survey3-s1/survey3-s1.module').then( m => m.Survey3PageModule)
-  },
-  {
     path: 'emoji',
     loadChildren: () => import('./pages/emoji/emoji.module').then( m => m.EmojiPageModule)
   },
@@ -33,13 +29,14 @@ const routes: Routes = [
     path: 'survey1-s2',
     loadChildren: () => import('./pages/survey1-s2/survey1-s2.module').then( m => m.Survey1S2PageModule)
   },
+
   {
-    path: 'survey2-s2',
-    loadChildren: () => import('./pages/survey2-s2/survey2-s2.module').then( m => m.Survey2S2PageModule)
+    path: 'socio',
+    loadChildren: () => import('./pages/socio/socio.module').then( m => m.SocioPageModule)
   },
   {
-    path: 'survey3-s2',
-    loadChildren: () => import('./pages/survey3-s2/survey3-s2.module').then( m => m.Survey3S2PageModule)
+    path: 'health',
+    loadChildren: () => import('./pages/health/health.module').then( m => m.HealthPageModule)
   }
 ];
 

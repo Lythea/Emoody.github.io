@@ -14,7 +14,6 @@ export class UserPage implements OnInit {
   formattedString='';
   dateTime;
   constructor(private router: Router) { this.setToday();}
-
   ngOnInit() {
   }
   begin(): void{
@@ -30,17 +29,22 @@ export class UserPage implements OnInit {
     .then(value => {
       console.log(value.data);
     });
-    this.router.navigate(['survey1-s1']);
-  }
-  achieve(): void{
-    this.router.navigate(['badges']);
+    this.router.navigate(['emoji']);
   }
   setToday(){
     this.formattedString = format(new Date(),'MMM d, yyyy');
   }
+  socio(){
+    this.router.navigate(['socio']);
+  }
+  health(){
+    this.router.navigate(['health']);
+  }
+
+  /*
   dateChanged(value){
     this.dateValue=value;
     this.formattedString = format(parseISO(value),'MMM d, yyyy');
   }
-
+*/
 }

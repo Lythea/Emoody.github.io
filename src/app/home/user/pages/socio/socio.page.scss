@@ -9,6 +9,10 @@ ion-checkbox::part(container) {
 }
 .menu{
   width:100%;
+  height:100%;
+  margin-bottom:10%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 ion-button{
   align-items:center;
@@ -22,24 +26,41 @@ ion-button{
   border-radius:25px;
   color:#ffffff;
 }
+label{
+  font-size: 10px;
+}
+h1{
+  text-align:center;
+  margin-top:12%;
+}
+.header{
+  background-color:#FFDA29;
+}
+h3{
+  text-align:center;
+ height:50%;
+}
 ion-content  {
   --ion-background-color:#FFDA29;
 }
 ion-select-option{
   width:50px;
   text-align:center;
+  font-size:55px;
 }
+.select{
+  font-size:25px;
+}
+
 ::ng-deep .mycomponent-wider-popover
 {
-  width:90px;
-  --max-width: 115px;
-  text-indent:21px;
-  padding: 1em 0;
-}
-h1{
+  font-size:5px;
+  --width: 100%;
+  --max-width: 440px;
+  align-items:center;
   text-align:center;
-  margin-top:20%;
+
 }
-.header{
-  background-color:#FFDA29;
+.r1{
+  background-color:aqua;
 }

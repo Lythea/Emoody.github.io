@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Survey3PageRoutingModule } from './survey3-s1-routing.module';
+import { SocioPageRoutingModule } from './socio-routing.module';
 
-import { Survey3Page } from './survey3-s1.page';
+import { SocioPage } from './socio.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Survey3PageRoutingModule
+    SocioPageRoutingModule
   ],
-  declarations: [Survey3Page]
+  declarations: [SocioPage]
 })
-export class Survey3PageModule {}
+export class SocioPageModule {}
