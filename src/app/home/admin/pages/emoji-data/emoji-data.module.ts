@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Admin1PageRoutingModule } from './admin1-routing.module';
+import { EmojiDataPageRoutingModule } from './emoji-data-routing.module';
 
-import { Admin1Page } from './admin1.page';
+import { EmojiDataPage } from './emoji-data.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Admin1PageRoutingModule
+    EmojiDataPageRoutingModule
   ],
-  declarations: [Admin1Page]
+  declarations: [EmojiDataPage]
 })
-export class Admin1PageModule {}
+export class EmojiDataPageModule {}

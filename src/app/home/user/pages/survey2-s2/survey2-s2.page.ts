@@ -16,10 +16,9 @@ export class Survey2S2Page implements OnInit {
   val6(e6s2) {
     const val6s2 = e6s2.detail.value;
     localStorage.setItem('val6_s2', val6s2);
-
   }
   val7(e7s2 ) {
-    const val7s2 = e7s2 .detail.value;
+    const val7s2 = e7s2.detail.value;
     localStorage.setItem('val7_s2', val7s2);
   }
   val8(e8s2) {

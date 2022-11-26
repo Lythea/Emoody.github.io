@@ -23,24 +23,31 @@
         <hr class="t1">
       <div class="emoji">
         <div class="emojis">
-        <ion-img id ="e1" class="happy" (click)="happy()" src="assets/Logo.png"></ion-img>
-        <ion-img id ="e2" class="sad" (click)="sad()" src="assets/Logo.png"></ion-img>
-        <ion-img id ="e3" class="afraid" (click)="afraid()" src="assets/Logo.png"></ion-img>
-        <ion-img id ="e4" class="disgusted" (click)="disgusted()" src="assets/Logo.png"></ion-img>
-        <ion-img id ="e5" class="angry" (click)="angry()" src="assets/Logo.png"></ion-img>
+        <ion-img id ="e1" class="happy" src="assets/Logo.png"></ion-img>
+        <ion-img id ="e2" class="sad" src="assets/Logo.png"></ion-img>
+        <ion-img id ="e3" class="afraid" src="assets/Logo.png"></ion-img>
+        <ion-img id ="e4" class="disgusted"  src="assets/Logo.png"></ion-img>
+        <ion-img id ="e5" class="angry" src="assets/Logo.png"></ion-img>
+        </div>
       </div>
-      </div>
-      <div class="label">
-        <ion-label style="font-size:13px;margin-left:27px;">HAPPY</ion-label>
-        <ion-label style="font-size:13px;margin-left:37px;">SAD </ion-label>
-        <ion-label style="font-size:13px;margin-left:25px;">AFRAID</ion-label>
-        <ion-label style="font-size:13px;margin-left:15px;">DISGUSTED </ion-label>
-        <ion-label style="font-size:13px;margin-left:3px;">ANGRY</ion-label>
+      <div class="radio">
+        <ion-radio-group value="custom-checked" [(ngModel)]="value_selected">
+          <ion-radio name="emoji" class ="r1" (click) = "happy()" value="Happy"></ion-radio>
+          <ion-label class="l1">HAPPY</ion-label>
+          <ion-radio name="emoji" class ="r2" (click) = "sad()" value="Sad"></ion-radio>
+          <ion-label class="l2">SAD </ion-label>
+          <ion-radio name="emoji" class ="r3" (click) = "afraid()" value="Afraid"></ion-radio>
+          <ion-label class="l3">AFRAID</ion-label>
+          <ion-radio name="emoji" class ="r4" (click) = "disgusted()" value="Disgusted"></ion-radio>
+          <ion-label class="l4">DISGUSTED </ion-label>
+          <ion-radio name="emoji" class ="r5" (click) = "angry()" value="Angry"></ion-radio>
+        <ion-label class="l5">ANGRY</ion-label>
+        </ion-radio-group>
       </div>
       <div class="scale">
-        <ion-label>How 'Emoji' are you?</ion-label>
-        <ion-range id="range" [min]="1" [max]="10" [value]="5" [pin]="true" [ticks]="true" [snaps]="true" disabled=""></ion-range>
-        <ion-button class="btns" color="#11013F" (click)="begin()">NEXT</ion-button>
+        <ion-label>{{value_selected}}</ion-label>
+        <ion-range (ionChange)="onIonChange($event)" id="range" [min]="1" [max]="10" [value]="1" [pin]="true" [ticks]="true" [snaps]="true" disabled=""></ion-range>
+        <ion-button id ="next"class="btns" color="#11013F" (click)="begin()" disabled="">NEXT</ion-button>
       </div>
   </div>
 

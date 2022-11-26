@@ -1,113 +1,190 @@
 .menu{
-  margin-top:10%;
+  margin-top:5%;
   text-align: center;
   height:20%;
-  width:80%;
+  width:100%;
   align-items:center;
-  margin-left:5%;
-  margin-right:5%;
+}
+.sc-ion-buttons-md-h {
+  display: block !important;
+}
+ion-menu-button {
+  font-size: 40px !important;
+}
+.menu .part1{
+  margin-top:10%;
+  margin-left:12%;
+  width:80%;
+  text-align: center;
+  align-items:center;
 }
 .header{
-  background-color:#FFDA29;
+  background-color:#FFC000;
+}
+.menu .column{
+  text-align: center;
+  align-items:center;
+  width:100%;
+  height:30%;
+}
+.menu .column .item1 ion-datetime{
+  border-radius:25px;
+  height:600px;
+  width:80%;
+  margin-left:12%;
 }
 ion-datetime{
-  margin-left:5%;
-  margin-right:5%;
-  width:90%;
-  height:60%;
-  border-radius:25px;
+  font-size:100px;
+  margin-top:10%;
 }
 ion-content  {
-  --ion-background-color:#FFDA29;
+  --ion-background-color:#FFC000;
 }
-
 .btns{
   border-radius:25px;
   width:70%;
-  height:50px;
+  height:90px;
   background-color:#11013F;
   color:#ffffff;
+  font-size:30px;
+  margin-right:33%;
 }
 h2{
   color:#ffffff;
 }
-.btnpos{
-  margin-top:2%;
+.menu .item2 .btnpos ion-button{
+  font-family: 'Quicksand';
 }
 
-@media screen and (max-width:1920px){
-
+@media screen and (max-width:1366px){
   .menu{
+    height:100%;
+    margin-bottom:90%;
+  }
+  .menu .part1{
+    height:2%;
+    width:70%;
+    margin-top:2%;
+  }
+  .menu .column .item1 ion-datetime{
+    border-radius:25px;
+    height:400px;
+    width:50%;
+    margin-left:22%;
+  }
+  ion-datetime{
+    font-size:100px;
     margin-top:5%;
-    margin-right:20%;
-    margin-left:5%;
-    margin-bottom:800px;
-    width:90%;
   }
   .menu ion-item{
-    width:30%;
-    font-size:40px;
-    align-items: center;
-    margin-left:35%;
-    margin-right:20%;
-    margin-bottom:2%;
+    font-size:30px;
   }
-  .menu ion-datetime{
-    border-radius:25px;
-    margin-left:40%;
-  }
-  .menu .item2{
-    margin-top:5%;
-    margin-right:7%;
+  .item2 .btnpos{
+    margin-top:15%;
+    grid-row: 1 / 3;
   }
   .item2 .btnpos{
     display: grid;
-    grid-template-columns: auto auto ;
+    width:20%;
+    grid-template-columns: auto auto auto ;
   }
-  .item2 .btns{
-    grid-row: 1 / 3;
-  }
-  .item2 ion-button{
-    height:50px;
-    font-size:30px;
-    width:80%
+  .menu .item2 .btnpos{
+    margin-left:5%;
+    margin-bottom:10px;
+    width:90%;
+    height:30%;
+    font-size:80px;
   }
 }
 
-
-
-
 @media screen and (max-width:1080px){
-  /*
-  .menu .column{
-    display: grid;
-    grid-template-columns: auto auto ;
-    grid-gap: 10px;
+  menu{
+    margin-top:10%;
+    text-align: center;
+    height:20%;
+    width:100%;
+    align-items:center;
   }
-  */
-  .menu{
-    margin-top:7%;
+  .sc-ion-buttons-md-h {
+    display: block !important;
   }
-  .menu ion-item{
-    font-size:50px;
+  ion-menu-button {
+    font-size: 70px !important;
   }
-  /*
-  .menu .item1{
-    grid-row: 1 / 2;
-  }
-  */
 
-  .menu ion-datetime{
-    margin-top:2%;
+  .menu .part1{
+    margin-top:20%;
+    margin-left:10%;
+    width:80%;
+    text-align: center;
+    align-items:center;
+  }
+  .menu .part1 ion-item {
+    font-size:60px;
+
+  }
+  .menu .column .item1{
+    margin-top:10%;
+  }
+
+  .menu .column{
+    text-align: center;
+    align-items:center;
+    width:100%;
+    height:40%;
+  }
+  .menu .item1{
+    height:10px;
+    width:95%;
+    text-align: center;
+    align-items:center;
+    margin-right:500px;
+  }
+
+  .menu .column .item1 ion-datetime{
     border-radius:25px;
-    margin-left:35%;
-    width:1500px;
-    height:350px;
+    height:600px;
+    width:80%;
+    margin-left:12%;
   }
-  .menu .btnpos{
-    margin-left:34%;
-    margin-bottom:700px;
+  ion-datetime{
+    font-size:100px;
+    margin-top:30%;
+  }
+
+  .btns{
+    border-radius:25px;
+    width:70%;
+    height:90px;
+    background-color:#11013F;
+    color:#ffffff;
+    font-size:30px;
+    margin-right:33%;
+  }
+  h2{
+    color:#ffffff;
+  }
+  .menu .item2 .btnpos ion-button{
+    font-family: 'Quicksand';
+    width:40%;
+    margin-top:5%;
+  }
+  .menu .item2{
+    margin-top: 20%;
+    align-items: center;
+    text-align: center;
+    margin-left:20%;
+    width:90%;
+  }
+  .menu .item2 .btnpos{
+    height:30%;
+    margin-top:35%;
+    grid-column: 3/ 1;
+  }
+  .menu .item2 .btnpos{
+    display: contents;
     width:30%;
-    height:40px;
+    grid-template-columns: auto auto auto ;
   }
+
 }

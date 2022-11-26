@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { Admin1Page } from './admin1.page';
+import { EmojiDataPage } from './emoji-data.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: Admin1Page
+    component: EmojiDataPage
   }
 ];
 
@@ -14,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class Admin1PageRoutingModule {}
+export class EmojiDataPageRoutingModule {}

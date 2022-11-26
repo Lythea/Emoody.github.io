@@ -10,7 +10,7 @@
     </ion-menu>
     <div class="ion-page" id="main-content">
       <ion-header class="basehead">
-        <ion-toolbar style="background-color:#FFDA29">
+        <ion-toolbar style="background-color:#250381">
           <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
@@ -18,100 +18,93 @@
         </ion-toolbar>
       </ion-header>
     </div>
-    <h1>SOCIO-ECONOMICAL SURVEY</h1>
+
 
     <div class="menu" >
-      <br>
-      <br>
-      <ion-list style="width:90%;">
-        <ion-item class="r1">
-          <ion-list >
-            <ion-label text-wrap >What is your marital status?  </ion-label>
-            <div class="r1">
-            <ion-radio-group [allowEmptySelection]="true" *ngFor="let option of data"[(ngModel)]="selectedValue"(ionChange)="checkValue($event)" >
-              <ion-item style="background-color:aqua"><ion-label style="font-size:13px;height:15px;width:200px;padding:0;margin:0;">{{option.A}}</ion-label><ion-radio slot="start" value="A"></ion-radio></ion-item>
-              <ion-item><ion-label>{{option.B}}</ion-label><ion-radio slot="start"  value="B"></ion-radio></ion-item>
-              <ion-item><ion-label>{{option.C}}</ion-label><ion-radio slot="start" value="C"></ion-radio></ion-item>
-              <ion-item><ion-label>{{option.D}}</ion-label><ion-radio slot="start" value="D"></ion-radio></ion-item>
-              <ion-item><ion-label>{{option.E}}</ion-label><ion-radio slot="start" value="E"></ion-radio></ion-item>
-            </ion-radio-group>
-          </div>
-          </ion-list>
-        </ion-item>
+      <h1>SOCIO-ECONOMICAL SURVEY</h1>
+      <div class="menucontent">
+      <ion-list>
         <ion-item lines="none">
-          <ion-label text-wrap >What is your marital status?  </ion-label>
+          <ion-img src="./assets/Necktie.png"></ion-img>
+          <ion-label >What is your marital status?  </ion-label>
           <ion-list >
             <ion-item lines="none">
               <ion-select class="select" [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="val1($event)">
-                <ion-select-option value="A">A: Never married  </ion-select-option>
-                <ion-select-option value="B">B: Separated  </ion-select-option>
-                <ion-select-option value="C">C: Divorced </ion-select-option>
-                <ion-select-option value="D">D: Widowed </ion-select-option>
-                <ion-select-option value="E">E: Married </ion-select-option>
+                <ion-select-option value="A">Never married</ion-select-option>
+                <ion-select-option value="B">Separated  </ion-select-option>
+                <ion-select-option value="C">Divorced </ion-select-option>
+                <ion-select-option value="D">Widowed </ion-select-option>
+                <ion-select-option value="E">Married </ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
         </ion-item>
+        <br>
         <ion-item lines="none">
-          <ion-label text-wrap >What is your marital status?  </ion-label>
+          <ion-img src="./assets/Necktie.png"></ion-img>
+          <ion-label text-wrap >How many people currently live in your household, including yourself?</ion-label>
           <ion-list >
             <ion-item lines="none">
               <ion-select class="select" interface="popover" (ionChange)="val2($event)">
-                <ion-select-option value="A">A: Living alone  </ion-select-option>
-                <ion-select-option value="B">B: 2 to 4 </ion-select-option>
-                <ion-select-option value="C">C: 5 to 6 </ion-select-option>
-                <ion-select-option value="D">D: 7 or more </ion-select-option>
+                <ion-select-option value="A">Living alone  </ion-select-option>
+                <ion-select-option value="B">2 to 4 </ion-select-option>
+                <ion-select-option value="C">5 to 6 </ion-select-option>
+                <ion-select-option value="D">7 or more </ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
         </ion-item>
         <ion-item lines="none">
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label text-wrap >What is the primary language spoken at home? </ion-label>
           <ion-list >
             <ion-item lines="none">
               <ion-select class="select" interface="popover" (ionChange)="val3($event)">
-                <ion-select-option value="A">A: Bikol  </ion-select-option>
-                <ion-select-option value="B">B: Cebuano </ion-select-option>
-                <ion-select-option value="C">C: Hiligaynon (Ilonggo) </ion-select-option>
-                <ion-select-option value="D">D: Kapampangan</ion-select-option>
-                <ion-select-option value="E">E: Pangasinan </ion-select-option>
-                <ion-select-option value="F">D: Tagalog </ion-select-option>
-                <ion-select-option value="G">D: Waray </ion-select-option>
-                <ion-select-option value="H">D: English </ion-select-option>
+                <ion-select-option value="A">Bikol  </ion-select-option>
+                <ion-select-option value="B">Cebuano </ion-select-option>
+                <ion-select-option value="C">Hiligaynon (Ilonggo) </ion-select-option>
+                <ion-select-option value="D">Kapampangan</ion-select-option>
+                <ion-select-option value="E">Pangasinan </ion-select-option>
+                <ion-select-option value="F">Tagalog </ion-select-option>
+                <ion-select-option value="G">Waray </ion-select-option>
+                <ion-select-option value="H">English </ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
         </ion-item>
         <ion-item lines="none">
-          <ion-label text-wrap >Please describe the home where you live :  </ion-label>
-          <ion-list >
+          <ion-img src="./assets/Necktie.png"></ion-img>
+          <ion-label >Please describe the home where you live :  </ion-label>
+          <ion-list  text-wrap>
             <ion-item lines="none">
               <ion-select class="select" [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="val4($event)">
-                <ion-select-option value="A" class="sr-ion-select-popover sc-ion-label-md-h sc-ion-label-md-s md hydrated" id="ion-rb-6">A: It is owned or bought by you (or someone in the household)  </ion-select-option>
-                <ion-select-option value="B">B: It is rented for money by you (or someone in the family)     </ion-select-option>
-                <ion-select-option value="C">C: It is occupied without payment or money or rent   </ion-select-option>
-                <ion-select-option value="D">D: I live with friends </ion-select-option>
-                <ion-select-option value="E">E: I live with family </ion-select-option>
-                <ion-select-option value="F">F: I have no permanent residence    </ion-select-option>
+                <ion-select-option value="A">It is owned or bought by you (or someone in the household)  </ion-select-option>
+                <ion-select-option value="B">It is rented for money by you (or someone in the family)     </ion-select-option>
+                <ion-select-option value="C">It is occupied without payment or money or rent   </ion-select-option>
+                <ion-select-option value="D">I live with friends </ion-select-option>
+                <ion-select-option value="E">I live with family </ion-select-option>
+                <ion-select-option value="F">I have no permanent residence    </ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
         </ion-item>
         <ion-item lines="none">
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label text-wrap >What is the highest level of education you have completed?    </ion-label>
           <ion-list >
             <ion-item lines="none">
               <ion-select class="select" interface="popover" (ionChange)="val5($event)">
-                <ion-select-option value="A">A: 12th grade or less   </ion-select-option>
-                <ion-select-option value="B">B: High school graduate or GED   </ion-select-option>
-                <ion-select-option value="C">C: Some college/AA degree/Technical school training   </ion-select-option>
-                <ion-select-option value="D">D: College graduate (BA or BS)   </ion-select-option>
-                <ion-select-option value="E">E: Graduate school degree: Master’s or Doctorate degree (MD, PhD, JD)   </ion-select-option>
+                <ion-select-option value="A">12th grade or less   </ion-select-option>
+                <ion-select-option value="B">High school graduate or GED   </ion-select-option>
+                <ion-select-option value="C">Some college/AA degree/Technical school training   </ion-select-option>
+                <ion-select-option value="D">College graduate (BA or BS)   </ion-select-option>
+                <ion-select-option value="E">Graduate school degree: Master’s or Doctorate degree (MD, PhD, JD)   </ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
         </ion-item>
         <ion-item lines="none">
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label text-wrap >How do you pay for your health care and medical expenses?  </ion-label>
           <ion-list >
             <ion-item lines="none">
@@ -124,53 +117,75 @@
           </ion-list>
         </ion-item>
         <ion-item >
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Are you employed?</ion-label>
           <input type='checkbox' [(ngModel)]="data1s3" (ngModelChange)="val7($event)">
         </ion-item>
-        <ion-item lines="none">
+        <ion-item lines="none" id="opt8" >
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label text-wrap >If you answered No, who earns income to support your family? </ion-label>
           <ion-list >
             <ion-item lines="none">
-              <ion-select class="select" interface="popover" (ionChange)="val8($event)">
-                <ion-select-option value="A">A: Parents </ion-select-option>
-                <ion-select-option value="B">B: Guardian </ion-select-option>
-                <ion-select-option value="C">C: Relatives </ion-select-option>
+              <ion-select class="select" interface="popover" (ionChange)="val8($event)" >
+                <ion-select-option value="A">Parents </ion-select-option>
+                <ion-select-option value="B">Guardian </ion-select-option>
+                <ion-select-option value="C">Relatives </ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
         </ion-item>
         <ion-item lines="none">
-          <ion-label text-wrap > How many hours each day do(es) the above person(s) work?   </ion-label>
+          <ion-img src="./assets/Necktie.png"></ion-img>
+          <ion-label text-wrap >How many hours each day do(es) the above person(s) work?   </ion-label>
           <ion-list >
             <ion-item lines="none">
               <ion-select class="select" interface="popover" (ionChange)="val9($event)">
-                <ion-select-option value="A">A: Less than 8 hrs </ion-select-option>
-                <ion-select-option value="B">B: 8 hrs </ion-select-option>
-                <ion-select-option value="C">C: 9 hrs - 10 hrs </ion-select-option>
-                <ion-select-option value="D">C: 11 hrs - 12 hrs </ion-select-option>
-                <ion-select-option value="E">C: More than 12 hrs </ion-select-option>
+                <ion-select-option value="A">Less than 8 hrs </ion-select-option>
+                <ion-select-option value="B">8 hrs </ion-select-option>
+                <ion-select-option value="C">9 hrs - 10 hrs </ion-select-option>
+                <ion-select-option value="D">11 hrs - 12 hrs </ion-select-option>
+                <ion-select-option value="E">More than 12 hrs </ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
         </ion-item>
         <ion-item lines="none">
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label text-wrap >What best corresponds to the above person(s) current work situation ?   </ion-label>
           <ion-list >
             <ion-item lines="none">
               <ion-select class="select" interface="popover" (ionChange)="val10($event)">
-                <ion-select-option value="A">A: Working full-time  </ion-select-option>
-                <ion-select-option value="B">B: Working part-time   </ion-select-option>
-                <ion-select-option value="C">C: Not working and not looking for work  </ion-select-option>
-                <ion-select-option value="D">C: Unemployed and looking for work  </ion-select-option>
-                <ion-select-option value="E">E: Disabled or retired and not looking for work   </ion-select-option>
-                <ion-select-option value="F">F: Currently in school    </ion-select-option>
+                <ion-select-option value="A">Working full-time  </ion-select-option>
+                <ion-select-option value="B">Working part-time   </ion-select-option>
+                <ion-select-option value="C">Not working and not looking for work  </ion-select-option>
+                <ion-select-option value="D">Unemployed and looking for work  </ion-select-option>
+                <ion-select-option value="E">Disabled or retired and not looking for work   </ion-select-option>
+                <ion-select-option value="F">Currently in school    </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-img src="./assets/Necktie.png"></ion-img>
+          <ion-label text-wrap >What is your total combined family income for the past 12 months, before taxes, from all sources, wages, public assistance/benefits, help from relatives, alimony, and so on?  </ion-label>
+          <ion-list >
+            <ion-item lines="none">
+              <ion-select class="select" interface="popover" (ionChange)="val11($event)">
+                <ion-select-option value="A">Less than ₱10,957 </ion-select-option>
+                <ion-select-option value="B">Between ₱9,520 to ₱21,194 </ion-select-option>
+                <ion-select-option value="C">Between ₱21,194 to ₱43,828 </ion-select-option>
+                <ion-select-option value="D">Between ₱43,828 to ₱76,669  </ion-select-option>
+                <ion-select-option value="E">Between ₱76,669 to ₱131,484</ion-select-option>
+                <ion-select-option value="F">Between ₱131,484 to ₱219,140  </ion-select-option>
+                <ion-select-option value="G">At least ₱219,140 and up </ion-select-option>
+                <ion-select-option value="H">Chose not to answer   </ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
         </ion-item>
       </ion-list>
-      <p *ngFor="let log of logs">{{ log }}</p>
-      <ion-button color="#250381"(click)="next()">Next</ion-button>
+    </div>
+      <ion-button color="#250381"(click)="next()">SUBMIT</ion-button>
     </div>
 
   </ion-app>

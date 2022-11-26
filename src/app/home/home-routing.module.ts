@@ -7,10 +7,9 @@ const routes: Routes = [
   {path: 'user',loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)},
   {path: 'admin',loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)},
   {
-    path: 'admin1',
-    loadChildren: () => import('./admin/admin1/admin1.module').then( m => m.Admin1PageModule)
+    path: 'emoji-data',
+    loadChildren: () => import('./admin/pages/emoji-data/emoji-data.module').then( m => m.EmojiDataPageModule)
   },
-
   {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)

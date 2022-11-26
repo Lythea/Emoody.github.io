@@ -12,98 +12,87 @@ export class SocioPage implements OnInit {
   logs: string[] = [];
   data1s3: any;
   selectedValue: any;
-  data: any[] = [
-    {
-      A:'Never married ',
-      B:'Separated',
-      C:'Divorced',
-      D:'Widowed ',
-      E:'Married ',
-    }
-  ];
+  value_selected: any;
+  fval: any;
+  disableSelector: boolean;
   constructor(private router: Router) { }
-
   ngOnInit() {
   }
-  checkValue(event) {
-    console.log(event.detail.value);
-}
-print(event) {
-  console.log('Selected value: ', this.selectedValue);
-}
-  val11(){
-    document.querySelector('h1').style.backgroundColor = 'red';
-  }
+
   val1(e1s3) {
-    const val1s3 =e1s3.detail.value;
-    localStorage.setItem('val1_s3', val1s3);
+    const sq1socio =e1s3.detail.value;
+    localStorage.setItem('sq1', sq1socio);
   }
   val2(e2s3) {
-    const val2s3 = e2s3.detail.value;
-    localStorage.setItem('val2_s3', val2s3);
+    const sq2socio = e2s3.detail.value;
+    localStorage.setItem('sq2', sq2socio);
   }
   val3(e3s3) {
-    const val3s3 = e3s3.detail.value;
-    localStorage.setItem('val3_s3', val3s3);
+    const sq3socio = e3s3.detail.value;
+    localStorage.setItem('sq3', sq3socio);
   }
   val4(e4s3) {
-    const val4s3 = e4s3.detail.value;
-    localStorage.setItem('val4_s3', val4s3);
+    const sq4socio = e4s3.detail.value;
+    localStorage.setItem('sq4', sq4socio);
   }
   val5(e5s3) {
-    const val5s3 = e5s3.detail.value;
-    localStorage.setItem('val5_s3', val5s3);
+    const sq5socio = e5s3.detail.value;
+    localStorage.setItem('sq5', sq5socio);
   }
   val6(e6s3) {
-    const val6s3 = e6s3.detail.value;
-    localStorage.setItem('val6_s3', val6s3);
+    const sq6socio = e6s3.detail.value;
+    localStorage.setItem('sq6', sq6socio);
   }
   val7(value: boolean): void {
-    let newValue7s3: string;
-    newValue7s3 = value ? 'Yes' : 'No';
-    localStorage.setItem('val7_s3', newValue7s3);
+    const num1 =document.getElementById('opt8') as HTMLInputElement;
+    num1.disabled=true;
+    let sq7socio: string;
+    sq7socio = value ? 'Yes' : 'No';
+    localStorage.setItem('sq7', sq7socio);
   }
   val8(e8s3) {
-    const val8s3 = e8s3.detail.value;
-    localStorage.setItem('val8_s3', val8s3);
+    const sq8socio = e8s3.detail.value;
+    localStorage.setItem('sq8', sq8socio);
   }
   val9(e9s3) {
-    const val9s3 = e9s3.detail.value;
-    localStorage.setItem('val9_s3', val9s3);
+    const sq9socio = e9s3.detail.value;
+    localStorage.setItem('sq9', sq9socio);
   }
   val10(e10s3) {
-    const val10s3 = e10s3.detail.value;
-    localStorage.setItem('val9_s3', val10s3);
+    const sq10socio = e10s3.detail.value;
+    localStorage.setItem('sq10', sq10socio);
   }
-
-
-
+  val11(e11s3) {
+    const sq11socio = e11s3.detail.value;
+    localStorage.setItem('sq11', sq11socio );
+  }
   next(): void{
-
     const formData = new FormData();
     const id = localStorage.getItem('id');
-    const val1s2 = localStorage.getItem('val1_s2');
-    const val2s2  = localStorage.getItem('val2_s2');
-    const val3s2  = localStorage.getItem('val3_s2');
-    const val4s2  = localStorage.getItem('val4_s2');
-    const val5s2  = localStorage.getItem('val5_s2');
-    const val6s2 = localStorage.getItem('val6_s2');
-    const val7s2  = localStorage.getItem('val7_s2');
-    const val8s2  = localStorage.getItem('val8_s2');
-    const val9s2  = localStorage.getItem('val9_s2');
-    const val10s2  = localStorage.getItem('val10_s2');
+    const sq1 = localStorage.getItem('sq1');
+    const sq2 = localStorage.getItem('sq2');
+    const sq3 = localStorage.getItem('sq3');
+    const sq4 = localStorage.getItem('sq4');
+    const sq5 = localStorage.getItem('sq5');
+    const sq6 = localStorage.getItem('sq6');
+    const sq7 = localStorage.getItem('sq7');
+    const sq8 = localStorage.getItem('sq8');
+    const sq9 = localStorage.getItem('sq9');
+    const sq10 = localStorage.getItem('sq10');
+    const sq11 = localStorage.getItem('sq11');
     formData.append('id', id);
-    formData.append('q1_s2', val1s2);
-    formData.append('q2_s2', val2s2);
-    formData.append('q3_s2', val3s2);
-    formData.append('q4_s2', val4s2);
-    formData.append('q5_s2', val5s2);
-    formData.append('q6_s2', val6s2);
-    formData.append('q7_s2', val7s2);
-    formData.append('q8_s2', val8s2);
-    formData.append('q9_s2', val9s2);
-    formData.append('q10_s2', val10s2);
-    fetch('http://localhost/newmobileapp/src/app/Backend/regData3.php', {
+    formData.append('sq1', sq1);
+    formData.append('sq2', sq2);
+    formData.append('sq3', sq3);
+    formData.append('sq4', sq4);
+    formData.append('sq5', sq5);
+    formData.append('sq6', sq6);
+    formData.append('sq7', sq7);
+    formData.append('sq8', sq8);
+    formData.append('sq9', sq9);
+    formData.append('sq10', sq10);
+    formData.append('sq11', sq11);
+    fetch('http://localhost/newmobileapp/src/app/Backend/socio.php', {
       method: 'POST',
       body: formData
     })

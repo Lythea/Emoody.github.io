@@ -9,12 +9,24 @@ const routes: Routes = [
     component: AdminPage
   },
   {
-    path: 'admin1',
-    loadChildren: () => import('./admin1/admin1.module').then( m => m.Admin1PageModule)
+    path: 'emoji-data',
+    loadChildren: () => import('./pages/emoji-data/emoji-data.module').then( m => m.EmojiDataPageModule)
   },
   {
-    path: 'admin1',
-    loadChildren: () => import('./admin1/admin1.module').then( m => m.Admin1PageModule)
+    path: 'socio-data',
+    loadChildren: () => import('./pages/socio-data/socio-data.module').then( m => m.SocioDataPageModule)
+  },
+  {
+    path: 'health-data',
+    loadChildren: () => import('./pages/health-data/health-data.module').then( m => m.HealthDataPageModule)
+  },
+  {
+    path: 'survey1-data',
+    loadChildren: () => import('./pages/survey1-data/survey1-data.module').then( m => m.Survey1DataPageModule)
+  },
+  {
+    path: 'survey2-data',
+    loadChildren: () => import('./pages/survey2-data/survey2-data.module').then( m => m.Survey2DataPageModule)
   }
 ];
 

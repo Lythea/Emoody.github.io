@@ -18,12 +18,14 @@
         </ion-toolbar>
       </ion-header>
     </div>
-    <h1>Daily Questions</h1>
+
     <div class="menu">
+      <h1>Daily Questions</h1>
       <br>
       <br>
-      <ion-list style="width:90%;">
+      <ion-list>
         <ion-item>
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Question 1</ion-label>
           <ion-list>
             <ion-item>
@@ -38,6 +40,7 @@
           </ion-list>
         </ion-item>
         <ion-item>
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Question 2</ion-label>
           <ion-list>
             <ion-item>
@@ -52,6 +55,7 @@
           </ion-list>
         </ion-item>
         <ion-item>
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Question 3</ion-label>
           <ion-list>
             <ion-item>
@@ -66,6 +70,7 @@
           </ion-list>
         </ion-item>
         <ion-item>
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Question 4</ion-label>
           <ion-list>
             <ion-item>
@@ -80,6 +85,7 @@
           </ion-list>
         </ion-item>
         <ion-item>
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Question 5</ion-label>
           <ion-list>
             <ion-item>
@@ -93,12 +99,11 @@
             </ion-item>
           </ion-list>
         </ion-item>
-
         <br>
-
       </ion-list>
-      <p *ngFor="let log of logs">{{ log }}</p>
-      <ion-button color="#250381"(click)="next()">Next</ion-button>
+      <div class="btn1">
+        <ion-button color="#250381"(click)="next()">Next</ion-button>
+      </div>
     </div>
 
   </ion-app>

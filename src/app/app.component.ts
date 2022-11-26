@@ -15,7 +15,6 @@ export class AppComponent {
     public router: Router,
 
   ) {this.initializeApp();}
-
   initializeApp(){
     this.platform.ready().then(()=>{
       this.statusBar.styleDefault();

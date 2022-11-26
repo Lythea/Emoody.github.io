@@ -10,7 +10,7 @@
     </ion-menu>
     <div class="ion-page" id="main-content" >
       <ion-header class="basehead">
-        <ion-toolbar style="background-color:#FFDA29">
+        <ion-toolbar style="background-color:#FFC000">
           <ion-buttons slot="start">
             <ion-menu-button ></ion-menu-button>
           </ion-buttons>
@@ -19,32 +19,39 @@
       </ion-header>
     </div>
   </ion-app>
-  <h1>Daily Question!</h1>
-    <div class="menu">
 
-      <ion-list style="width:90%;">
+    <div class="menu">
+      <h1>Daily Question!</h1>
+      <ion-list>
         <ion-item >
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Question1</ion-label>
           <input type='checkbox' [(ngModel)]="data6s1" (ngModelChange)="val6($event)">
         </ion-item>
         <ion-item >
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Question2</ion-label>
           <input type='checkbox' [(ngModel)]="data7s1" (ngModelChange)="val7($event)">
         </ion-item>
         <ion-item >
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Question3</ion-label>
           <input type='checkbox' [(ngModel)]="data8s1" (ngModelChange)="val8($event)">
         </ion-item>
         <ion-item >
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Question4</ion-label>
           <input type='checkbox' [(ngModel)]="data9s1" (ngModelChange)="val9($event)">
         </ion-item>
         <ion-item >
+          <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>Question5</ion-label>
           <input type='checkbox' [(ngModel)]="data10s1" (ngModelChange)="val10($event)">
         </ion-item>
       </ion-list>
-      <ion-button color="#250381"(click)="next()">Next</ion-button>
+      <div class="btn1">
+        <ion-button color="#250381"(click)="next()">Next</ion-button>
+      </div>
     </div>
 
 

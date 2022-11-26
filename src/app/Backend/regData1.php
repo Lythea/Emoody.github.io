@@ -15,7 +15,9 @@ if ($conn->connect_error) {
 
   $date = $_POST['date'];
   $id = $_POST['id'];
-  $sql = "INSERT into dataset1 (id,date) VALUES ('$id','$date')";
+  $emoji = $_POST['emoji'];
+  $range = $_POST['range'];
+  $sql = "INSERT into dataset1 (id,date,emoji,scale) VALUES ('$id','$date','$emoji','$range')";
   $result = $conn->query($sql);
     if($result===TRUE){
       echo json_encode(['data' => 'Data Registered']);

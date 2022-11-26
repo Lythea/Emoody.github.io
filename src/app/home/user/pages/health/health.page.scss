@@ -1,0 +1,173 @@
+ion-content  {
+  --ion-background-color:#FFC000;
+}
+.header{
+  background-color:#FFC000;
+}
+.output{
+  margin-top:5%;
+  width:90%;
+  margin-left:5%;
+  height:55%;
+}
+.terms{
+  width:90%;
+  margin-left:3.5%;
+  height:40%;
+  margin-top:2%;
+  margin-bottom:12%;
+}
+.step1{
+  margin-left:10%;
+  margin-top:5%;
+  width:80%;
+  text-align:center;
+  align-items: center;
+  height:4%;
+}
+.step1 .num1{
+  width:80%;
+  text-align:center;
+  align-items: center;
+}
+ion-button{
+  align-items: center;
+  border-radius:25px;
+  width:10%;
+  height:40px;
+  background-color:#11013F;
+  color:#ffffff;
+  margin-top:38%;
+  margin-left:45%;
+}
+.questions{
+  width:90%;
+  margin-left:2%;
+  margin-top:2%;
+  text-align: left;
+  height:100%;
+}
+.align1{
+  text-align: center;
+
+}
+.grid1 ion-grid{
+  width:65%;
+}
+.grid1 ion-col{
+height:30px;
+border: 1px solid #000000;
+}
+.grid1 ion-radio{
+  margin-left:46%;
+}
+.grid2 ion-grid{
+  width:90%;
+  margin-left:5%;
+}
+.grid2 ion-col{
+height:30px;
+border: 1px solid #000000;
+}
+.grid3 ion-radio{
+  margin-left:46%;
+}
+.grid3 ion-grid{
+  width:90%;
+  margin-left:4%;
+}
+.grid3 ion-col{
+height:57px;
+border: 1px solid #000000;
+}
+.grid3 ion-radio{
+  margin-left:46%;
+}
+
+@media screen and (max-width:1366px){
+  ion-content  {
+    --ion-background-color:#FFC000;
+  }
+  .header{
+    background-color:#FFC000;
+  }
+  .output{
+    margin-top:5%;
+    width:90%;
+    margin-left:5%;
+    height:55%;
+  }
+  .terms{
+    width:90%;
+    margin-left:3.5%;
+    height:25%;
+    margin-top:2%;
+    margin-bottom:12%;
+  }
+  .step1{
+    margin-left:10%;
+    margin-top:5%;
+    width:80%;
+    text-align:center;
+    align-items: center;
+    height:4%;
+  }
+  .step1 .num1{
+    width:80%;
+    text-align:center;
+    align-items: center;
+  }
+  ion-button{
+    align-items: center;
+    border-radius:25px;
+    width:10%;
+    height:40px;
+    background-color:#11013F;
+    color:#ffffff;
+    margin-top:68%;
+    margin-left:45%;
+  }
+  .questions{
+    width:90%;
+    margin-left:2%;
+    margin-top:2%;
+    text-align: left;
+    height:100%;
+  }
+  .align1{
+    text-align: center;
+
+  }
+  .grid1 ion-grid{
+    width:65%;
+  }
+  .grid1 ion-col{
+  height:30px;
+  border: 1px solid #000000;
+  }
+  .grid1 ion-radio{
+    margin-left:46%;
+  }
+  .grid2 ion-grid{
+    width:90%;
+    margin-left:5%;
+  }
+  .grid2 ion-col{
+  height:30px;
+  border: 1px solid #000000;
+  }
+  .grid3 ion-radio{
+    margin-left:46%;
+  }
+  .grid3 ion-grid{
+    width:90%;
+    margin-left:4%;
+  }
+  .grid3 ion-col{
+  height:57px;
+  border: 1px solid #000000;
+  }
+  .grid3 ion-radio{
+    margin-left:46%;
+  }
+}

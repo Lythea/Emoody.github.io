@@ -13,7 +13,6 @@ export class SplashPage implements OnInit {
       this.router.navigateByUrl('home');
     },1000);
   }
-
   ngOnInit() {
   }
 

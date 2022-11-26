@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
@@ -12,9 +13,12 @@ const routes: Routes = [
   {path: 'socio',loadChildren: () => import('./home/user/pages/socio/socio.module').then( m => m.SocioPageModule)},
   {path: 'health',loadChildren: () => import('./home/user/pages/health/health.module').then( m => m.HealthPageModule)},
   {path: 'emoji',loadChildren: () => import('./home/user/pages/emoji/emoji.module').then( m => m.EmojiPageModule)},
-
   {path: 'success',loadChildren: () => import('./home/user/pages/success/success.module').then( m => m.SuccessPageModule)},
-  {path: 'admin1',loadChildren: () => import('./home/admin/admin1/admin1.module').then( m => m.Admin1PageModule)},
+  {path: 'emoji-data',loadChildren: () => import('./home/admin/pages/emoji-data/emoji-data.module').then( m => m.EmojiDataPageModule)},
+  {path: 'socio-data',loadChildren: () => import('./home/admin/pages/socio-data/socio-data.module').then( m => m.SocioDataPageModule)},
+  {path: 'health-data',loadChildren: () => import('./home/admin/pages/health-data/health-data.module').then( m => m.HealthDataPageModule)},
+  {path: 'survey1-data',loadChildren: () => import('./home/admin/pages/survey1-data/survey1-data.module').then( m => m.Survey1DataPageModule)},
+  {path: 'survey2-data',loadChildren: () => import('./home/admin/pages/survey2-data/survey2-data.module').then( m => m.Survey2DataPageModule)},
 ];
 
 @NgModule({

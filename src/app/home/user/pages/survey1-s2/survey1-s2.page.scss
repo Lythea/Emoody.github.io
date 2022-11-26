@@ -1,19 +1,25 @@
 ion-checkbox {
-  --size: 32px;
+  --size: 52px;
   --background-checked: #6815ec;
 }
-ion-checkbox::part(container) {
-  border-radius: 6px;
-  border: 2px solid #6815ec;
+.sc-ion-buttons-md-h {
+  display: block !important;
+}
+ion-menu-button {
+  font-size: 40px !important;
 }
 .menu{
-
+  font-family:'Quicksand';
   width:100%;
   margin-top:10%;
   align-items:center;
+  position:fixed;
+}
+.menu ion-img{
+  width:2%;
 }
 .header{
-  background-color:#FFDA29;
+  background-color:#FFC000;
 }
 ion-button{
   align-items:center;
@@ -28,9 +34,48 @@ ion-button{
   color:#ffffff;
 }
 ion-content  {
-  --ion-background-color:#FFDA29;
+  --ion-background-color:#FFC000;
 }
 h1{
   text-align:center;
-  margin-top:20%;
+}
+input{
+  border-radius: 5px;
+}
+@media screen and (max-width:1366px){
+  .menu{
+    margin-bottom:50%;
+    margin-top:5%;
+  }
+  h1{
+    font-size:50px;
+  }
+  .menu .btn1 ion-button{
+    width:10%;
+    font-size:20px;
+    margin-left:45%;
+    margin-top:20%;
+  }
+}
+@media screen and (max-width:1080px){
+  .sc-ion-buttons-md-h {
+    display: block !important;
+  }
+  .ion-page ion-header ion-toolbar ion-buttons ion-menu-button {
+    font-size:70px !important;
+  }
+  .menu{
+    height:100%;
+    margin-top:15%;
+  }
+  .menu h1{
+    font-size:100px;
+  }
+  .menu .btn1 ion-button{
+    margin-top:100%;
+    margin-left:40%;
+    width:20%;
+    height:50px;
+    font-size:30px;
+  }
 }

@@ -1,3 +1,4 @@
+
 <ion-content>
 <ion-app>
   <div class="head">
@@ -20,22 +21,24 @@
     </ion-header>
   </div>
   </div>
+
   <div class="menu">
+    <div class="part1">
       <ion-item>
         <ion-label>Date</ion-label>
         <ion-text slot="end">{{formattedString}}</ion-text>
-        <hr>
       </ion-item>
+    </div>
     <div class="column">
       <div class="item1">
-        <ion-datetime [presentation]="selectedMode" #datetime *ngIf="showPicker" [value]="dateValue" (ionChange)="setToday()"></ion-datetime><!--(ionChange)="dateChanged(datetime.value)-->
+        <ion-datetime size="cover" [presentation]="selectedMode" #datetime *ngIf="showPicker" [value]="dateValue" (ionChange)="setToday()"></ion-datetime><!--(ionChange)="dateChanged(datetime.value)-->
       </div>
     </div>
       <div class="item2">
         <div class="btnpos">
-          <ion-button class="btns" color="#FFDA29" (click)="socio()">SOCIO-ECONOMICAL SURVEY</ion-button>
-          <ion-button class="btns" color="#FFDA29" (click)="begin()">BEGIN MOOD TRACKING</ion-button>
-          <ion-button class="btns" color="#FFDA29" (click)="health()">HEALTH INDEX</ion-button>
+          <ion-button  class="btns" id="btn1"color="#FFDA29" (click)="socio()">SOCIO-ECONOMICAL <br>SURVEY</ion-button>
+          <ion-button class="btns"  id="btn2"color="#FFDA29" (click)="begin()">BEGIN MOOD <br> TRACKING</ion-button>
+          <ion-button   class="btns"  id="btn3"color="#FFDA29" (click)="health()">HEALTH INDEX</ion-button>
         </div>
       </div>
   </div>

@@ -11,10 +11,16 @@ export class AdminPage implements OnInit {
 
   ngOnInit() {
   }
+  emoji(): void{
+    this.router.navigate(['emoji-data']);
+  }
   begin(): void{
     this.router.navigate(['admin1']);
   }
-  next(): void{
-    this.router.navigate(['admin1']);
+  socio(){
+
+  }
+  health(){
+    
   }
 }
