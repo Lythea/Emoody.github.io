@@ -8,7 +8,7 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  /*
+/*
   constructor(
     private platform: Platform,
     private statusBar: StatusBar,

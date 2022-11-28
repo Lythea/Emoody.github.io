@@ -19,6 +19,7 @@ const routes: Routes = [
   {path: 'health-data',loadChildren: () => import('./home/admin/pages/health-data/health-data.module').then( m => m.HealthDataPageModule)},
   {path: 'survey1-data',loadChildren: () => import('./home/admin/pages/survey1-data/survey1-data.module').then( m => m.Survey1DataPageModule)},
   {path: 'survey2-data',loadChildren: () => import('./home/admin/pages/survey2-data/survey2-data.module').then( m => m.Survey2DataPageModule)},
+  {path: 'attendance-data',loadChildren: () => import('./home/admin/pages/attendance-data/attendance-data.module').then( m => m.AttendanceDataPageModule)},
 ];
 
 @NgModule({

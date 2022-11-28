@@ -29,6 +29,7 @@
     "@ionic/angular": "^6.1.9",
     "canvasjs": "^1.8.3",
     "chart.js": "^2.9.4",
+    "chartjs-plugin-datalabels": "^2.1.0",
     "date-fns": "^2.29.3",
     "ionic-native": "^2.9.0",
     "ionic2-calendar": "^0.6.9",

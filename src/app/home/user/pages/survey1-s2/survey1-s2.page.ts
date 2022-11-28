@@ -45,6 +45,8 @@ export class Survey1S2Page implements OnInit {
   next(): void{
     const formData = new FormData();
     const id = localStorage.getItem('id');
+    const date = localStorage.getItem('date');
+    formData.append('date', date);
     const val1s1 = localStorage.getItem('val1_s1');
     const val2s1 = localStorage.getItem('val2_s1');
     const val3s1 = localStorage.getItem('val3_s1');

@@ -14,6 +14,7 @@ if ($conn->connect_error) {
   }
 
   $id = $_POST['id'];
+  $date = $_POST['date'];
   $sq1 = $_POST['sq1'];
   $sq2 = $_POST['sq2'];
   $sq3 = $_POST['sq3'];
@@ -26,8 +27,8 @@ if ($conn->connect_error) {
   $sq10 = $_POST['sq10'];
   $sq11 = $_POST['sq11'];
 
-  $sql = "INSERT into socio (id,sq1,sq2,sq3,sq4,sq5,sq6,sq7,sq8,sq9,sq10,sq11)
-  VALUES ('$id','$sq1','$sq2','$sq3', '$sq4','$sq5','$sq6','$sq7','$sq8','$sq9','$sq10','$sq11')";
+  $sql = "INSERT into socio (id,date,sq1,sq2,sq3,sq4,sq5,sq6,sq7,sq8,sq9,sq10,sq11)
+  VALUES ('$id','$date','$sq1','$sq2','$sq3','$sq4','$sq5','$sq6','$sq7','$sq8','$sq9','$sq10','$sq11')";
   $result = $conn->query($sql);
     if($result===TRUE){
       echo json_encode(['data' => 'Data Registered']);

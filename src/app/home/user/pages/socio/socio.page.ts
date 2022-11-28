@@ -69,6 +69,7 @@ export class SocioPage implements OnInit {
   next(): void{
     const formData = new FormData();
     const id = localStorage.getItem('id');
+    const date = localStorage.getItem('date');
     const sq1 = localStorage.getItem('sq1');
     const sq2 = localStorage.getItem('sq2');
     const sq3 = localStorage.getItem('sq3');
@@ -81,6 +82,7 @@ export class SocioPage implements OnInit {
     const sq10 = localStorage.getItem('sq10');
     const sq11 = localStorage.getItem('sq11');
     formData.append('id', id);
+    formData.append('date', date);
     formData.append('sq1', sq1);
     formData.append('sq2', sq2);
     formData.append('sq3', sq3);

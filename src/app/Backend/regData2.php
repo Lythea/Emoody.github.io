@@ -14,6 +14,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
   }
   $id = $_POST['id'];
+  $date = $_POST['date'];
   $val1_s1 = $_POST['q1_s1'];
   $val2_s1 = $_POST['q2_s1'];
   $val3_s1 = $_POST['q3_s1'];
@@ -25,9 +26,10 @@ if ($conn->connect_error) {
   $val9_s1= $_POST['q9_s1'];
   $val10_s1= $_POST['q10_s1'];
 
-  $sql = "INSERT into dataset2 (id,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)
+  $sql = "INSERT into dataset2 (id,date,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)
   VALUES (
     '$id',
+    '$date',
     '$val1_s1',
     '$val2_s1',
     '$val3_s1',

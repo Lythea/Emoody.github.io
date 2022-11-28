@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'survey2-data',
     loadChildren: () => import('./pages/survey2-data/survey2-data.module').then( m => m.Survey2DataPageModule)
+  },
+  {
+    path: 'attendance-data',
+    loadChildren: () => import('./pages/attendance-data/attendance-data.module').then( m => m.AttendanceDataPageModule)
   }
 ];
 

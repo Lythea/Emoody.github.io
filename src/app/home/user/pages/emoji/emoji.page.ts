@@ -61,6 +61,7 @@ value_selected: string;
     const formData = new FormData();
     const id = localStorage.getItem('id');
     const date = localStorage.getItem('date');
+    formData.append('date', date);
     const emoji = localStorage.getItem('emoji');
     const range = localStorage.getItem('range');
     formData.append('id', id);
