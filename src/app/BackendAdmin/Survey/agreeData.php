@@ -63,7 +63,7 @@ if ($conn->connect_error) {
   (SELECT COUNT(id) FROM dataset3 WHERE q10='SD' AND date='$date') as q10val1,
   (SELECT COUNT(id) FROM dataset3 WHERE q10='D' AND date='$date') as q10val2,
   (SELECT COUNT(id) FROM dataset3 WHERE q10='SA' AND date='$date') as q10va3,
-  (SELECT COUNT(id) FROM dataset3 WHERE q10='A' AND date='$date') as q10val4,
+  (SELECT COUNT(id) FROM dataset3 WHERE q10='A' AND date='$date') as q10val4
   ;";
 
   $result = $conn->query($sql);

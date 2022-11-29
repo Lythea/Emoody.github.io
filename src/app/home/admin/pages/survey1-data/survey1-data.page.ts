@@ -8,6 +8,7 @@ import { Chart } from 'chart.js';
 })
 
 export class Survey1DataPage {
+
   @ViewChild('barChart1') barChart1;
   @ViewChild('barChart2') barChart2;
   @ViewChild('barChart3') barChart3;
@@ -31,6 +32,7 @@ export class Survey1DataPage {
   bars10: any;
   colorArray: any;
   hrzBars: any;
+  val: any;
 
   q1Yes: any = localStorage.getItem('q1Yes');
   q1No: any = localStorage.getItem('q1No');
@@ -62,6 +64,8 @@ export class Survey1DataPage {
   q10Yes: any = localStorage.getItem('q10Yes');
   q10No: any = localStorage.getItem('q10No');
 
+
+
   constructor(private router: Router) { }
 
   ionViewDidEnter() {
@@ -77,27 +81,85 @@ export class Survey1DataPage {
     this.createPieChart9();
     this.createPieChart10();
   }
-  next(): void{
-    this.router.navigate(['survey1-data']);
+  next(): void{const formData = new FormData();
+    const dateFinal = localStorage.getItem('dateToday');
+    formData.append('dateToday', dateFinal);
+    fetch('http://localhost/newmobileapp/src/app/BackendAdmin/Survey/agreeData.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(value => {
+      localStorage.setItem('q1val1', value.data[0].q1val1);
+      localStorage.setItem('q1val2', value.data[0].q1val2);
+      localStorage.setItem('q1val3', value.data[0].q1val3);
+      localStorage.setItem('q1val4', value.data[0].q1val4);
+
+      localStorage.setItem('q2val1', value.data[0].q2val1);
+      localStorage.setItem('q2val2', value.data[0].q2val2);
+      localStorage.setItem('q2val3', value.data[0].q2val3);
+      localStorage.setItem('q2val4', value.data[0].q2val4);
+
+      localStorage.setItem('q3val1', value.data[0].q3val1);
+      localStorage.setItem('q3val2', value.data[0].q3val2);
+      localStorage.setItem('q3val3', value.data[0].q3val3);
+      localStorage.setItem('q3val4', value.data[0].q3val4);
+
+      localStorage.setItem('q4val1', value.data[0].q4val1);
+      localStorage.setItem('q4val2', value.data[0].q4val2);
+      localStorage.setItem('q4val3', value.data[0].q4val3);
+      localStorage.setItem('q4val4', value.data[0].q4val4);
+
+      localStorage.setItem('q5val1', value.data[0].q5val1);
+      localStorage.setItem('q5val2', value.data[0].q5val2);
+      localStorage.setItem('q5val3', value.data[0].q5val3);
+      localStorage.setItem('q5val4', value.data[0].q5val4);
+
+      localStorage.setItem('q6val1', value.data[0].q6val1);
+      localStorage.setItem('q6val2', value.data[0].q6val2);
+      localStorage.setItem('q6val3', value.data[0].q6val3);
+      localStorage.setItem('q6val4', value.data[0].q6val4);
+
+      localStorage.setItem('q7val1', value.data[0].q7val1);
+      localStorage.setItem('q7val2', value.data[0].q7val2);
+      localStorage.setItem('q7val3', value.data[0].q7val3);
+      localStorage.setItem('q7val4', value.data[0].q7val4);
+
+      localStorage.setItem('q8val1', value.data[0].q8val1);
+      localStorage.setItem('q8val2', value.data[0].q8val2);
+      localStorage.setItem('q8val3', value.data[0].q8val3);
+      localStorage.setItem('q8val4', value.data[0].q8val4);
+
+      localStorage.setItem('q9val1', value.data[0].q9val1);
+      localStorage.setItem('q9val2', value.data[0].q9val2);
+      localStorage.setItem('q9val3', value.data[0].q9val3);
+      localStorage.setItem('q9val4', value.data[0].q9val4);
+
+      localStorage.setItem('q10val1', value.data[0].q10val1);
+      localStorage.setItem('q10val2', value.data[0].q10val2);
+      localStorage.setItem('q10val3', value.data[0].q10val3);
+      localStorage.setItem('q10val4', value.data[0].q10val4);
+
+    });
+    this.router.navigate(['survey2-data']);
   }
   createPieChart1() {
     this.bars1 = new Chart(this.barChart1.nativeElement, {
+
       type: 'pie',
       data: {
         labels: ['Yes', 'No'],
         datasets: [{
-          label: '1',
+          label: '',
           data: [this.q1Yes,this.q1No],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',
-
           ], // array should have same number of elements as number of dataset
           // array should have same number of elements as number of dataset
         }
        ]
       },
-
       options: {
           yAxes: [{
             stacked: true,
@@ -107,12 +169,7 @@ export class Survey1DataPage {
           }],
           xAxes:[{
             stacked:false,
-          }],
-          plugins:{
-            tooltip:{
-              enabled:false,
-            }
-          }
+          }]
       },
     });
   }
@@ -128,8 +185,6 @@ export class Survey1DataPage {
             '#ABDEE6',
             '#CBAACB',
           ], // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-          borderWidth: 1
         },
 
        ]
@@ -160,8 +215,6 @@ export class Survey1DataPage {
             '#CBAACB',
 
           ], // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-          borderWidth: 1
         },
 
        ]
@@ -192,8 +245,6 @@ export class Survey1DataPage {
             '#CBAACB',
 
           ], // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-          borderWidth: 1
         },
 
        ]
@@ -224,8 +275,6 @@ export class Survey1DataPage {
             '#CBAACB',
 
           ], // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-          borderWidth: 1
         },
 
        ]
@@ -256,8 +305,6 @@ export class Survey1DataPage {
             '#CBAACB',
 
           ], // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-          borderWidth: 1
         },
 
        ]
@@ -288,8 +335,6 @@ export class Survey1DataPage {
             '#CBAACB',
 
           ], // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-          borderWidth: 1
         },
 
        ]
@@ -319,8 +364,6 @@ export class Survey1DataPage {
             '#ABDEE6',
             '#CBAACB',
           ], // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-          borderWidth: 1
         },
 
        ]
@@ -351,8 +394,6 @@ export class Survey1DataPage {
             '#CBAACB',
 
           ], // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-          borderWidth: 1
         },
 
        ]
@@ -382,8 +423,6 @@ export class Survey1DataPage {
             '#ABDEE6',
             '#CBAACB',
           ], // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-          borderWidth: 1
         },
        ]
       },

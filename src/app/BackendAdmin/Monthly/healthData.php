@@ -18,6 +18,7 @@ if ($conn->connect_error) {
   $sql = "SELECT
 
   (SELECT COUNT(id) FROM healthindex WHERE q1='Agree' AND date='$date') as hq1,
+
   (SELECT COUNT(id) FROM healthindex WHERE q2='Excellent' AND date='$date') as hq2val1,
   (SELECT COUNT(id) FROM healthindex WHERE q2='Very Good' AND date='$date') as hq2val2,
   (SELECT COUNT(id) FROM healthindex WHERE q2='Good' AND date='$date') as hq2val3,
@@ -90,7 +91,7 @@ if ($conn->connect_error) {
   (SELECT COUNT(id) FROM healthindex WHERE q8='Mild difficulty' AND date='$date') as hq8val2,
   (SELECT COUNT(id) FROM healthindex WHERE q8='Moderate difficulty' AND date='$date') as hq8val3,
   (SELECT COUNT(id) FROM healthindex WHERE q8='Severe difficulty' AND date='$date') as hq8val4,
-  (SELECT COUNT(id) FROM healthindex WHERE q8='So much difficulty that I can't sleep' AND date='$date') as hq8val5,
+  (SELECT COUNT(id) FROM healthindex WHERE q8='So much difficulty that I cant sleep' AND date='$date') as hq8val5,
 
   (SELECT COUNT(id) FROM healthindex WHERE q9r1='6 hours or less' AND date='$date') as hq9r1val1,
   (SELECT COUNT(id) FROM healthindex WHERE q9r1='About 7 hours' AND date='$date') as hq9r1val2,
@@ -107,9 +108,7 @@ if ($conn->connect_error) {
   (SELECT COUNT(id) FROM healthindex WHERE q10='Very Good' AND date='$date') as hq10val1,
   (SELECT COUNT(id) FROM healthindex WHERE q10='Fairly Good' AND date='$date') as hq10val2,
   (SELECT COUNT(id) FROM healthindex WHERE q10='Fairly Poor' AND date='$date') as hq10val3,
-  (SELECT COUNT(id) FROM healthindex WHERE q10='Very Poor' AND date='$date') as hq10val4
-
-  ;";
+  (SELECT COUNT(id) FROM healthindex WHERE q10='Very Poor' AND date='$date') as hq10val4;";
 
   $result = $conn->query($sql);
     if ($result->num_rows > 0) {
