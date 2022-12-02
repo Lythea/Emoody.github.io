@@ -1,5 +1,5 @@
 ion-checkbox {
-  --size: 52px;
+  --size: 25px;
   --background-checked: #6815ec;
 }
 .sc-ion-buttons-md-h {
@@ -11,7 +11,7 @@ ion-menu-button {
 .menu{
   font-family:'Quicksand';
   width:100%;
-  margin-top:10%;
+  margin-top:2%;
   align-items:center;
   position:fixed;
 }
@@ -24,7 +24,7 @@ ion-menu-button {
 ion-button{
   align-items:center;
   text-align: center;
-  margin-top:10%;
+  margin-top:2%;
   margin-left:35%;
   margin-right:40%;
   width:30%;
@@ -42,6 +42,12 @@ h1{
 input{
   border-radius: 5px;
 }
+ion-label{
+  font-size:20px;
+}
+.menu ion-item{
+  margin-top:3%;
+}
 @media screen and (max-width:1366px){
   .menu{
     margin-bottom:50%;
@@ -54,7 +60,10 @@ input{
     width:10%;
     font-size:20px;
     margin-left:45%;
-    margin-top:20%;
+
+  }
+  .menu ion-label{
+    font-size:20px;
   }
 }
 @media screen and (max-width:1080px){
@@ -71,11 +80,25 @@ input{
   .menu h1{
     font-size:100px;
   }
+  .menu ion-img{
+    margin-top:10%;
+    width:5%;
+  }
   .menu .btn1 ion-button{
-    margin-top:100%;
-    margin-left:40%;
-    width:20%;
-    height:50px;
-    font-size:30px;
+    margin-top:10%;
+    margin-left:36%;
+    width:30%;
+    height:70px;
+    font-size:50px;
+  }
+  .menu ion-label{
+    margin-top:10%;
+    font-size:40px;
+  }
+  ion-checkbox {
+    margin-top: 10%;
+    --size: 45px;
+    --background-checked: #6815ec;
   }
 }
+

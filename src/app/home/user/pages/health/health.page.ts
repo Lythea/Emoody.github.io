@@ -236,7 +236,7 @@ val10s3: any;
     formData.append('q9r1', q9r1);
     formData.append('q9r2', q9r2);
 
-    fetch('http://localhost/newmobileapp/src/app/Backend/healthindex.php', {
+    fetch('http://localhost/newmobileapp/src/app/BackendUser/healthindex.php', {
       method: 'POST',
       body: formData
     })

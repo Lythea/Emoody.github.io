@@ -48,6 +48,11 @@ export class SocioPage implements OnInit {
     num1.disabled=true;
     let sq7socio: string;
     sq7socio = value ? 'Yes' : 'No';
+    if (sq7socio === 'Yes'){
+      num1.disabled=true;
+    } else {
+      num1.disabled=false;
+    }
     localStorage.setItem('sq7', sq7socio);
   }
   val8(e8s3) {
@@ -94,7 +99,7 @@ export class SocioPage implements OnInit {
     formData.append('sq9', sq9);
     formData.append('sq10', sq10);
     formData.append('sq11', sq11);
-    fetch('http://localhost/newmobileapp/src/app/Backend/socio.php', {
+    fetch('http://localhost/newmobileapp/src/app/BackendUser/socio.php', {
       method: 'POST',
       body: formData
     })

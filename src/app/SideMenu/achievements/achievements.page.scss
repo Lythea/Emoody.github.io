@@ -1,0 +1,168 @@
+.header{
+  background-color:#FFC000;
+}
+ion-content  {
+  --ion-background-color:#FFC000;
+}
+.menu{
+  font-family: 'Quicksand';
+  height:100%;
+  width:95%;
+}
+.menu .content{
+  margin-top:7%;
+  width:80%;
+  margin-left:17%;
+  font-family: 'Quicksand';
+}
+.menu .content .amain{
+  font-size:80px;
+  margin-left:20%;
+  color:white;
+  text-shadow: black 6px 6px;
+}
+ion-item{
+  width:90%;
+  margin-top:2%;
+}
+.a1{
+  margin-top:2%;
+  height:80px;
+}
+.a2{
+  height:80px;
+}
+.a3{
+
+  height:80px;
+}
+.a4{
+  height:80px;
+}
+.a5{
+  height:80px;
+}
+.a1 .l1{
+  margin-top:2%;
+}
+.a2 .l1{
+  margin-left:2%;
+  margin-top:2%;
+}
+.a3 .l1{
+  margin-left:2%;
+  margin-top:2%;
+}
+.a4 .l1{
+  margin-left:2%;
+  margin-top:2%;
+}
+.a5 .l1{
+  margin-left:1%;
+}
+
+.content .l1{
+  font-size:25px;
+}
+.content .l2{
+  font-size:20px;
+}
+
+
+
+.a1 ion-img{
+  float: left;
+  width:10%;
+}
+.a2 ion-img{
+  float: left;
+  width:6%;
+  margin-left:2%;
+}
+.a3 ion-img{
+  float: left;
+  width:6%;
+  margin-left:2%;
+}
+.a4 ion-img{
+  float: left;
+  width:6%;
+  margin-left:2%;
+}
+.a5 ion-img{
+  float: left;
+  width:7%;
+  margin-left:2%;
+}
+ion-button{
+  margin-left:47%;
+  width:10%;
+  height:45px;
+  border-radius:15px;
+  background-color:#11013F;
+  color:#FFDA29;
+  font-size:25px;
+  font-family: 'Quicksand';
+}
+
+@media screen and (max-width:1080px) {
+  .menu .content{
+    width:100%;
+    align-items: center;
+    text-align: center;
+    margin-right:70%;
+    margin-left:0;
+  }
+  .menu{
+    margin-top:40%;
+    width:100%;
+  }
+  .menu .content .amain{
+    margin-left:5%;
+    font-size:110px;
+  }
+  .menu .content .a1 {
+    margin-top:5%;
+    margin-bottom:5%;
+  }
+  .menu .content .a2 {
+    margin-top:5%;
+    margin-bottom:5%;
+  }
+  .menu .content .a3 {
+    margin-top:5%;
+    margin-bottom:5%;
+  }
+  .menu .content .a4 {
+    margin-top:5%;
+    margin-bottom:5%;
+  }
+  .menu .content .a5 {
+    margin-top:5%;
+    margin-bottom:5%;
+  }
+  .menu .content .a1 ion-label{
+
+    font-size:30px;
+  }
+  .menu .content .a2 ion-label{
+    font-size:30px;
+  }
+  .menu .content .a3 ion-label{
+    font-size:30px;
+  }
+  .menu .content .a4 ion-label{
+    font-size:30px;
+  }
+  .menu .content .a5 ion-label{
+    font-size:30px;
+  }
+  .menu  ion-button{
+    margin-top:10%;
+    width:20%;
+    height:50px;
+    font-size:50px;
+    color:white;
+    margin-left:41%;
+  }
+}

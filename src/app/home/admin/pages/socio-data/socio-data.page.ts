@@ -523,7 +523,7 @@ createBarChart8() {
       {
         label: '',
         data: [this.sq8val1,this.sq8val2,this.sq8val3],
-        backgroundColor: ['#ABDEE6','#CBAACB','#FFFFB5'], // array should have same number of elements as number of dataset
+        backgroundColor: ['#97C1A9','#CBAACB','#FFFFB5'], // array should have same number of elements as number of dataset
       }]
     },
     options: {

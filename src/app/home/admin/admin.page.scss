@@ -10,6 +10,9 @@
   color:#ffffff;
   font-family:'Quicksand';
 }
+ion-content  {
+  --ion-background-color:#FFC000;
+}
 h1{
   font-size:50px;
   text-shadow: #000000 10px 10px;
@@ -29,11 +32,9 @@ ion-button{
 .bmain{
   margin-top:70%;
 }
-ion-content  {
-  --ion-background-color:#FFDA29;
-}
+
 .header{
-  background-color:#FFDA29;
+  background-color:#FFC000;
 }
 @media screen and (max-width:1366px){
   .sc-ion-buttons-md-h {

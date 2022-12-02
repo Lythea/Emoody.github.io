@@ -68,7 +68,7 @@ export class Survey1S2Page implements OnInit {
     formData.append('q8_s1', val8s1);
     formData.append('q9_s1', val9s1);
     formData.append('q10_s1', val10s1);
-    fetch('http://localhost/newmobileapp/src/app/Backend/regData2.php', {
+    fetch('http://localhost/newmobileapp/src/app/BackendUser/regData2.php', {
       method: 'POST',
       body: formData
     })

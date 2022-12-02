@@ -25,7 +25,7 @@ export class AttendanceDataPage {
   ionViewDidEnter() {
     this.createBarChart();
   }
- 
+
   getAttendance(){
 
   }
@@ -173,7 +173,7 @@ export class AttendanceDataPage {
         {
           label: 'Active',
           data: [this.userActive],
-          backgroundColor: 'yellow', // array should have same number of elements as number of dataset
+          backgroundColor: 'blue', // array should have same number of elements as number of dataset
           borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
           borderWidth: 1
         },

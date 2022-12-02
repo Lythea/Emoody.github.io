@@ -42,7 +42,7 @@
       <ion-label >2. Would you say that in general, your health is?</ion-label>
       <ion-list>
         <ion-item lines="none">
-          <ion-select id="q2" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q2($event)">
+          <ion-select id="q2" class="select"  placeholder="CHOOSE:"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q2($event)">
             <ion-select-option value="Excellent">Excellent</ion-select-option>
             <ion-select-option value="Very Good">Very Good  </ion-select-option>
             <ion-select-option value="Good">Good </ion-select-option>
@@ -104,7 +104,7 @@
         <ion-label> 4. Nutrition experts recommend filling half your plate with fruits and vegetables at every meal and snacking occasion. How often do you meet this goal?</ion-label>
         <ion-list>
           <ion-item lines="none">
-            <ion-select id="q4" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q4($event)">
+            <ion-select id="q4" placeholder="CHOOSE:"class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q4($event)">
               <ion-select-option value="Never">Never</ion-select-option>
               <ion-select-option value="Rarely">Rarely</ion-select-option>
               <ion-select-option value="Half of the Time">Half of the Time</ion-select-option>
@@ -118,7 +118,7 @@
         <ion-label> 5. Health experts say that you should do strength training exercises twice a week plus do other activities that increase your heart rate and breathing several days each week. How often do you meet this goal? </ion-label>
         <ion-list>
           <ion-item lines="none">
-            <ion-select id="q5" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q5($event)">
+            <ion-select id="q5" placeholder="CHOOSE:" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q5($event)">
               <ion-select-option value="Never">Never</ion-select-option>
               <ion-select-option value="Rarely">Rarely</ion-select-option>
               <ion-select-option value="Half of the Time">Half of the Time</ion-select-option>
@@ -133,7 +133,7 @@
         </ion-label>
         <ion-list>
           <ion-item lines="none">
-            <ion-select id="q6" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q6($event)">
+            <ion-select id="q6"placeholder="CHOOSE:" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q6($event)">
               <ion-select-option value="Every day">Every day</ion-select-option>
               <ion-select-option value="Some days">Some days</ion-select-option>
               <ion-select-option value="Not at all">Not at all</ion-select-option>
@@ -205,12 +205,12 @@
          </ion-radio-group>
       </ion-grid>
     </div>
-    <div>
+    <div class="num8">
       <ion-item lines="none" id="opt5" disabled="true">
         <ion-label>8. During the past week, to what extent have you had difficulty sleeping because of any physical or emotional problem?</ion-label>
         <ion-list>
           <ion-item lines="none">
-            <ion-select id="q8" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q8($event)">
+            <ion-select id="q8" class="select" placeholder="CHOOSE:" [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q8($event)">
               <ion-select-option value="No difficulty">No difficulty</ion-select-option>
               <ion-select-option value="Mild difficulty">Mild difficulty</ion-select-option>
               <ion-select-option value="Moderate difficulty">Moderate difficulty</ion-select-option>
@@ -254,12 +254,12 @@
          </ion-radio-group>
       </ion-grid>
     </div>
-    <div>
+    <div class="num10">
       <ion-item lines="none" id="opt6" disabled="true">
         <ion-label>10. How would you describe the quality of your sleep on a typical night? </ion-label>
         <ion-list>
           <ion-item lines="none">
-            <ion-select id="q2" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q10($event)">
+            <ion-select id="q2"placeholder="CHOOSE:" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q10($event)">
               <ion-select-option value="Very Good">Very Good</ion-select-option>
               <ion-select-option value="Fairly Good">Fairly Good</ion-select-option>
               <ion-select-option value="Fairly Poor">Fairly Poor</ion-select-option>
@@ -269,7 +269,9 @@
         </ion-list>
       </ion-item>
     </div>
+    <ion-button id="next"color="#250381"(click)="next()" disabled="">Next</ion-button>
   </div>
+
 </div>
-<ion-button id="next"color="#250381"(click)="next()" disabled="">Next</ion-button>
+
 </ion-content>

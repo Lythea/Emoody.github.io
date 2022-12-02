@@ -1,0 +1,66 @@
+
+
+<ion-content>
+  <ion-app>
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Menu Content</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">This is the menu content.</ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+      <ion-header class="basehead">
+        <ion-toolbar style="background-color:#250381">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title class="header"></ion-title>
+        </ion-toolbar>
+      </ion-header>
+    </div>
+    </ion-app>
+
+    <div class="menu">
+      <div class="content">
+        <ion-label class="amain">ACHIEVEMENTS!</ion-label>
+        <div class="a1">
+          <ion-item disabled="" id="achievement1">
+            <ion-img src="assets/Achievements/First Timer.png"></ion-img>
+            <ion-label class="l1">FIRST TIMER </ion-label>
+            <ion-label class="l2">REGISTER YOUR FIRST EVER E-MOODY PROGRESS.</ion-label>
+          </ion-item>
+        </div>
+        <div class="a2">
+          <ion-item disabled="" id="achievement2">
+            <ion-img src="assets/Achievements/I Need Aid.png"></ion-img>
+            <ion-label class="l1">I NEED AID</ion-label><br>
+            <ion-label class="l2">SEEK THROUGH THE SUGGESTIONS TAB FOR THE FIRST TIME.</ion-label>
+          </ion-item>
+        </div>
+        <div class="a3">
+          <ion-item disabled="" id="achievement3">
+          <ion-img src="assets/Achievements/Healthy Living.png"></ion-img>
+          <ion-label class="l1">HEALTHY LIVING</ion-label><br>
+          <ion-label class="l2">FULFILL A TOTAL OF AT LEAST 60% OF HAPPY CHOICES.</ion-label>
+        </ion-item>
+        </div>
+        <div class="a4">
+        <ion-item disabled="" id="achievement4">
+          <ion-img src="assets/Achievements/Loyalty.png"></ion-img>
+          <ion-label class="l1">LOYALTY</ion-label><br>
+          <ion-label class="l2">USE E-MOODY FOR 30 CONSECUTIVE DAYS.</ion-label>
+        </ion-item>
+        </div>
+        <div class="a5">
+        <ion-item disabled="" id="achievement5">
+          <ion-img src="assets/Achievements/Respondent.png"></ion-img>
+          <ion-label class="l1">RESPONDENT</ion-label><br>
+          <ion-label class="l2">SUCCESSFULLY FILL OUT A SOCIO-ECONOMICAL SURVEY.</ion-label>
+        </ion-item>
+        </div>
+      </div>
+      <ion-button (click)="disable()">Done</ion-button>
+    </div>
+</ion-content>

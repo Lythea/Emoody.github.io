@@ -18,8 +18,6 @@
         </ion-toolbar>
       </ion-header>
     </div>
-
-
     <div class="menu" >
       <h1>SOCIO-ECONOMICAL SURVEY</h1>
       <div class="menucontent">
@@ -116,10 +114,10 @@
             </ion-item>
           </ion-list>
         </ion-item>
-        <ion-item >
+        <ion-item lines="none">
           <ion-img src="./assets/Necktie.png"></ion-img>
-          <ion-label>Are you employed?</ion-label>
-          <input type='checkbox' [(ngModel)]="data1s3" (ngModelChange)="val7($event)">
+          <ion-label >Are you employed?</ion-label>
+          <ion-checkbox [(ngModel)]="data1s3" (ngModelChange)="val7($event)" ></ion-checkbox>
         </ion-item>
         <ion-item lines="none" id="opt8" >
           <ion-img src="./assets/Necktie.png"></ion-img>

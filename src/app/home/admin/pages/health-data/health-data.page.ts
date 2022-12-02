@@ -282,7 +282,7 @@ export class HealthDataPage{
         {
           label: [],
           data: [this.hq4val1,this.hq4val2,this.hq4val3,this.hq4val4,this.hq4val5],
-          backgroundColor: ['#ABDEE6','#CBAACB'], // array should have same number of elements as number of dataset
+          backgroundColor: ['#ABDEE6','#CBAACB','#FFFFB5','#FFCCB6','#F3B0C3','#C6DBDA'],
         },
 
       ]
@@ -310,7 +310,7 @@ export class HealthDataPage{
         {
           label: [],
           data: [this.hq5val1,this.hq5val2,this.hq5val3,this.hq5val4,this.hq5val5],
-          backgroundColor: ['#ABDEE6','#CBAACB'], // array should have same number of elements as number of dataset
+          backgroundColor: ['#ABDEE6','#CBAACB','#FFFFB5','#FFCCB6','#F3B0C3','#C6DBDA'],
         },
       ]
       },
@@ -337,7 +337,7 @@ export class HealthDataPage{
         {
           label: [''],
           data: [this.hq6val1,this.hq6val2,this.hq6val3],
-          backgroundColor: ['#ABDEE6','#CBAACB'], // array should have same number of elements as number of dataset
+          backgroundColor: ['#ABDEE6','#CBAACB','#FFFFB5'],
         },
 
       ]
@@ -364,39 +364,38 @@ export class HealthDataPage{
         {
           label: ['None'],
           data: [this.hq7r1val1,this.hq7r2val1,this.hq7r3val1,this.hq7r4val1,this.hq7r5val1],
-          backgroundColor: 'red', // array should have same number of elements as number of dataset
+          backgroundColor: '#100d08', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['Mild'],
           data: [this.hq7r1val2,this.hq7r2val2,this.hq7r3val2,this.hq7r4val2,this.hq7r5val2],
-          backgroundColor: 'blue', // array should have same number of elements as number of dataset
+          backgroundColor:'#2d231a', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['Moderate'],
           data: [this.hq7r1val3,this.hq7r2val3,this.hq7r3val3,this.hq7r4val3,this.hq7r5val3],
-          backgroundColor: 'violet', // array should have same number of elements as number of dataset
+          backgroundColor: '#463626', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['Severe'],
           data: [this.hq7r1val4,this.hq7r2val4,this.hq7r3val4,this.hq7r4val4,this.hq7r5val5],
-          backgroundColor: 'yellow', // array should have same number of elements as number of dataset
+          backgroundColor: '#916c51', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['Extreme'],
           data: [this.hq7r1val5,this.hq7r2val5,this.hq7r3val5,this.hq7r4val5,this.hq7r5val5],
-          backgroundColor: 'green', // array should have same number of elements as number of dataset
+          backgroundColor: '#c18762', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
-        },
-    ]
+        }]
       },
       options: {
         scales: {
@@ -422,7 +421,7 @@ export class HealthDataPage{
         {
           label: [''],
           data: [this.hq8val1,this.hq8val2,this.hq8val3,this.hq8val4,this.hq8val5],
-          backgroundColor: ['#ABDEE6','#CBAACB'], // array should have same number of elements as number of dataset
+          backgroundColor: ['#ABDEE6','#CBAACB','#FFFFB5','#FFCCB6','#F3B0C3','#C6DBDA'],
         },
       ]
       },
@@ -449,35 +448,35 @@ export class HealthDataPage{
         {
           label: ['6 hours or less'],
           data: [this.hq9r1val1,this.hq9r2val1],
-          backgroundColor: 'red', // array should have same number of elements as number of dataset
+          backgroundColor: '#100d08', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['About 7 hours'],
           data: [this.hq9r1val2,this.hq9r2val2],
-          backgroundColor: 'blue', // array should have same number of elements as number of dataset
+          backgroundColor: '#2d231a', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['About 8 hours'],
           data: [this.hq9r1val3,this.hq9r2val3],
-          backgroundColor: 'green', // array should have same number of elements as number of dataset
+          backgroundColor: '#463626', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['About 9 hours'],
           data: [this.hq9r1val4,this.hq9r2val4],
-          backgroundColor: 'yellow', // array should have same number of elements as number of dataset
+          backgroundColor: '#916c51', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['About 10 hours or more'],
           data: [this.hq9r1val5,this.hq9r2val5],
-          backgroundColor: 'orange', // array should have same number of elements as number of dataset
+          backgroundColor: '#c18762', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         }

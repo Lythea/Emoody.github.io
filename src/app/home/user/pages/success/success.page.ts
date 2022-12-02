@@ -11,7 +11,25 @@ export class SuccessPage implements OnInit {
 
   ngOnInit() {
   }
-  next(): void{
-    this.router.navigate(['survey3']);
+  menu(): void{
+    this.router.navigate(['user']);
+  }
+  suggestions(){
+    const formData = new FormData();
+    const id = localStorage.getItem('id');
+    const email = localStorage.getItem('email');
+    const pass = localStorage.getItem('pass');
+    formData.append('id', id);
+    formData.append('email', email);
+    formData.append('pass', pass);
+    fetch('http://localhost/newmobileapp/src/app/BackendUser/suggestions.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(value => {
+    console.log(value.data);
+    });
+    this.router.navigate(['suggestions']);
   }
 }

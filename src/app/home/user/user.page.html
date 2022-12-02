@@ -8,7 +8,11 @@
         <ion-title>Menu Content</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">This is the menu content.</ion-content>
+    <ion-content class="sidemenu">
+      <ion-button (click)="menu()">MAIN MENU</ion-button>
+      <ion-button (click)="achievements()">ACHIEVEMENTS</ion-button>
+      <ion-button (click)="aboutus()">ABOUT US</ion-button>
+    </ion-content>
   </ion-menu>
   <div class="ion-page" id="main-content">
     <ion-header class="basehead">

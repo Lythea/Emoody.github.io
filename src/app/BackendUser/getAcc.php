@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
   $user = $_POST['user'];
   $pass = $_POST['pass'];
-  $sql = "SELECT id,profile FROM datalogin WHERE gmail ='$user' and pass = '$pass'";
+  $sql = "SELECT id,gmail,pass,profile FROM datalogin WHERE gmail ='$user' and pass = '$pass'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       $data = $result->fetch_all(MYSQLI_ASSOC);

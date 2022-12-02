@@ -68,7 +68,7 @@ value_selected: string;
     formData.append('date', date);
     formData.append('emoji', emoji);
     formData.append('range', range);
-    fetch('http://localhost/newmobileapp/src/app/Backend/regData1.php', {
+    fetch('http://localhost/newmobileapp/src/app/BackendUser/regData1.php', {
       method: 'POST',
       body: formData
     })

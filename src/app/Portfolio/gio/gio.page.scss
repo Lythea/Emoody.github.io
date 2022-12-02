@@ -1,0 +1,82 @@
+.ion-padding ion-button{
+  width:100%;
+}
+.menu{
+  position:relative;
+  width:95%;
+  height:200%;
+  margin-bottom:2%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Quicksand';
+  background-color: #250381;
+  margin-left:2.5%;
+  margin-top:5.5%;
+  color:white;
+}
+.menu ion-img{
+  margin-top:2%;
+  width:20%;
+  margin-left:40%;
+}
+.menu h1{
+  font-size:40px;
+  text-shadow: black 5px 5px;
+}
+.menu .l2{
+  font-size:20px;
+}
+.menu .part1{
+  width:50%;
+  align-items: center;
+  text-align: center;
+  margin-left:24%;
+}
+.menu .row{
+  margin-top:5%;
+}
+.menu .row ion-img{
+  width:50%;
+  margin-left:23%;
+}
+ion-content {
+  --ion-background-color:#FFC000;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  height:100%;
+  align-items: center;
+  text-align: center;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.pics .pic1{
+  grid-row: 1 / 2;
+  margin-right:20%;
+}
+.pics .pic1{
+  display: grid;
+  grid-template-columns: auto auto  ;
+}
+.pics .pic1 ion-img{
+  margin-left:10%;
+  width:150%;
+}
+
+.column .part2 .img1{
+  width:150%;
+}
+.column .part2 .img3{
+  width:250%;
+  margin-right:50%;
+}
+.column .part2 ion-label{
+  width:90%;
+}
+.column .part2 .pics{
+  margin-bottom: 3%;;
+  }

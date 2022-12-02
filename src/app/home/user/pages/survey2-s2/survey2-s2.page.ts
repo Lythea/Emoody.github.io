@@ -60,7 +60,7 @@ export class Survey2S2Page implements OnInit {
     formData.append('q8_s2', val8s2);
     formData.append('q9_s2', val9s2);
     formData.append('q10_s2', val10s2);
-    fetch('http://localhost/newmobileapp/src/app/Backend/regData3.php', {
+    fetch('http://localhost/newmobileapp/src/app/BackendUser/regData3.php', {
       method: 'POST',
       body: formData
     })
@@ -68,6 +68,6 @@ export class Survey2S2Page implements OnInit {
     .then(value => {
       console.log(value.data);
     });
-    this.router.navigate(['user']);
+    this.router.navigate(['success']);
   }
 }

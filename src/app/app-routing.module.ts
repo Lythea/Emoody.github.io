@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
-  {path: '',loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  {path: '',loadChildren: () => import('./Portfolio/gio/gio.module').then( m => m.GioPageModule)},
   {path: 'home',loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {path: 'splash',loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)},
   {path: 'user',loadChildren: () => import('./home/user/user.module').then( m => m.UserPageModule)},
@@ -20,6 +20,15 @@ const routes: Routes = [
   {path: 'survey1-data',loadChildren: () => import('./home/admin/pages/survey1-data/survey1-data.module').then( m => m.Survey1DataPageModule)},
   {path: 'survey2-data',loadChildren: () => import('./home/admin/pages/survey2-data/survey2-data.module').then( m => m.Survey2DataPageModule)},
   {path: 'attendance-data',loadChildren: () => import('./home/admin/pages/attendance-data/attendance-data.module').then( m => m.AttendanceDataPageModule)},
+  {path: 'achievements',loadChildren: () => import('./sidemenu/achievements/achievements.module').then( m => m.AchievementsPageModule)},
+  {path: 'aboutus',loadChildren: () => import('./sidemenu/aboutus/aboutus.module').then( m => m.AboutusPageModule)},
+  {path: 'gio',loadChildren: () => import('./Portfolio/gio/gio.module').then( m => m.GioPageModule)},
+  {path: 'hannah',loadChildren: () => import('./Portfolio/hannah/hannah.module').then( m => m.HannahPageModule)},
+  {path: 'ron',loadChildren: () => import('./Portfolio/ron/ron.module').then( m => m.RonPageModule)},
+  {path: 'dianne',loadChildren: () => import('./Portfolio/dianne/dianne.module').then( m => m.DiannePageModule)},
+  {path: 'daniela',loadChildren: () => import('./Portfolio/daniela/daniela.module').then( m => m.DanielaPageModule)},
+  {path: 'yanrei',loadChildren: () => import('./Portfolio/yanrei/yanrei.module').then( m => m.YanreiPageModule)},
+  {path: 'suggestions',loadChildren: () => import('./SideMenu/suggestions/suggestions.module').then( m => m.SuggestionsPageModule)},
 ];
 
 @NgModule({

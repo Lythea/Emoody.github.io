@@ -208,7 +208,7 @@ export class EmojiDataPage {
       localStorage.setItem('q10Yes', value.data[0].q10Yes);
       localStorage.setItem('q10No', value.data[0].q10No);
 
-  
+
     });
 
 
