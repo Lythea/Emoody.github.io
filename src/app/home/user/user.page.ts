@@ -106,7 +106,7 @@ export class UserPage implements OnInit {
         const num1 =document.getElementById('achievement4') as HTMLInputElement;
         num1.disabled=true;
       }
-      else if(this.num1>= 60){
+      else if(this.num1>= 30){
         const num1 =document.getElementById('achievement4') as HTMLInputElement;
         num1.disabled=false;
       }else{

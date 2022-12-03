@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
-  {path: '',loadChildren: () => import('./Portfolio/gio/gio.module').then( m => m.GioPageModule)},
+  {path: '',loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {path: 'home',loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {path: 'splash',loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)},
   {path: 'user',loadChildren: () => import('./home/user/user.module').then( m => m.UserPageModule)},
@@ -29,6 +29,7 @@ const routes: Routes = [
   {path: 'daniela',loadChildren: () => import('./Portfolio/daniela/daniela.module').then( m => m.DanielaPageModule)},
   {path: 'yanrei',loadChildren: () => import('./Portfolio/yanrei/yanrei.module').then( m => m.YanreiPageModule)},
   {path: 'suggestions',loadChildren: () => import('./SideMenu/suggestions/suggestions.module').then( m => m.SuggestionsPageModule)},
+  {path: 'admin',loadChildren: () => import('./home/admin/admin.module').then( m => m.AdminPageModule)},
 ];
 
 @NgModule({

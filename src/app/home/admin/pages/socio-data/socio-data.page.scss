@@ -39,3 +39,23 @@ ion-label{
   font-size:15px;
   color:black;
 }
+@media screen and (max-width:1080px){
+  .chartBox{
+    width:800px;
+    height:400px;
+    margin-left:13%;
+  }
+  ion-label{
+    padding: 10px;
+    font-size: 30px;
+  }
+  ion-button{
+    width:10%;
+    height:45px;
+    border-radius:15px;
+    background-color:#11013F;
+    color:#FFDA29;
+    font-size:25px;
+    font-family: 'Quicksand';
+  }
+}

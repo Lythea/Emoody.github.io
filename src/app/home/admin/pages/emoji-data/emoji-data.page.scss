@@ -31,3 +31,17 @@
 ion-content  {
   --ion-background-color:#FFC000;
 }
+@media screen and (max-width:1080px){
+  ion-card{
+    margin-top:45%;
+  }
+  ion-button{
+    width:10%;
+    height:45px;
+    border-radius:15px;
+    background-color:#11013F;
+    color:#FFDA29;
+    font-size:25px;
+    font-family: 'Quicksand';
+  }
+}

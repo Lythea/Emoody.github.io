@@ -146,6 +146,7 @@ export class HealthDataPage{
     this.createBarChart10();
   }
   createBarChart1(){
+
     this.bars1 = new Chart(this.barChart1.nativeElement, {
       type: 'pie',
       data: {
@@ -163,6 +164,7 @@ export class HealthDataPage{
             stacked: false,
             ticks: {
               beginAtZero: true
+
             }
           }],
           xAxes:[{
@@ -225,11 +227,12 @@ export class HealthDataPage{
           yAxes: [{
             stacked: false,
             ticks: {
-              beginAtZero: true
+              beginAtZero: true,
             }
           }],
           xAxes:[{
             stacked:false,
+
           }]
         }
       }

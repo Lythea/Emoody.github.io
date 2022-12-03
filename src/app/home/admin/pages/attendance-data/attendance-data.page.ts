@@ -17,7 +17,7 @@ export class AttendanceDataPage {
   formattedString='';
   userTotal: any  = localStorage.getItem('userTotal');
   userActive: any = localStorage.getItem('userActive');
-  userInactive = this.userTotal - this.userActive;
+  userInactive =  this.userActive - this.userTotal ;
   constructor(private router: Router) { this.setToday();}
   setToday(){
     this.formattedString = format(new Date(),'MMM d, yyyy');
@@ -190,15 +190,19 @@ export class AttendanceDataPage {
       options: {
         scales: {
           yAxes: [{
+            stacked: false,
             ticks: {
               beginAtZero: true
             }
           }],
-
+          xAxes:[{
+            stacked:false,
+          }]
         }
       }
     });
   }
-
 }
+
+
 
