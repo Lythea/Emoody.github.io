@@ -1,0 +1,150 @@
+ion-content {
+  --ion-background-color:#FFC000;
+}
+.sc-ion-buttons-md-h {
+  display: block !important;
+}
+ion-menu-button {
+  font-size: 70px !important;
+}
+ion-button{width:100%;}
+.menu{
+  position: relative;
+  font-family: 'Quicksand';
+  margin-top:7.5%;
+  background-color:#11013F ;
+  color:#FFC000;
+  align-items: center;
+  text-align: center;
+  height:100%;
+  width:95%;
+  margin-left:2.5%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-bottom: 2.5%;
+}
+.menu .greet{
+  font-size:90px;
+  text-shadow:black 5px 5px;
+}
+.menu ion-img{
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left:40%;
+  width:20%;
+}
+.menu .content .intro1{
+  font-size:15px;
+  color:white;
+}
+.menu .content .intro2{
+  font-size:45px;
+  color:#FFC000;
+  text-shadow:black 5px 5px;
+  margin-bottom:5%;
+}
+.menu .content{
+  margin-top:5%;
+  height:50%;
+}
+
+.menu .content .part2{
+  color:white;
+  margin-top:5%;
+  font-size:30px;
+  height:100%;
+  margin-bottom:40%;
+}
+.part2{
+  height:100%;
+}
+.part2 .set1 ion-label{
+  margin-top: 9%;
+
+}
+.part2 .set1 ion-img{
+  margin-left:35%;
+width:30%;
+}
+.part2 .set2 ion-label{
+  margin-top: 25%;
+  margin-right: 35%;
+  margin-left: 5%;
+}
+.part2 .set2 ion-img{
+  margin-left:15%;
+  margin-right:55%;
+width:70%;
+}
+.part2 .set2{
+  grid-row: 1 ;
+}
+.part2 .set2{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.item1 {
+  width:30px;
+}
+.item2 {
+  width:30px;
+  margin-right: 10%;;
+  margin-left: 1%;;
+}
+.menu .content .intro3{
+  font-size:65px;
+  color:#FFC000;
+  text-shadow:black 5px 5px;
+}
+.part3{
+  width:90%;
+  color:white;
+  margin-left:5%;
+  height:100%;
+}
+
+.s1 ion-img{
+  float:left;
+  width:50%;
+}
+.s1 ion-label{
+  margin-top:20%;
+}
+.part3 .s1{
+  grid-row: 1 ;
+}
+.part3 .s1{
+  display: grid;
+  grid-template-columns: auto auto ;
+}
+
+.s2 ion-img{
+  float:left;
+  width:60%;
+  margin-right:30%;
+}
+.s2 ion-label{
+  margin-top:25%;
+}
+.part3 .s2{
+  grid-row: 1 ;
+}
+.part3 .s2{
+  display: grid;
+  grid-template-columns: auto auto ;
+}
+.s3 ion-img{
+  float:left;
+  width:100%;
+  margin-left:5%;
+}
+.s3 ion-label{
+  margin-top:30%;
+}
+.part3 .s3{
+  grid-row: 1 ;
+}
+.part3 .s3{
+  display: grid;
+  grid-template-columns: auto auto ;
+}

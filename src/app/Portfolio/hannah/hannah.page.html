@@ -1,9 +1,66 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>hannah</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-app>
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Menu Content</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-button class="l0" (click)="gotomenu()">MAIN MENU</ion-button>
+        <ion-button class="l2" (click)="gotoron()">RON</ion-button>
+        <ion-button class="l3" (click)="gotogio()">GIOREVH</ion-button>
+        <ion-button class="l4" (click)="gotodaniela()">DANIELA</ion-button>
+        <ion-button class="l5" (click)="gotoyanrei()">BRYAN</ion-button>
+        <ion-button class="l6" (click)="gotodianne()">DIANNE</ion-button>
+      </ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+      <ion-header class="basehead">
+        <ion-toolbar style="background-color:#250381">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title class="header"></ion-title>
+        </ion-toolbar>
+      </ion-header>
+    </div>
+    <div class="menu">
+      <div class="content">
+      <ion-label class="greet">GREETINGS!</ion-label><br>
+      <ion-label class="intro1">I am Hannah Rose C  Jose . Welcome to my lounge!</ion-label>
+      <ion-img src="assets/Profile/Hannah.jpg"></ion-img>
+      <ion-label class="intro2">HERE IS EVERYTHING THERE IS TO KNOW ABOUT ME!</ion-label>
+      <div class="part2">
+        <div class="set1">
+          <ion-label>I AM 21 YEARS OLD </ion-label>
+          <ion-img src="assets/Portfolio/Hannah/place of birth.png"></ion-img>
+          <ion-label> I WAS BORN AT CALAMBA CITY, LAGUNA</ion-label>
+        </div>
+        <div class="set2">
+          <ion-img class ="item1"src="assets/Portfolio/Hannah/hobbies.jpg"></ion-img>
+          <ion-img  class ="item2" src="assets/Portfolio/Hannah/hobbies2.webp"></ion-img>
+          <ion-img  class ="item3" src="assets/Portfolio/Hannah/hobbies2.jpg"></ion-img>
+        </div>
+        <ion-label>AND MY HOBBIES ARE WATCHING MANGA/ANIME AND BEING A K-POP</ion-label>
+      </div>
+      <ion-label class="intro3">AS FOR MY SCHOOL JOURNEY:</ion-label>
+      <div class="part3">
+        <div class="s1">
+          <ion-img src="assets/Portfolio/Hannah/HS school.png"></ion-img>
+          <ion-label>I STUDIED JUNIOR HIGH SCHOOL AT SAINT MICHAEL'S COLLEGE OF LAGUNA,</ion-label>
+        </div>
+        <div class="s2">
+          <ion-label>I STUDIED SENIOR HIGH SCHOOL AT LYCEUM OF THE PHILIPPINES UNIVERSITY - LAGUNA,</ion-label>
+          <ion-img src="assets/Portfolio/Hannah/SHS school.png"></ion-img>
 
+        </div>
+        <div class="s3">
+          <ion-img src="assets/Portfolio/Gio/BSU Logo (College).png"></ion-img>
+          <ion-label>AND NOW, I AM A COLLEGE STUDENT AT BATANGAS STATE UNIVERSITY!</ion-label>
+        </div>
+     </div>
+     </div>
+    </div>
+  </ion-app>
 </ion-content>

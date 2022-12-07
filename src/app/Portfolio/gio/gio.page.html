@@ -7,12 +7,12 @@
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
-        <ion-button>MAIN MENU</ion-button>
-        <ion-button>HANNAH</ion-button>
-        <ion-button>RON</ion-button>
-        <ion-button>DANIELA</ion-button>
-        <ion-button>DIANNE</ion-button>
-        <ion-button>YANREI</ion-button>
+        <ion-button class="l0" (click)="gotomenu()">MAIN MENU</ion-button>
+        <ion-button class="l1" (click)="gotohannah()">HANNAH</ion-button>
+        <ion-button class="l2" (click)="gotoron()">RON</ion-button>
+        <ion-button class="l4" (click)="gotodaniela()">DANIELA</ion-button>
+        <ion-button class="l5" (click)="gotoyanrei()">BRYAN</ion-button>
+        <ion-button class="l6" (click)="gotodianne()">DIANNE</ion-button>
       </ion-content>
     </ion-menu>
     <div class="ion-page" id="main-content">
@@ -26,48 +26,40 @@
       </ion-header>
     </div>
     <div class="menu">
-      <div class="part1">
-        <ion-img src="assets/Portfolio/Gio/MAIN LOGO.png"></ion-img>
-        <ion-label><h1>GREETINGS</h1></ion-label><br>
-        <ion-label class="l2">I am Giorevh McJude Ortega. Welcome to my lounge!</ion-label>
-      </div>
-      <div class="row">
-        <div class="column">
-            <ion-label>I AM 21 YEARS OLD</ion-label><br>
-            <ion-img src="assets/Portfolio/Gio/Manila.jpg"></ion-img>
-            <ion-label>I WAS BORN AT MANILA, PHILIPPINES</ion-label>
-            <div class="pics">
-              <div class="pic1">
-                <ion-img src="assets/Portfolio/Gio/Genshin Icon.png"></ion-img>
-                <ion-img src="assets/Portfolio/Gio/Valorant icon.png"></ion-img>
-              </div>
-            </div>
-            <ion-label>AND I LOVE PLAYING COMPUTER GAMES</ion-label>
-          </div>
-        <div class="column">
-          <div class="part2">
-            <div class="pics">
-              <div class="pic1">
-                <ion-label>I STUDIED JUNIOR HIGHSCHOOL AT QUEZON NATIONAL HIGH SCHOOL</ion-label>
-                <ion-img class = "img1"src="assets/Portfolio/Gio/Quezon National High School Logo (Junior High School).png"></ion-img>
-              </div>
-            </div>
-            <div class="pics">
-              <div class="pic1">
-                <ion-img class = "img2"src="assets/Portfolio/Gio/Sacred Heart College Logo (Senior High School).png"></ion-img>
-                <ion-label>I STUDIED SENIOR HIGHSCHOOL AT SACRED HEART COLLEGE</ion-label>
-            </div></div>
-            <div class="pics">
-              <div class="pic1">
-              <ion-label>AND NOW, I AM A COLLEGE STUDENT AT BATANGAS STATE UNIVERSITY!</ion-label>
-              <ion-img class = "img3" src="assets/Portfolio/Gio/BSU Logo (College).png"></ion-img>
-              </div></div>
-          </div>
+      <div class="content">
+      <ion-label class="greet">GREETINGS!</ion-label><br>
+      <ion-label class="intro1">I am Giorevh McJude V. Ortega. Welcome to my lounge!</ion-label>
+      <ion-img src="assets/Profile/Gio.jpg"></ion-img>
+      <ion-label class="intro2">HERE IS EVERYTHING THERE IS TO KNOW ABOUT ME!</ion-label>
+      <div class="part2">
+        <div class="set1">
+          <ion-label>I AM 21 YEARS OLD </ion-label>
+          <ion-img src="assets/Portfolio/Gio/Manila.jpg"></ion-img>
+          <ion-label> I WAS BORN AT SAMPALOC, MANILA</ion-label>
         </div>
-        <div class="column">
+        <div class="set2">
+          <ion-img class ="item1"src="assets/Portfolio/Gio/Valorant icon.png"></ion-img>
+          <ion-img  class ="item2" src="assets/Portfolio/Gio/Genshin Icon.png"></ion-img>
+        </div>
+        <ion-label>AND I LOVE PLAYING COMPUTER GAMES, READING MANGA AND WATCHING ANIME</ion-label>
+      </div>
+      <ion-label class="intro3">AS FOR MY SCHOOL JOURNEY:</ion-label>
+      <div class="part3">
+        <div class="s1">
+          <ion-img src="assets/Portfolio/Gio/Quezon National High School Logo (Junior High School).png"></ion-img>
+          <ion-label>I STUDIED JUNIOR HIGH SCHOOL AT QUEZON NATIONAL HIGH SCHOOL,</ion-label>
+        </div>
+        <div class="s2">
+          <ion-label>I STUDIED SENIOR HIGH SCHOOL AT SACRED HEART COLLEGE,</ion-label>
+          <ion-img src="assets/Portfolio/Gio/Sacred Heart College Logo (Senior High School).png"></ion-img>
 
         </div>
-      </div>
+        <div class="s3">
+          <ion-img src="assets/Portfolio/Gio/BSU Logo (College).png"></ion-img>
+          <ion-label>AND NOW, I AM A COLLEGE STUDENT AT BATANGAS STATE UNIVERSITY!</ion-label>
+        </div>
+     </div>
+     </div>
     </div>
   </ion-app>
 </ion-content>

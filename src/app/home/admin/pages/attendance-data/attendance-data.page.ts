@@ -17,7 +17,7 @@ export class AttendanceDataPage {
   formattedString='';
   userTotal: any  = localStorage.getItem('userTotal');
   userActive: any = localStorage.getItem('userActive');
-  userInactive =  this.userActive - this.userTotal ;
+  userInactive =  this.userTotal - this.userActive;
   constructor(private router: Router) { this.setToday();}
   setToday(){
     this.formattedString = format(new Date(),'MMM d, yyyy');

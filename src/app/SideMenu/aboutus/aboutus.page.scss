@@ -18,7 +18,6 @@ ion-content{
 .menu .profile ion-img{
   width:90%;
   height:80%;
-
 }
 .menu .label1{
   color:#ffffff;
@@ -39,7 +38,7 @@ ion-content{
   margin-bottom:5%;
 }
 
-.menu .label .l1{
+.menu .label .l1 {
   margin-left:5%;
 }
 .menu .label .l2{
@@ -57,16 +56,88 @@ ion-content{
 .menu .label .l6{
   margin-left:12%;
 }
-.profile ion-img{
-  grid-row: 1 / 6;
-}
-.profile {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-}
 .label ion-label{
   margin-left:8%;
   font-size:20px;
+
+}
+.menu ion-button{
+  background-color:#11013F;
+  font-family: 'Quicksand';
+}
+@media screen and (max-width:1366px) {
+  ion-content{
+    font-family: 'Quicksand';
+    --ion-background-color:#FFC000;
+  }
+  .menu{
+    height:100%;
+    width:100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .menu .menucontent{
+    margin: 6.5% 2.5%;
+    background-color: #250381;
+    color:#ffffff;
+    align-items: center;
+    height:80%;
+  }
+  .menu .profile ion-img{
+    width:90%;
+    height:80%;
+
+  }
+  .menu .label1{
+    color:#ffffff;
+    font-size:50px;
+    text-shadow: #000000 5px 5px;
+    margin-left:40%;
+  }
+  .menu .label2{
+    color:#ffffff;
+    font-size:50px;
+    text-shadow: #000000 5px 5px;
+    margin-left:30%;
+  }
+  .menu p{
+    width:70%;
+    text-align: center;
+    margin-left:14%;
+    margin-bottom:5%;
+  }
+.menu .label ion-button{
+  background-color: #250381;
+}
+  .menu .label .l1 {
+    margin-left:5%;
+  }
+  .menu .label .l2 {
+    margin-left:11%;
+  }
+  .menu .label .l3 {
+    margin-left:8.5%;
+  }
+  .menu .label .l4 {
+    margin-left:8%;
+  }
+  .menu .label .l5 {
+    margin-left:9%;
+  }
+  .menu .label .l6 {
+    margin-left:10%;
+  }
+  .profile ion-img{
+    grid-row: 1 / 6;
+  }
+  .profile {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+  .label ion-label{
+    margin-left:8%;
+    font-size:20px;
+  }
 }
 @media  screen and (max-width:1080px) {
   .menu{
@@ -108,12 +179,14 @@ ion-content{
   .menu .label .l6{
     margin-left:10%;
   }
+  .profile .img1{
+  margin-left:30%;
+  }
   .profile ion-img{
-    grid-row: 1 / 6;
+    grid-row: 4  / 4;
   }
   .profile {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto ;
   }
-
 }

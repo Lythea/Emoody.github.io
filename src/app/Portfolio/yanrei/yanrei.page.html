@@ -1,9 +1,66 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>yanrei</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-
+  <ion-app>
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Menu Content</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-button class="l0" (click)="gotomenu()">MAIN MENU</ion-button>
+        <ion-button class="l1" (click)="gotohannah()">HANNAH</ion-button>
+        <ion-button class="l2" (click)="gotoron()">RON</ion-button>
+        <ion-button class="l3" (click)="gotogio()">GIOREVH</ion-button>
+        <ion-button class="l4" (click)="gotodaniela()">DANIELA</ion-button>
+        <ion-button class="l6" (click)="gotodianne()">DIANNE</ion-button>
+      </ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+      <ion-header class="basehead">
+        <ion-toolbar style="background-color:#250381">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title class="header"></ion-title>
+        </ion-toolbar>
+      </ion-header>
+    </div>
+    <div class="menu">
+      <div class="content">
+      <ion-label class="greet">GREETINGS!</ion-label><br>
+      <ion-label class="intro1">I am Bryan Andrei Lasi Cabatic. Welcome to my lounge!</ion-label>
+      <ion-img src="assets/Profile/Yanrei.jpg"></ion-img>
+      <ion-label class="intro2">HERE IS EVERYTHING THERE IS TO KNOW ABOUT ME!</ion-label>
+      <div class="part2">
+        <div class="set1">
+          <ion-label>I AM 21 YEARS OLD </ion-label>
+          <ion-img src="assets/Portfolio/Yanrie/birthplace_cavite.png"></ion-img>
+          <ion-label> I WAS BORN AT CAVITE, PHILIPPINES</ion-label>
+        </div>
+        <div class="set2">
+          <ion-img class ="item1"src="assets/Portfolio/Yanrie/hobby1_watchinganime.png"></ion-img>
+          <ion-img  class ="item2" src="assets/Portfolio/Yanrie/hobby2_playgenshin.png"></ion-img>
+          <ion-img  class ="item3" src="assets/Portfolio/Yanrie/hobby3_readmanga.png"></ion-img>
+        </div>
+        <ion-label>AND MY HOBBIES ARE WATCHING ANIME, READING MANGA/MANHWA/MANHUA, AND PLAYNG GENSHIN</ion-label>
+      </div>
+      <ion-label class="intro3">AS FOR MY SCHOOL JOURNEY:</ion-label>
+      <div class="part3">
+        <div class="s1">
+          <ion-img src="assets/Portfolio/Yanrie/ES.png"></ion-img>
+          <ion-label>I STUDIED GRADESCHOOL AT STO. TORIBIO ELEMENTARY SCHOOL,</ion-label>
+        </div>
+        <div class="s2">
+          <ion-label>I STUDIED JUNIOR AND SENIOR HIGH SCHOOL AT SAN CELESTINE INTEGRATED NATIONAL HIGH SCHOOL,</ion-label>
+          <ion-img src="assets/Portfolio/Yanrie/HS.png"></ion-img>
+        </div>
+        <div class="s3">
+          <ion-img src="assets/Portfolio/Gio/BSU Logo (College).png"></ion-img>
+          <ion-label>AND NOW, I AM A COLLEGE STUDENT AT BATANGAS STATE UNIVERSITY!</ion-label>
+        </div>
+     </div>
+     </div>
+    </div>
+  </ion-app>
 </ion-content>
