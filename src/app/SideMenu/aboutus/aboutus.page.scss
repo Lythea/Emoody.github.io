@@ -5,15 +5,14 @@ ion-content{
 .menu{
   height:100%;
   width:100%;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 .menu .menucontent{
-  margin: 6.5% 2.5%;
+  margin-top:2.5%;
+  margin-bottom:2.5%;
   background-color: #250381;
   color:#ffffff;
   align-items: center;
-  height:80%;
+  height:95%;
 }
 .menu .profile ion-img{
   width:90%;
@@ -59,7 +58,24 @@ ion-content{
 .label ion-label{
   margin-left:8%;
   font-size:20px;
-
+}
+.menu .menucontent .roles .r1{
+margin-left:4%;
+}
+.menu .menucontent .roles .r2{
+margin-left:8%;
+}
+.menu .menucontent .roles .r3{
+margin-left:8.5%;
+}
+.menu .menucontent .roles .r4{
+margin-left:8.5%;
+}
+.menu .menucontent .roles .r5{
+margin-left:7%;
+}
+.menu .menucontent .roles .r6{
+margin-left:10%;
 }
 .menu ion-button{
   background-color:#11013F;
@@ -78,6 +94,7 @@ ion-content{
   }
   .menu .menucontent{
     margin: 6.5% 2.5%;
+    margin-bottom:2%;
     background-color: #250381;
     color:#ffffff;
     align-items: center;
@@ -165,16 +182,16 @@ ion-content{
     margin-left:5%;
   }
   .menu .label .l2{
-    margin-left:11%;
+    margin-left:8%;
   }
   .menu .label .l3{
     margin-left:8%;
   }
   .menu .label .l4{
-    margin-left:7%;
+    margin-left:6%;
   }
   .menu .label .l5{
-    margin-left:9%;
+    margin-left:6%;
   }
   .menu .label .l6{
     margin-left:10%;
