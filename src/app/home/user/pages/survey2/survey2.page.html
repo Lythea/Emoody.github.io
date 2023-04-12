@@ -1,0 +1,191 @@
+<ion-content>
+  <ion-app>
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Menu Content</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">This is the menu content.</ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+      <ion-header class="basehead">
+        <ion-toolbar style="background-color:#FFDA29">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title class="header"></ion-title>
+        </ion-toolbar>
+      </ion-header>
+    </div>
+
+
+    <div class="menu">
+      <h1>Daily Questions</h1>
+      <div class="container1">
+        <div class="container">
+          <ion-list >
+            <ion-item class="q1">
+              <ion-img src="./assets/Necktie.png"></ion-img>
+              <ion-label>1. I feel excited about going to work.</ion-label>
+
+              <ion-list class="a1">
+                <ion-item>
+                  <ion-select class="select" interface="popover" placeholder="Choose: "
+                  (ionChange)="val0($event)">
+                    <ion-select-option value="SA">Strongly Agree</ion-select-option>
+                    <ion-select-option value="A"> Agree</ion-select-option>
+                    <ion-select-option value="D"> Disagree</ion-select-option>
+                    <ion-select-option value="SD">Strongly Disagree</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+
+            </ion-item>
+            <ion-item>
+              <ion-img src="./assets/Necktie.png"></ion-img>
+              <ion-label>2. I am very happy when I’m at work.</ion-label>
+              <ion-list>
+                <ion-item>
+                  <ion-select class="select" interface="popover" placeholder="Choose: "
+                  (ionChange)="val1($event)">
+                    <ion-select-option value="SA">Strongly Agree</ion-select-option>
+                    <ion-select-option value="A"> Agree</ion-select-option>
+                    <ion-select-option value="D"> Disagree</ion-select-option>
+                    <ion-select-option value="SD">Strongly Disagree</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <ion-img src="./assets/Necktie.png"></ion-img>
+              <ion-label>3. I’m not stressed at all when I’m at work.</ion-label>
+              <ion-list>
+                <ion-item>
+                  <ion-select class="select" interface="popover" placeholder="Choose: "
+                  (ionChange)="val2($event)">
+                    <ion-select-option value="SA">Strongly Agree</ion-select-option>
+                    <ion-select-option value="A"> Agree</ion-select-option>
+                    <ion-select-option value="D"> Disagree</ion-select-option>
+                    <ion-select-option value="SD">Strongly Disagree</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <ion-img src="./assets/Necktie.png"></ion-img>
+              <ion-label>4. I am productive today and got all the work done.</ion-label>
+              <ion-list>
+                <ion-item>
+                  <ion-select class="select" interface="popover" placeholder="Choose: "
+                  (ionChange)="val3($event)">
+                  <ion-select-option value="SA">Strongly Agree</ion-select-option>
+                  <ion-select-option value="A"> Agree</ion-select-option>
+                  <ion-select-option value="D"> Disagree</ion-select-option>
+                  <ion-select-option value="SD">Strongly Disagree</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <ion-img src="./assets/Necktie.png"></ion-img>
+              <ion-label>5. I feel like I am accepted for who I am at work, and I’m free to be my authentic self.</ion-label>
+              <ion-list>
+                <ion-item>
+                  <ion-select class="select" interface="popover" placeholder="Choose: "
+                  (ionChange)="val4($event)">
+                  <ion-select-option value="SA">Strongly Agree</ion-select-option>
+                  <ion-select-option value="A"> Agree</ion-select-option>
+                  <ion-select-option value="D"> Disagree</ion-select-option>
+                  <ion-select-option value="SD">Strongly Disagree</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <ion-img src="./assets/Necktie.png"></ion-img>
+              <ion-label>6. I still feel energized after a day at work.</ion-label>
+              <ion-list>
+                <ion-item>
+                  <ion-select class="select" interface="popover" placeholder="Choose: "
+                  (ionChange)="val5($event)" [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}">
+                    <ion-select-option value="SA">Strongly Agree</ion-select-option>
+                    <ion-select-option value="A"> Agree</ion-select-option>
+                    <ion-select-option value="D"> Disagree</ion-select-option>
+                    <ion-select-option value="SD">Strongly Disagree</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <ion-img src="./assets/Necktie.png"></ion-img>
+              <ion-label>7. I feel like I have a good sense of work-life balance and I can finish the work day without feeling compelled to keep working at home.</ion-label>
+              <ion-list>
+                <ion-item>
+                  <ion-select class="select" interface="popover" placeholder="Choose: "
+                  (ionChange)="val6($event)">
+                    <ion-select-option value="SA">Strongly Agree</ion-select-option>
+                    <ion-select-option value="A"> Agree</ion-select-option>
+                    <ion-select-option value="D"> Disagree</ion-select-option>
+                    <ion-select-option value="SD">Strongly Disagree</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <ion-img src="./assets/Necktie.png"></ion-img>
+              <ion-label>8. I feel like I am able to disconnect from my work on the weekends.</ion-label>
+              <ion-list>
+                <ion-item>
+                  <ion-select class="select" interface="popover" placeholder="Choose: "
+                  (ionChange)="val7($event)">
+                    <ion-select-option value="SA">Strongly Agree</ion-select-option>
+                    <ion-select-option value="A"> Agree</ion-select-option>
+                    <ion-select-option value="D"> Disagree</ion-select-option>
+                    <ion-select-option value="SD">Strongly Disagree</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <ion-img src="./assets/Necktie.png"></ion-img>
+              <ion-label>9. I’m content with my overall sense of mental well-being at work.</ion-label>
+              <ion-list>
+                <ion-item>
+                  <ion-select class="select" interface="popover" placeholder="Choose: "
+                  (ionChange)="val8($event)">
+                    <ion-select-option value="SA">Strongly Agree</ion-select-option>
+                    <ion-select-option value="A"> Agree</ion-select-option>
+                    <ion-select-option value="D"> Disagree</ion-select-option>
+                    <ion-select-option value="SD">Strongly Disagree</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+            <ion-item>
+              <ion-img src="./assets/Necktie.png"></ion-img>
+              <ion-label>10. I feel fulfilled by the work that I do.</ion-label>
+              <ion-list>
+                <ion-item>
+                  <ion-select class="select" interface="popover" placeholder="Choose: "
+                  (ionChange)="val9($event)">
+                    <ion-select-option value="SA">Strongly Agree</ion-select-option>
+                    <ion-select-option value="A"> Agree</ion-select-option>
+                    <ion-select-option value="D"> Disagree</ion-select-option>
+                    <ion-select-option value="SD">Strongly Disagree</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+            <br>
+          </ion-list>
+        </div>
+      </div>
+
+      <div class="btn1">
+      <ion-button color="#250381"(click)="next()" id ="next">Next</ion-button>
+    </div>
+    </div>
+
+  </ion-app>
+</ion-content>

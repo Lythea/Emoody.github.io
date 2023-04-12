@@ -61,14 +61,15 @@ value_selected: string;
     const formData = new FormData();
     const id = localStorage.getItem('id');
     const date = localStorage.getItem('date');
-    formData.append('date', date);
     const emoji = localStorage.getItem('emoji');
     const range = localStorage.getItem('range');
+
     formData.append('id', id);
     formData.append('date', date);
     formData.append('emoji', emoji);
     formData.append('range', range);
-    fetch('http://localhost/newmobileapp/src/app/BackendUser/regData1.php', {
+
+    fetch('http://localhost/EMOODY/src/app/BackendUser/regData1.php', {
       method: 'POST',
       body: formData
     })
@@ -76,7 +77,7 @@ value_selected: string;
     .then(value => {
       console.log(value.data);
     });
-    this.router.navigate(['survey1-s1']);
+    this.router.navigate(['survey1']);
   }
 
   }

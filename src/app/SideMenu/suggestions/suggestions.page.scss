@@ -7,33 +7,43 @@ ion-content  {
 ion-button{
     align-items:center;
     text-align: center;
-    margin-bottom:3%;
-    margin-left:40%;
+    margin-top:3%;
+
+    margin-left:32%;
     margin-right:40%;
-    width:20%;
-    height:35px;
+    width:40%;
+    height:75px;
     background-color:#250381;
     border-radius:70px;
     color:#ffffff;
+    font-size:70px;
 }
-
 .menu{
+  margin-top:10%;
+  height:90%;
+}
+.menu .container1{
+  overflow-x: hidden;
+  overflow-y: auto;
   position:relative;
-  width:95%;
-  height:100%;
-  margin-top:7.5%;
-  margin-left:2.5%;
+  height:90%;
+  margin-top:2%;
+  margin-left:2%;
+  margin-right:2%;
+  font-family:'Quicksand';
+  color:#ffffff;
+}
+.menu .container{
+  width:100%;
+  height:700%;
   background-color:#250381;
   font-family:'Quicksand';
   color:#ffffff;
-  overflow-x: hidden;
-  overflow-y: auto;
-  margin-bottom:3%;
 }
 .menu .l1{
-  margin-left:30%;
-  text-shadow:black 5px 5px;
-  font-size:70px;
+  margin-left:20%;
+  text-shadow:white 5px 5px;
+  font-size:90px;
 }
 .menu ion-img{
   width:10%;

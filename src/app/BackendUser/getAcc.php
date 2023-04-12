@@ -1,8 +1,8 @@
 <?php
-
 header ('Access-Control-Allow-Origin: *');
 header ('Access-Control-Allow-Headers: *');
 header ('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -15,6 +15,8 @@ if ($conn->connect_error) {
 
   $user = $_POST['user'];
   $pass = $_POST['pass'];
+
+
   $sql = "SELECT id,gmail,pass,profile FROM datalogin WHERE gmail ='$user' and pass = '$pass'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -23,6 +25,9 @@ if ($conn->connect_error) {
     } else {
       echo json_encode(['data'=> 'Not Found!']);
   }
+
+
+
 $conn->close();
 exit();
 ?>

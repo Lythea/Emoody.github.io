@@ -22,7 +22,7 @@ export class SuccessPage implements OnInit {
     formData.append('id', id);
     formData.append('email', email);
     formData.append('pass', pass);
-    fetch('http://localhost/newmobileapp/src/app/BackendUser/suggestions.php', {
+    fetch('http://localhost/EMOODY/src/app/BackendUser/suggestions.php', {
       method: 'POST',
       body: formData
     })

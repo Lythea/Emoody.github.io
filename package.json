@@ -31,6 +31,7 @@
     "chart.js": "^2.9.4",
     "chartjs-plugin-datalabels": "^2.1.0",
     "date-fns": "^2.29.3",
+    "firebase": "^9.18.0",
     "ionic-native": "^2.9.0",
     "ionic2-calendar": "^0.6.9",
     "ionicons": "^6.0.3",
@@ -68,7 +69,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
-    "protractor": "~7.0.0",
+    "protractor": "^3.3.0",
     "ts-node": "~8.3.0",
     "typescript": "~4.7.3"
   },

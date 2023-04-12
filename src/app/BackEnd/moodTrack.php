@@ -1,8 +1,8 @@
 <?php
-
 header ('Access-Control-Allow-Origin: *');
 header ('Access-Control-Allow-Headers: *');
 header ('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -13,17 +13,19 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
   }
 
-  $date = $_POST['date'];
   $id = $_POST['id'];
-  $emoji = $_POST['emoji'];
-  $range = $_POST['range'];
+  $date = $_POST['date'];
 
-  $sql = "INSERT into dataset1 (id,date,emoji,scale) VALUES ('$id','$date','$emoji','$range')";
-  $result = $conn->query($sql);
-    if($result===TRUE){
-      echo json_encode(['data' => 'Date registered']);
-    }else
-      echo json_encode(['data' => 'Error']);
+  $sql = "SELECT id,date,emoji,scale FROM dataset1 WHERE id= '$id' and date = '$date'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+      $data = $result->fetch_all(MYSQLI_ASSOC);
+      echo json_encode(['data' => $data]);
+    } else {
+      echo json_encode(['data'=> 'Not Found!']);
+  }
+
+
 $conn->close();
 exit();
 ?>

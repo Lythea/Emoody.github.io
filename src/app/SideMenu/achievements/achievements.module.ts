@@ -18,3 +18,5 @@ import { AchievementsPage } from './achievements.page';
   declarations: [AchievementsPage]
 })
 export class AchievementsPageModule {}
+
+export { AchievementsPage };

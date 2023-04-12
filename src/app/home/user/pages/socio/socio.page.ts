@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable prefer-arrow/prefer-arrow-functions */
-/* eslint-disable prefer-const */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { getElement } from 'ionicons/dist/types/stencil-public-runtime';
 @Component({
   selector: 'app-socio',
   templateUrl: './socio.page.html',
@@ -11,102 +9,118 @@ import { Router } from '@angular/router';
 export class SocioPage implements OnInit {
   logs: string[] = [];
   data1s3: any;
-  selectedValue: any;
-  value_selected: any;
-  fval: any;
-  disableSelector: boolean;
+  val: any = [];
+  finalData: any = [];
+  newDate: any = [] ;
+  finalDate: any= [];
   constructor(private router: Router) { }
   ngOnInit() {
   }
 
-  val1(e1s3) {
-    const sq1socio =e1s3.detail.value;
-    localStorage.setItem('sq1', sq1socio);
+  val1(data1) {
+    this.val[1] =data1.detail.value;
   }
-  val2(e2s3) {
-    const sq2socio = e2s3.detail.value;
-    localStorage.setItem('sq2', sq2socio);
+  val2(data2) {
+    this.val[2] =data2.detail.value;
   }
-  val3(e3s3) {
-    const sq3socio = e3s3.detail.value;
-    localStorage.setItem('sq3', sq3socio);
+  val3(data3) {
+    this.val[3]=data3.detail.value;
   }
-  val4(e4s3) {
-    const sq4socio = e4s3.detail.value;
-    localStorage.setItem('sq4', sq4socio);
+  val4(data4) {
+    this.val[4]=data4.detail.value;
   }
-  val5(e5s3) {
-    const sq5socio = e5s3.detail.value;
-    localStorage.setItem('sq5', sq5socio);
+  val5(data5) {
+    this.val[5] =data5.detail.value;
   }
-  val6(e6s3) {
-    const sq6socio = e6s3.detail.value;
-    localStorage.setItem('sq6', sq6socio);
+  val6(data6) {
+    this.val[6] =data6.detail.value;
   }
-  val7(value: boolean): void {
-    const num1 =document.getElementById('opt8') as HTMLInputElement;
-    num1.disabled=true;
-    let sq7socio: string;
-    sq7socio = value ? 'Yes' : 'No';
-    if (sq7socio === 'Yes'){
-      num1.disabled=true;
-    } else {
-      num1.disabled=false;
-    }
-    localStorage.setItem('sq7', sq7socio);
+  val7(data7) {
+    this.val[7]= data7 ? 'Yes' : 'No';
+      if(this.val[7]=== 'Yes'){
+        const num8 = document.getElementById('num8') as HTMLInputElement;
+        num8.disabled=false;
+      }else if(this.val[7]=== 'No'){
+        const num8 = document.getElementById('num8') as HTMLInputElement;
+        num8.disabled=true;
+      }
   }
-  val8(e8s3) {
-    const sq8socio = e8s3.detail.value;
-    localStorage.setItem('sq8', sq8socio);
+  val8(data8) {
+    this.val[8] =data8.detail.value;
   }
-  val9(e9s3) {
-    const sq9socio = e9s3.detail.value;
-    localStorage.setItem('sq9', sq9socio);
+  val9(data9) {
+    this.val[9] =data9.detail.value;
   }
-  val10(e10s3) {
-    const sq10socio = e10s3.detail.value;
-    localStorage.setItem('sq10', sq10socio);
+  val10(data10) {
+    this.val[10] =data10.detail.value;
   }
-  val11(e11s3) {
-    const sq11socio = e11s3.detail.value;
-    localStorage.setItem('sq11', sq11socio );
+  val11(data11) {
+    this.val[11] =data11.detail.value;
   }
   next(): void{
-    const formData = new FormData();
-    const id = localStorage.getItem('id');
-    const date = localStorage.getItem('date');
-    const sq1 = localStorage.getItem('sq1');
-    const sq2 = localStorage.getItem('sq2');
-    const sq3 = localStorage.getItem('sq3');
-    const sq4 = localStorage.getItem('sq4');
-    const sq5 = localStorage.getItem('sq5');
-    const sq6 = localStorage.getItem('sq6');
-    const sq7 = localStorage.getItem('sq7');
-    const sq8 = localStorage.getItem('sq8');
-    const sq9 = localStorage.getItem('sq9');
-    const sq10 = localStorage.getItem('sq10');
-    const sq11 = localStorage.getItem('sq11');
-    formData.append('id', id);
-    formData.append('date', date);
-    formData.append('sq1', sq1);
-    formData.append('sq2', sq2);
-    formData.append('sq3', sq3);
-    formData.append('sq4', sq4);
-    formData.append('sq5', sq5);
-    formData.append('sq6', sq6);
-    formData.append('sq7', sq7);
-    formData.append('sq8', sq8);
-    formData.append('sq9', sq9);
-    formData.append('sq10', sq10);
-    formData.append('sq11', sq11);
-    fetch('http://localhost/newmobileapp/src/app/BackendUser/socio.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(value => {
-      console.log(value.data);
-    });
-    this.router.navigate(['user']);
+    if(!this.val[1] || !this.val[2] || !this.val[3] || !this.val[4] || !this.val[5] || !this.val[6] ||
+       !this.val[9] || !this.val[10] || !this.val[11] ){
+        alert('You must answer all the questions');
+          const formData = new FormData();
+          const id = localStorage.getItem('id');
+          const date1 = localStorage.getItem('date1');
+          const date2 = localStorage.getItem('date2');
+          formData.append('id', id);
+          formData.append('date1', date1);
+          formData.append('date2', date2);
+          fetch('http://localhost/EMOODY/src/app/BackEnd/resetSocio.php', {
+                      method: 'POST',
+                      body: formData
+                      })
+                      .then(response => response.json())
+                      .then(value => {
+                        if (value.data === 'Deleted Successfully!'){
+                          alert('Answers been reset');
+                        }else if (value.data !== 'Deleted Successfully!'){
+                          alert('Try Again Later');
+                        }else {
+                        console.log('Error');
+                        }
+                      });
+
+      }else{
+        if(!this.val[7]){
+          this.val[7]='Yes';}
+        if(!this.val[8] || this.val[8] === 'No'){
+          this.val[8]='Me';}
+        const formData = new FormData();
+        const id = localStorage.getItem('id');
+        const dateVal = localStorage.getItem('finaldate');
+        formData.append('id', id);
+        formData.append('dateVal', dateVal);
+        for (let i = 1; i < 4; i++) {
+          this.finalDate[i] =localStorage.getItem('newDate'+i);
+        }
+        for (let i = 1; i < 4; i++) {
+          formData.append('date' + i, this.finalDate[i]);
+        }
+
+        for (let i = 1; i < 12; i++) {
+          localStorage.setItem('sval'+i, this.val[i]);
+        }
+        for (let i = 1; i < 12; i++) {
+          this.finalData[i] =localStorage.getItem('sval'+ i);
+        }
+        for (let i = 1; i < 12; i++) {
+            formData.append('data' + i, this.finalData[i]);
+          }
+        fetch('http://localhost/EMOODY/src/app/BackendUser/Socio.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(value => {
+          console.log(value.data);
+          this.router.navigate(['user']);
+        });
+
+      }
+      }
+
   }
-}
+

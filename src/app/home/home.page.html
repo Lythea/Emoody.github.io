@@ -1,4 +1,11 @@
 <ion-content class="body"[fullscreen]="true">
+
+  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"></script>
+
+  <script src="index.js"></script>
+
   <div class="all">
     <div class="logo">
       <ion-img src="assets/Logo.png"></ion-img>
@@ -16,10 +23,10 @@
           </ion-item>
           <ion-item lines="none">
             <ion-label class="label" position="stacked">PASSWORD:</ion-label>
-            <ion-input  placeholder="SR-CODE" id="password"name="password"formControlName="password"></ion-input>
+            <ion-input  placeholder="SR-CODE" id="password"name="password" formControlName="password" type ="password"></ion-input>
           </ion-item>
         </ion-list>
-        <ion-button color="#11013F" name ="button1"(click)="try1(login.value)" [disabled]="login.invalid">LOGIN</ion-button>
+        <ion-button color="#11013F" name ="button1" (click)="try1(login.value)" [disabled]="login.invalid">LOGIN</ion-button>
         </form>
       </div>
     </div>

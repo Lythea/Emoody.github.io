@@ -19,259 +19,246 @@
       </ion-header>
     </div>
   </div>
-    <div class="output">
-      <div class="terms">
-        <ion-label>1. Before you begin the survey, please understand the following:<br>
-          ­<br>- Your participation in this survey is voluntary. In the course of completing this survey, you may refuse to answer specific questions. You may also choose to end the survey at any time. ­
-          ­<br>- There are no right or wrong answers—we want to hear about your experiences and opinions. ­
-          ­<br>- All of the answers you provide will be maintained in a secure manner. We will not disclose your responses or anything about you. Your name will not be linked to any responses you provide in this survey. ­
-          ­<br>- Your responses will be combined with those from other employees to provide an overall average for feedback about the organization. The results will be used to guide decisions about policies and programs related to employee health, safety, and wellness. ­
-          ­<br>- There are no risks or rewards anticipated for completing the survey. However, it is possible that programs developed in the future may benefit you and your coworkers
-        </ion-label>
+
+  <div class="menu">
+    <h1>Health Index</h1>
+    <div class="container1">
+      <div class="container">
+    <div class="questions">
+      <ion-item lines="none" id="q1">
+        <ion-label >1. Would you say that in general, your health is?</ion-label>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-select id="dd1" class="select"  placeholder="CHOOSE:"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q2($event)">
+              <ion-select-option value="Excellent">Excellent</ion-select-option>
+              <ion-select-option value="Very Good">Very Good  </ion-select-option>
+              <ion-select-option value="Good">Good </ion-select-option>
+              <ion-select-option value="Fair">Fair</ion-select-option>
+              <ion-select-option value="Poor">Poor </ion-select-option>
+              <ion-select-option value="Dont know or Not Sure">Don't know / Not Sure </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+      <div class="grid1">
+        <ion-label style="margin-left:1.3%;" id="q2">2. Has a doctor or other healthcare provider told you that you have any of the following conditions? If so, is this condition currently being treated? </ion-label><br>
+        <ion-label style="margin-left:3%" id="q3">  Check all that apply.</ion-label>
+        <ion-grid>
+          <ion-row class="align1">
+            <ion-col></ion-col>
+            <ion-col size="6" size-md="4" size-lg="3">Diagnosed</ion-col>
+            <ion-col size="6" size-md="4" size-lg="3">Taking Medicine For</ion-col>
+          </ion-row>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[1]" >
+            <ion-row>
+              <ion-col >a) Elevated blood sugar or  diabetes</ion-col>
+              <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="table1_r1" value="Diagnosed"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="table1_r2" value="Taking Medicine For"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[2]" >
+            <ion-row>
+              <ion-col >b) High blood  pressure/hypertension</ion-col>
+              <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="table1_r3" value="Diagnosed"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="table1_r4" value="Taking Medicine For"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[3]">
+            <ion-row>
+              <ion-col >c) Elevated cholesterol level </ion-col>
+              <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="table1_r5" value="Diagnosed"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="table1_r6" value="Taking Medicine For"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[4]">
+            <ion-row>
+              <ion-col >d) Low back disease or spine problems</ion-col>
+              <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="table1_r7" value="Diagnosed"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="table1_r8" value="Taking Medicine For"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[5]">
+            <ion-row>
+              <ion-col >e) Anxiety/depression</ion-col>
+              <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="table1_r9" value="Diagnosed"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="table1_r10" value="Taking Medicine For"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+        </ion-grid>
       </div>
-  <div class="step1">
-    <ion-label class="num1">If you would like to participate, please click "Agree" to indicate you have read the information on this page.</ion-label>
-    <br>
-    <ion-radio-group value="custom-checked" [(ngModel)]="value_selected1">
-      <ion-radio (click) = "agree()" value="Agree"></ion-radio>
-      <ion-label>Agree</ion-label>
-    </ion-radio-group>
-  </div>
-  <div class="questions">
-    <ion-item lines="none" id="opt1" disabled="true">
-      <ion-label >2. Would you say that in general, your health is?</ion-label>
-      <ion-list>
-        <ion-item lines="none">
-          <ion-select id="q2" class="select"  placeholder="CHOOSE:"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q2($event)">
-            <ion-select-option value="Excellent">Excellent</ion-select-option>
-            <ion-select-option value="Very Good">Very Good  </ion-select-option>
-            <ion-select-option value="Good">Good </ion-select-option>
-            <ion-select-option value="Fair">Fair</ion-select-option>
-            <ion-select-option value="Poor">Poor </ion-select-option>
-            <ion-select-option value="Dont know or Not Sure">Don't know / Not Sure </ion-select-option>
-          </ion-select>
+      <div class="radmain">
+        <ion-item lines="none" id="q4">
+          <ion-label> 3. Nutrition experts recommend filling half your plate with fruits and vegetables at every meal and snacking occasion. How often do you meet this goal?</ion-label>
+          <ion-list>
+            <ion-item lines="none">
+              <ion-select id="dd2" placeholder="CHOOSE:"class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q4($event)">
+                <ion-select-option value="Never">Never</ion-select-option>
+                <ion-select-option value="Rarely">Rarely</ion-select-option>
+                <ion-select-option value="Half of the Time">Half of the Time</ion-select-option>
+                <ion-select-option value="Often">Often</ion-select-option>
+                <ion-select-option value="Always">Always</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
         </ion-item>
-      </ion-list>
-    </ion-item>
-    <div class="grid1">
-      <ion-label style="margin-left:1.3%;">3. Has a doctor or other healthcare provider told you that you have any of the following conditions? If so, is this condition currently being treated? </ion-label><br>
-      <ion-label style="margin-left:3%">  Check all that apply.</ion-label>
-      <ion-grid>
-        <ion-row class="align1">
-          <ion-col></ion-col>
-          <ion-col size="6" size-md="4" size-lg="3">Diagnosed</ion-col>
-          <ion-col size="6" size-md="4" size-lg="3">Taking Medicine For</ion-col>
-        </ion-row>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected2" >
-          <ion-row>
-            <ion-col >a) Elevated blood sugar or  diabetes</ion-col>
-            <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="g1_r1"disabled=""  value="Diagnosed"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="g1_r2"disabled=""  value="Taking Medicine For"></ion-radio></ion-col>
+        <ion-item lines="none" id="q5">
+          <ion-label> 4. Health experts say that you should do strength training exercises twice a week plus do other activities that increase your heart rate and breathing several days each week. How often do you meet this goal? </ion-label>
+          <ion-list>
+            <ion-item lines="none">
+              <ion-select id="dd3" placeholder="CHOOSE:" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q5($event)">
+                <ion-select-option value="Never">Never</ion-select-option>
+                <ion-select-option value="Rarely">Rarely</ion-select-option>
+                <ion-select-option value="Half of the Time">Half of the Time</ion-select-option>
+                <ion-select-option value="Often">Often</ion-select-option>
+                <ion-select-option value="Always">Always</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+        <ion-item lines="none" id="q6">
+          <ion-label>5. Do you now smoke cigarettes every day, some days, or not at all?
+          </ion-label>
+          <ion-list>
+            <ion-item lines="none">
+              <ion-select id="dd4"placeholder="CHOOSE:" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q6($event)">
+                <ion-select-option value="Every day">Every day</ion-select-option>
+                <ion-select-option value="Some days">Some days</ion-select-option>
+                <ion-select-option value="Not at all">Not at all</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+      </div>
+      <div class="grid2">
+        <ion-label style="margin-left:1.3%;"id="q7">6. During the past 3 months, to what extent have you had pain, aching, numbness or tingling in any of these body areas? </ion-label>
+        <ion-grid>
+          <ion-row class="align1">
+            <ion-col></ion-col>
+            <ion-col size="6" size-md="4" size-lg="1.5">None</ion-col>
+            <ion-col size="6" size-md="4" size-lg="1.5">Mild</ion-col>
+            <ion-col size="6" size-md="4" size-lg="1.5">Moderate</ion-col>
+            <ion-col size="6" size-md="4" size-lg="1.5">Severe</ion-col>
+            <ion-col size="6" size-md="4" size-lg="1.5">Extreme</ion-col>
           </ion-row>
-         </ion-radio-group>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected3" disabled="" >
-          <ion-row>
-            <ion-col >b) High blood  pressure/hypertension</ion-col>
-            <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="g1_r3"disabled=""  value="Diagnosed"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="g1_r4"disabled=""  value="Taking Medicine For"></ion-radio></ion-col>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[6]" >
+            <ion-row>
+              <ion-col >a. Hand or wrist</ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r1" value="None"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r2" value="Mild"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r3" value="Moderate"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r4" value="Severe"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r5" value="Extreme"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[7]" >
+            <ion-row>
+              <ion-col >b. Shoulder, neck, or upper back</ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r6" value="None"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r7" value="Mild"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r8" value="Moderate"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r9" value="Severe"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r10" value="Extreme"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[8]" >
+            <ion-row>
+              <ion-col >c. Low back</ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r11" value="None"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r11" value="Mild"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r13" value="Moderate"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r14" value="Severe"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r15" value="Extreme"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[9]">
+            <ion-row>
+              <ion-col >d. Knee</ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r16" value="None"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r17" value="Mild"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r18" value="Moderate"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r19" value="Severe"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r20" value="Extreme"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[10]">
+            <ion-row>
+              <ion-col >e. Foot</ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r21" value="None"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r22" value="Mild"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r23" value="Moderate"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r24" value="Severe"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table2_r25" value="Extreme"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+        </ion-grid>
+      </div>
+      <div class="num8">
+        <ion-item lines="none" id="q8">
+          <ion-label>7. During the past week, to what extent have you had difficulty sleeping because of any physical or emotional problem?</ion-label>
+          <ion-list>
+            <ion-item lines="none">
+              <ion-select id="dd5" class="select" placeholder="CHOOSE:" [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q8($event)">
+                <ion-select-option value="No difficulty">No difficulty</ion-select-option>
+                <ion-select-option value="Mild difficulty">Mild difficulty</ion-select-option>
+                <ion-select-option value="Moderate difficulty">Moderate difficulty</ion-select-option>
+                <ion-select-option value="Severe difficulty ">Severe difficulty </ion-select-option>
+                <ion-select-option value="So much difficulty that I cant sleep">So much difficulty that I can't sleep</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+      </div>
+      <div class="grid3">
+        <ion-label style="margin-left:1.3%;" id="q9">8. Please answer the following questions about sleep.  </ion-label>
+        <ion-grid>
+          <ion-row class="align1">
+            <ion-col></ion-col>
+            <ion-col size="6" size-md="4" size-lg="1.5">6 hours or less</ion-col>
+            <ion-col size="6" size-md="4" size-lg="1.5">About 7 hours</ion-col>
+            <ion-col size="6" size-md="4" size-lg="1.5">About 8 hours</ion-col>
+            <ion-col size="6" size-md="4" size-lg="1.5">About 9 hours</ion-col>
+            <ion-col size="6" size-md="4" size-lg="1.5">About 10 hours or more</ion-col>
           </ion-row>
-         </ion-radio-group>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected4" disabled="" >
-          <ion-row>
-            <ion-col >c) Elevated cholesterol level </ion-col>
-            <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="g1_r5"disabled=""  value="Diagnosed"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="g1_r6"disabled=""  value="Taking Medicine For"></ion-radio></ion-col>
-          </ion-row>
-         </ion-radio-group>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected5" disabled="" >
-          <ion-row>
-            <ion-col >d) Low back disease or spine problems</ion-col>
-            <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="g1_r7"disabled=""  value="Diagnosed"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="g1_r8"disabled=""  value="Taking Medicine For"></ion-radio></ion-col>
-          </ion-row>
-         </ion-radio-group>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected6" disabled="" >
-          <ion-row>
-            <ion-col >e) Anxiety/depression</ion-col>
-            <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="g1_r9"disabled=""  value="Diagnosed"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="3"><ion-radio id="g1_r10"disabled=""  value="Taking Medicine For"></ion-radio></ion-col>
-          </ion-row>
-         </ion-radio-group>
-      </ion-grid>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[11]" >
+            <ion-row>
+              <ion-col >a. ) During the work week,  about how many hours of sleep do you typically get per 24­hour period?</ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table3_r1" value="6 hours or less"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table3_r2" value="About 7 hours"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table3_r3" value="About 8 hours"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table3_r4" value="About 9 hours"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table3_r5" value="About 10 hours or more"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+           <ion-radio-group value="custom-checked" [(ngModel)]="radio[12]" disabled="" >
+            <ion-row>
+              <ion-col >b) How many hours of sleep do you usually need to have good functioning the next day? </ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table3_r6" value="6 hours or less"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table3_r7" value="About 7 hours"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table3_r8" value="About 8 hours"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table3_r9" value="About 9 hours"></ion-radio></ion-col>
+              <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="table3_r10" value="About 10 hours or more"></ion-radio></ion-col>
+            </ion-row>
+           </ion-radio-group>
+        </ion-grid>
+      </div>
+      <div class="num10">
+        <ion-item lines="none" id="q10">
+          <ion-label>9. How would you describe the quality of your sleep on a typical night? </ion-label>
+          <ion-list>
+            <ion-item lines="none">
+              <ion-select id="dd6"placeholder="CHOOSE:" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q10($event)">
+                <ion-select-option value="Very Good">Very Good</ion-select-option>
+                <ion-select-option value="Fairly Good">Fairly Good</ion-select-option>
+                <ion-select-option value="Fairly Poor">Fairly Poor</ion-select-option>
+                <ion-select-option value="Very Poor">Very Poor</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+      </div>
+        </div>
+      </div>
     </div>
-    <div class="radmain">
-      <ion-item lines="none" id="opt2" disabled="true">
-        <ion-label> 4. Nutrition experts recommend filling half your plate with fruits and vegetables at every meal and snacking occasion. How often do you meet this goal?</ion-label>
-        <ion-list>
-          <ion-item lines="none">
-            <ion-select id="q4" placeholder="CHOOSE:"class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q4($event)">
-              <ion-select-option value="Never">Never</ion-select-option>
-              <ion-select-option value="Rarely">Rarely</ion-select-option>
-              <ion-select-option value="Half of the Time">Half of the Time</ion-select-option>
-              <ion-select-option value="Often">Often</ion-select-option>
-              <ion-select-option value="Always">Always</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-      </ion-item>
-      <ion-item lines="none" id="opt3" disabled="true">
-        <ion-label> 5. Health experts say that you should do strength training exercises twice a week plus do other activities that increase your heart rate and breathing several days each week. How often do you meet this goal? </ion-label>
-        <ion-list>
-          <ion-item lines="none">
-            <ion-select id="q5" placeholder="CHOOSE:" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q5($event)">
-              <ion-select-option value="Never">Never</ion-select-option>
-              <ion-select-option value="Rarely">Rarely</ion-select-option>
-              <ion-select-option value="Half of the Time">Half of the Time</ion-select-option>
-              <ion-select-option value="Often">Often</ion-select-option>
-              <ion-select-option value="Always">Always</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-      </ion-item>
-      <ion-item lines="none" id="opt4" disabled="true">
-        <ion-label>6. Do you now smoke cigarettes every day, some days, or not at all?
-        </ion-label>
-        <ion-list>
-          <ion-item lines="none">
-            <ion-select id="q6"placeholder="CHOOSE:" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q6($event)">
-              <ion-select-option value="Every day">Every day</ion-select-option>
-              <ion-select-option value="Some days">Some days</ion-select-option>
-              <ion-select-option value="Not at all">Not at all</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-      </ion-item>
-    </div>
-    <div class="grid2">
-      <ion-label style="margin-left:1.3%;">7. During the past 3 months, to what extent have you had pain, aching, numbness or tingling in any of these body areas? </ion-label>
-      <ion-grid>
-        <ion-row class="align1">
-          <ion-col></ion-col>
-          <ion-col size="6" size-md="4" size-lg="1.5">None</ion-col>
-          <ion-col size="6" size-md="4" size-lg="1.5">Mild</ion-col>
-          <ion-col size="6" size-md="4" size-lg="1.5">Moderate</ion-col>
-          <ion-col size="6" size-md="4" size-lg="1.5">Severe</ion-col>
-          <ion-col size="6" size-md="4" size-lg="1.5">Extreme</ion-col>
-        </ion-row>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected7" >
-          <ion-row>
-            <ion-col >a. Hand or wrist</ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r1"disabled=""  value="None"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r2"disabled=""  value="Mild"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r3"disabled=""  value="Moderate"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r4"disabled=""  value="Severe"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r5"disabled=""  value="Extreme"></ion-radio></ion-col>
-          </ion-row>
-         </ion-radio-group>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected8" disabled="" >
-          <ion-row>
-            <ion-col >b. Shoulder, neck, or upper back</ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r6"disabled=""  value="None"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r7"disabled=""  value="Mild"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r8"disabled=""  value="Moderate"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r9"disabled=""  value="Severe"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r10"disabled=""  value="Extreme"></ion-radio></ion-col>
-          </ion-row>
-         </ion-radio-group>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected9" disabled="" >
-          <ion-row>
-            <ion-col >c. Low back</ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r11"disabled=""  value="None"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r12"disabled=""  value="Mild"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r13"disabled=""  value="Moderate"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r14"disabled=""  value="Severe"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r15"disabled=""  value="Extreme"></ion-radio></ion-col>
-          </ion-row>
-         </ion-radio-group>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected10" disabled="" >
-          <ion-row>
-            <ion-col >d. Knee</ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r16"disabled=""  value="None"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r17"disabled=""  value="Mild"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r18"disabled=""  value="Moderate"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r19"disabled=""  value="Severe"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r20"disabled=""  value="Extreme"></ion-radio></ion-col>
-          </ion-row>
-         </ion-radio-group>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected11" disabled="" >
-          <ion-row>
-            <ion-col >e. Foot</ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r21"disabled=""  value="None"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r22"disabled=""  value="Mild"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r23"disabled=""  value="Moderate"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r24"disabled=""  value="Severe"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g2_r25"disabled=""  value="Extreme"></ion-radio></ion-col>
-          </ion-row>
-         </ion-radio-group>
-      </ion-grid>
-    </div>
-    <div class="num8">
-      <ion-item lines="none" id="opt5" disabled="true">
-        <ion-label>8. During the past week, to what extent have you had difficulty sleeping because of any physical or emotional problem?</ion-label>
-        <ion-list>
-          <ion-item lines="none">
-            <ion-select id="q8" class="select" placeholder="CHOOSE:" [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q8($event)">
-              <ion-select-option value="No difficulty">No difficulty</ion-select-option>
-              <ion-select-option value="Mild difficulty">Mild difficulty</ion-select-option>
-              <ion-select-option value="Moderate difficulty">Moderate difficulty</ion-select-option>
-              <ion-select-option value="Severe difficulty ">Severe difficulty </ion-select-option>
-              <ion-select-option value="So much difficulty that I cant sleep">So much difficulty that I can't sleep</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-      </ion-item>
-    </div>
-    <div class="grid3">
-      <ion-label style="margin-left:1.3%;">9. Please answer the following questions about sleep.  </ion-label>
-      <ion-grid>
-        <ion-row class="align1">
-          <ion-col></ion-col>
-          <ion-col size="6" size-md="4" size-lg="1.5">6 hours or less</ion-col>
-          <ion-col size="6" size-md="4" size-lg="1.5">About 7 hours</ion-col>
-          <ion-col size="6" size-md="4" size-lg="1.5">About 8 hours</ion-col>
-          <ion-col size="6" size-md="4" size-lg="1.5">About 9 hours</ion-col>
-          <ion-col size="6" size-md="4" size-lg="1.5">About 10 hours or more</ion-col>
-        </ion-row>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected12" >
-          <ion-row>
-            <ion-col >a. ) During the work week,  about how many hours of sleep do you typically get per 24­hour period?</ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g3_r1"disabled=""  value="6 hours or less"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g3_r2"disabled=""  value="About 7 hours"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g3_r3"disabled=""  value="About 8 hours"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g3_r4"disabled=""  value="About 9 hours"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g3_r5"disabled=""  value="About 10 hours or more"></ion-radio></ion-col>
-          </ion-row>
-         </ion-radio-group>
-         <ion-radio-group value="custom-checked" [(ngModel)]="value_selected13" disabled="" >
-          <ion-row>
-            <ion-col >b) How many hours of sleep do you usually need to have good functioning the next day? </ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g3_r6"disabled=""  value="6 hours or less"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g3_r7"disabled=""  value="About 7 hours"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g3_r8"disabled=""  value="About 8 hours"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g3_r9"disabled=""  value="About 9 hours"></ion-radio></ion-col>
-            <ion-col size="6" size-md="4" size-lg="1.5"><ion-radio id="g3_r10"disabled=""  value="About 10 hours or more"></ion-radio></ion-col>
-          </ion-row>
-         </ion-radio-group>
-      </ion-grid>
-    </div>
-    <div class="num10">
-      <ion-item lines="none" id="opt6" disabled="true">
-        <ion-label>10. How would you describe the quality of your sleep on a typical night? </ion-label>
-        <ion-list>
-          <ion-item lines="none">
-            <ion-select id="q2"placeholder="CHOOSE:" class="select"  [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}" interface="popover" (ionChange)="q10($event)">
-              <ion-select-option value="Very Good">Very Good</ion-select-option>
-              <ion-select-option value="Fairly Good">Fairly Good</ion-select-option>
-              <ion-select-option value="Fairly Poor">Fairly Poor</ion-select-option>
-              <ion-select-option value="Very Poor">Very Poor</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-      </ion-item>
-    </div>
-    <ion-button id="next"color="#250381"(click)="next()" disabled="">Next</ion-button>
+    <ion-button color="#250381"(click)="next()">SUBMIT</ion-button>
   </div>
-
-</div>
-
 </ion-content>

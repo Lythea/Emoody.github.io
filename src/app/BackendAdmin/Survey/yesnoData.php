@@ -44,8 +44,6 @@ if ($conn->connect_error) {
 
   (SELECT COUNT(id) FROM dataset2 WHERE q10='Yes' AND date='$date') as q10Yes,
   (SELECT COUNT(id) FROM dataset2 WHERE q10='No' AND date='$date') as q10No
-
-
   ;";
 
   $result = $conn->query($sql);

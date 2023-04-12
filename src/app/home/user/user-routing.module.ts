@@ -7,11 +7,11 @@ const routes: Routes = [
   {path: '',component: UserPage},
   {
     path: 'survey1',
-    loadChildren: () => import('./pages/survey1-s1/survey1-s1.module').then( m => m.Survey1PageModule)
+    loadChildren: () => import('./pages/survey1/survey1.module').then( m => m.Survey1PageModule)
   },
   {
     path: 'survey2',
-    loadChildren: () => import('./pages/survey2-s1/survey2-s1.module').then( m => m.Survey2PageModule)
+    loadChildren: () => import('./pages/survey2/survey2.module').then( m => m.Survey2PageModule)
   },
   {
     path: 'success',
@@ -23,11 +23,11 @@ const routes: Routes = [
   },
   {
     path: 'survey1-s2',
-    loadChildren: () => import('./pages/survey1-s2/survey1-s2.module').then( m => m.Survey1S2PageModule)
+    loadChildren: () => import('./pages/survey1/survey1.module').then( m => m.Survey1PageModule)
   },
   {
     path: 'survey1-s2',
-    loadChildren: () => import('./pages/survey1-s2/survey1-s2.module').then( m => m.Survey1S2PageModule)
+    loadChildren: () => import('./pages/survey1/survey1.module').then( m => m.Survey1PageModule)
   },
 
   {
@@ -37,7 +37,12 @@ const routes: Routes = [
   {
     path: 'health',
     loadChildren: () => import('./pages/health/health.module').then( m => m.HealthPageModule)
-  }
+  },
+  {
+    path: 'socio',
+    loadChildren: () => import('./pages/socio/socio.module').then( m => m.SocioPageModule)
+  },
+
 ];
 
 @NgModule({
