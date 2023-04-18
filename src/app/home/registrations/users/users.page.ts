@@ -257,6 +257,7 @@ export class UsersPage implements OnInit {
           .then(response => response.json())
           .then(value => {
             console.log(value.data);
+            this.router.navigate(['home']);
           });
 
 

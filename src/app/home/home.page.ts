@@ -54,10 +54,10 @@ company: any;
         this.domain[0]='BSU';
         this.company= this.domain[0];
       }else if(data.email.includes(this.domain[1])){
-        this.domain[0]='UB';
+        this.domain[1]='UB';
         this.company= this.domain[1];
       }else if(data.email.includes(this.domain[2])){
-        this.domain[0]='LPU';
+        this.domain[2]='LPU';
         this.company= this.domain[2];
       }
     }else{
