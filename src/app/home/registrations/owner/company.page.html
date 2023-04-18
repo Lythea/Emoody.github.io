@@ -1,0 +1,55 @@
+<ion-content>
+  <div class="menu">
+    <ion-label><h1>REGISTRATION</h1></ion-label>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <ion-list class="container">
+        <ion-item lines="none">
+          <ion-label position="stacked">Company Owner</ion-label>
+          <ion-input class="textbox" (ionChange)="name()"  id="name"name="name" formControlName="name" type="text">
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[0] ? 'checkmark' : 'close'}}"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Company name</ion-label>
+          <ion-input (ionChange)="company($event)" class="textbox"id="companyname"name="companyname"formControlName="company" type="text" >
+            <ion-icon name="people-circle-outline" slot="start"></ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[1] ? 'checkmark' : 'close'}}"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Domain Email</ion-label>
+          <ion-input class="textbox"  (ionChange)="email($event)" formControlName="email" type="email" >
+            <ion-icon name="key-outline" slot="start"></ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[4] ? 'checkmark' : 'close'}}"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Admin Code</ion-label>
+          <ion-input (ionChange)="admin($event)" id ="admincode"class="textbox"  type="text" formControlName="admincode">
+            <ion-icon name="code-outline" slot="start"></ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[2]? 'checkmark' : 'close'}}"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <ion-item lines="none" >
+          <ion-label position="stacked">Employee Code</ion-label>
+          <ion-input (ionChange)="employee($event)" class ="email"class="textbox"placeholder="Enter your E-mail" id="email" formControlName="employeecode" type="text" value="{{domain}}">
+            <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[3] ? 'checkmark' : 'close'}}"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Authentication Code</ion-label>
+          <ion-input class="textbox" placeholder="Authentication" (ionChange)="authentication($event)" formControlName="authenticator" type="text" >
+            <ion-icon name="key-outline" slot="start"></ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[4] ? 'checkmark' : 'close'}}"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <div class="buttons">
+          <ion-button color="#11013F"class ="button1" (click)="register()" >REGISTER</ion-button>
+          <ion-button color="#11013F" class ="button2" (click)="cancel()" >CANCEL</ion-button>
+        </div>
+  </ion-list>
+</form>
+  </div>
+</ion-content>

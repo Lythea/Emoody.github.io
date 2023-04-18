@@ -45,7 +45,7 @@ company: any;
     this.formattedDate =  this.date.toISOString().slice(0, 10);
   }
   register(){
-    this.router.navigate(['registration']);
+    this.router.navigate(['option']);
   }
   try1(data: any): void{
 
@@ -87,7 +87,7 @@ company: any;
         formData.append('id', this.val1);
         formData.append('date', this.val2);
         formData.append('company', this.val3);
-        
+
         this.newDate = new Date();
         this.newDate[1] = this.newDate.getFullYear();
         this.newDate[2] = this.newDate.getMonth()+1;

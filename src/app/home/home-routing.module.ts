@@ -15,8 +15,16 @@ const routes: Routes = [
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
   {
-    path: 'registration',
-    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
+    path: 'users',
+    loadChildren: () => import('./registrations/users/users.module').then( m => m.UsersPageModule)
+  },
+  {
+    path: 'company',
+    loadChildren: () => import('./registrations/owner/company.module').then( m => m.CompanyPageModule)
+  },
+  {
+    path: 'option',
+    loadChildren: () => import('./registrations/option/option.module').then( m => m.OptionPageModule)
   },
 
 ];

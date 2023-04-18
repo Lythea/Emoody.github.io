@@ -28,7 +28,10 @@ const routes: Routes = [
   {path: 'admin',loadChildren: () => import('./home/admin/admin.module').then( m => m.AdminPageModule)},
   {path: 'achievements',loadChildren: () => import('./SideMenu/achievements/achievements.module').then( m => m.AchievementsPageModule)},
   {path: 'aboutus',loadChildren: () => import('./SideMenu/aboutus/aboutus.module').then( m => m.AboutusPageModule)},
-  {path: 'registration',loadChildren: () => import('./home/registration/registration.module').then( m => m.RegistrationPageModule)}
+  {path: 'users',loadChildren: () => import('./home/registrations/users/users.module').then( m => m.UsersPageModule)},
+  {path: 'owner',loadChildren: () => import('./home/registrations/owner/company.module').then( m => m.CompanyPageModule)},
+  {path: 'option',loadChildren: () => import('./home/registrations/option/option.module').then( m => m.OptionPageModule)},
+
 ];
 
 @NgModule({
