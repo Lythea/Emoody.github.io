@@ -32,6 +32,8 @@ date = new Date();
 formattedDate: any;
 newDate: any = [];
 finalDate: any =[];
+domain: any = ['@g.batstate-u.edu.ph','@ub.edu.ph','@lpu.edu.ph'];
+company: any;
   constructor(private router: Router,private http: HttpClient, private fb: FormBuilder) { this.setToday();}
   ngOnInit(): void{
     this.login = this.fb.group({
@@ -41,35 +43,51 @@ finalDate: any =[];
   }
   setToday(){
     this.formattedDate =  this.date.toISOString().slice(0, 10);
-
+  }
+  register(){
+    this.router.navigate(['registration']);
   }
   try1(data: any): void{
+
+    if (data.email.includes(this.domain[0]) || data.email.includes(this.domain[1]) || data.email.includes(this.domain[2]) ){
+      if(data.email.includes(this.domain[0])){
+        this.domain[0]='BSU';
+        this.company= this.domain[0];
+      }else if(data.email.includes(this.domain[1])){
+        this.domain[0]='UB';
+        this.company= this.domain[1];
+      }else if(data.email.includes(this.domain[2])){
+        this.domain[0]='LPU';
+        this.company= this.domain[2];
+      }
+    }else{
+      alert('You domain email is not registered');
+    }
       const formData = new FormData();
       formData.append('user', data.email);
       formData.append('pass', data.password);
-      fetch('http://localhost/EMOODY/src/app/BackendUser/getAcc.php', {
+      formData.append('company', this.company);
+      fetch('http://localhost/EMOODY/src/app/BackendUser/gettingAccountInfo.php', {
       method: 'POST',
       body: formData
       })
     .then(response => response.json())
     .then(value => {
-      if(value.data[0].profile ==='user'){
+      if(value.data[0].position ==='EMPLOYEE'){
+        console.log(value.data[0]);
         this.router.navigate(['user']);
         localStorage.setItem('id', value.data[0].id);
-        localStorage.setItem('email',data.email);
-        localStorage.setItem('pass',data.password);
+        localStorage.setItem('company',value.data[0].company);
         localStorage.setItem('date',this.formattedDate);
 
         this.val1=  localStorage.getItem('id');
-        this.val2=  localStorage.getItem('email');
-        this.val3=  localStorage.getItem('pass');
-        this.val4=  localStorage.getItem('date');
+        this.val2=  localStorage.getItem('date');
+        this.val3=  localStorage.getItem('company');
 
         formData.append('id', this.val1);
-        formData.append('email', this.val2);
-        formData.append('pass', this.val3);
-        formData.append('date', this.val4);
-
+        formData.append('date', this.val2);
+        formData.append('company', this.val3);
+        
         this.newDate = new Date();
         this.newDate[1] = this.newDate.getFullYear();
         this.newDate[2] = this.newDate.getMonth()+1;
@@ -148,7 +166,7 @@ finalDate: any =[];
                 }
                });
 
-      }else if(value.data[0].profile ==='admin'){
+      }else if(value.data[0].position ==='ADMIN'){
         this.router.navigate(['admin']);
         console.log('Logging in as Admin');
       }else {

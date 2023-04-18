@@ -65,10 +65,12 @@ export class SocioPage implements OnInit {
           const id = localStorage.getItem('id');
           const date1 = localStorage.getItem('date1');
           const date2 = localStorage.getItem('date2');
+          const company = localStorage.getItem('company');
+          formData.append('company', company);
           formData.append('id', id);
           formData.append('date1', date1);
           formData.append('date2', date2);
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resetSocio.php', {
+          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingSocioEconomic.php', {
                       method: 'POST',
                       body: formData
                       })
@@ -91,6 +93,8 @@ export class SocioPage implements OnInit {
         const formData = new FormData();
         const id = localStorage.getItem('id');
         const dateVal = localStorage.getItem('finaldate');
+        const company = localStorage.getItem('company');
+        formData.append('company', company);
         formData.append('id', id);
         formData.append('dateVal', dateVal);
         for (let i = 1; i < 4; i++) {
@@ -109,7 +113,7 @@ export class SocioPage implements OnInit {
         for (let i = 1; i < 12; i++) {
             formData.append('data' + i, this.finalData[i]);
           }
-        fetch('http://localhost/EMOODY/src/app/BackendUser/Socio.php', {
+        fetch('http://localhost/EMOODY/src/app/BackendUser/socio.php', {
           method: 'POST',
           body: formData
         })

@@ -6,23 +6,61 @@ header ('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "dataStorage";
+$bsu = "bsu";
+$ub = "ub";
+$lpu = "lpu";
 // Connect with the database.
-$conn= new mysqli($servername, $username, $password,$database);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-  }
+$company = $_POST['company'];
+if ($company == 'BSU'){
+  $conn= new mysqli($servername, $username, $password,$bsu);
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);}
+    $id = $_POST['id'];
+    $sql = "SELECT id,date,sq1,sq2,sq3,sq4,sq5,sq6,sq7,sq8,sq9,sq10,sq11 FROM socioeconomic WHERE id='$id'";
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0) {
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+        echo json_encode(['data' => $data]);
+      } else {
+        echo json_encode(['data'=> 'Not Found!']);
+    }
+    $conn->close();
+    exit();
+}else if($company == 'UB'){
 
-  $id = $_POST['id'];
-  $sql = "SELECT id,date,sq1,sq2,sq3,sq4,sq5,sq6,sq7,sq8,sq9,sq10,sq11 FROM socio WHERE id='$id'";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-      $data = $result->fetch_all(MYSQLI_ASSOC);
-      echo json_encode(['data' => $data]);
-    } else {
-      echo json_encode(['data'=> 'Not Found!']);
-  }
-$conn->close();
-exit();
+  $conn= new mysqli($servername, $username, $password,$ub);
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);}
+
+    $id = $_POST['id'];
+    $sql = "SELECT id,date,sq1,sq2,sq3,sq4,sq5,sq6,sq7,sq8,sq9,sq10,sq11 FROM socioeconomic WHERE id='$id'";
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0) {
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+        echo json_encode(['data' => $data]);
+      } else {
+        echo json_encode(['data'=> 'Not Found!']);
+    }
+    $conn->close();
+    exit();
+}else if($company == 'LPU'){
+
+  $conn= new mysqli($servername, $username, $password,$lpu);
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);}
+
+    $id = $_POST['id'];
+    $sql = "SELECT id,date,sq1,sq2,sq3,sq4,sq5,sq6,sq7,sq8,sq9,sq10,sq11 FROM socioeconomic WHERE id='$id'";
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0) {
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+        echo json_encode(['data' => $data]);
+      } else {
+        echo json_encode(['data'=> 'Not Found!']);
+    }
+    $conn->close();
+    exit();
+}
+
 ?>
 

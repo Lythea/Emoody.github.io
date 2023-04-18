@@ -3,7 +3,7 @@
   height:100%;
   margin-bottom:2%;
   position:fixed;
-  font-family: 'Quicksand';
+  font-family: 'Poppins', sans-serif;
 }
 h1{
   text-align:center;
@@ -17,41 +17,49 @@ ion-img{
   width:30%;
 }
 ion-content  {
-  --ion-background-color:#FFC000;
+  --ion-background-color:white;
 }
 .content .scale ion-label{
   font-size:40px;
   margin-top:10%;
   text-align:center;
 }
+
 ion-range{
   margin-bottom:5%;
 }
-.t1{
-  width:90%;
-  height:2px;
-  border-width:0;
-  color:black;
-  background-color:black;
-}
-.content .emoji{
-  width:40%;
-  margin-right:500px;
-}
+
+
 .label{
   width:100%;
   margin-top:15%;
   height:3%;
 }
+.content .bg{
+  background-color:#250381;
+  height:250px;
+  width:95%;
+  margin-left:2.5%;
+  border-radius:25px;
+}
+.scale ion-label{
+  margin-left:45%;
+}
 .btns{
+  height:70px;
   margin-bottom:10%;
   border-radius:25px;
-  width:40%;
-  background-color:#11013F;
+  width:30%;
+  font-size:40px;
+  margin-left:37%;
+  background-color:#250381;
   text-align:center;
   align-items:center;
 }
 .emoji .emojis{
+  width:90%;
+  height:100%;
+  margin-right:5%;;
   grid-row: 1 / 5;
 }
 .emoji .emojis{
@@ -62,12 +70,14 @@ ion-range{
 .content .radio{
   text-align: left;
   width:90%;
+  margin-top: 15%;;
   margin-left:10%;
   position:absolute;
   height:3%;
+  color:white;
   }
 .r2{
-  margin-left:14%;
+  margin-left:12%;
 }
 .r3{
   margin-left:14%;
@@ -87,6 +97,7 @@ ion-range{
 ion-menu-button {
   font-size: 50px !important;
 }
+/*
 @media screen and (max-width:1366px){
   .content{
     font-family: 'Quicksand';
@@ -159,7 +170,7 @@ ion-menu-button {
     font-size:30px;
   }
 }
-
+*/
 @media screen and (max-width:1080px){
   .sc-ion-buttons-md-h {
     display: block !important;
@@ -174,7 +185,7 @@ ion-menu-button {
     text-shadow: #ffffff 12px 12px;
   }
   .content .t1{
-    margin-top:50%;
+    margin-top:40%;
   }
   .content .scale{
     margin-left:1%;
@@ -192,15 +203,10 @@ ion-menu-button {
     margin-right:50%;
     margin-bottom:0;
   }
-  .content .emoji .emojis{
-    width:90%;
-    height:100%;
-    margin-right:20%;;
-  }
+
   .content .emoji .emojis ion-img{
     width:160%;
     height:100%;
-    margin-right:20%;;
   }
   .content .radio{
     width:100%;
@@ -213,15 +219,15 @@ ion-menu-button {
     font-size:30px;
   }
   .content .radio .r2{
-    margin-left:10%;
+    margin-left:8%;
   }
   .r3{
-    margin-left:9%;
+    margin-left:7%;
   }
   .r4{
     margin-left:4%;
   }
   .r5{
-    margin-left:4%;
+    margin-left:3%;
   }
 }

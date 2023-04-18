@@ -53,14 +53,17 @@ export class Survey2Page implements OnInit {
           const formData = new FormData();
           const id = localStorage.getItem('id');
           const date = localStorage.getItem('date');
+          const company = localStorage.getItem('date');
           formData.append('id', id);
           formData.append('date', date);
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resetSurvey2.php', {
+          formData.append('company', company);
+          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingDailysurvey2.php', {
                       method: 'POST',
                       body: formData
                       })
                       .then(response => response.json())
                       .then(value => {
+                        console.log(value.data);
                         if (value.data === 'Deleted Successfully!'){
                           alert('Answers been reset');
                         }else if (value.data !== 'Deleted Successfully!'){
@@ -74,6 +77,8 @@ export class Survey2Page implements OnInit {
         const formData = new FormData();
         const id = localStorage.getItem('id');
         const date = localStorage.getItem('date');
+        const company = localStorage.getItem('company');
+    formData.append('company', company);
         formData.append('id', id);
         formData.append('date', date);
         for (let i = 1; i < 11; i++) {
@@ -85,7 +90,7 @@ export class Survey2Page implements OnInit {
         for (let i = 1; i < 11; i++) {
             formData.append('data' + i, this.finalData[i]);
           }
-        fetch('http://localhost/EMOODY/src/app/BackendUser/regData3.php', {
+        fetch('http://localhost/EMOODY/src/app/BackendUser/registerDailysurvey2.php', {
           method: 'POST',
           body: formData
         })

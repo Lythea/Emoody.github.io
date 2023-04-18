@@ -17,6 +17,7 @@ table3: any = [];
 f = 23;
 data = [];
 finalDate: any =[];
+newDate: any =[];
 dd: any = [];
   constructor(private router: Router) { }
 
@@ -53,9 +54,25 @@ dd: any = [];
           const formData = new FormData();
           const id = localStorage.getItem('id');
           const date = localStorage.getItem('date');
+          const company = localStorage.getItem('company');
+          formData.append('company', company);
           formData.append('id', id);
           formData.append('date', date);
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resetHealth.php', {
+          this.newDate = new Date();
+          this.newDate[1] = this.newDate.getFullYear();
+          this.newDate[2] = this.newDate.getMonth()+1;
+          this.newDate[3] = this.newDate.getDate();
+
+          for (let i = 1; i < 4; i++) {
+            localStorage.setItem('newDate'+i, this.newDate[i]);
+          }
+          for (let i = 1; i < 4; i++) {
+            this.finalDate[i] =localStorage.getItem('newDate'+i);
+          }
+          for (let i = 1; i < 4; i++) {
+            formData.append('date' + i, this.finalDate[i]);
+          }
+          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingHealthIndex.php', {
                       method: 'POST',
                       body: formData
                       })
@@ -89,6 +106,8 @@ dd: any = [];
       const formData = new FormData();
       const id = localStorage.getItem('id');
       const dateVal = localStorage.getItem('finaldate');
+      const company = localStorage.getItem('company');
+      formData.append('company', company);
       formData.append('date', dateVal);
       formData.append('id', id);
       for (let i = 1; i < 4; i++) {
@@ -105,7 +124,7 @@ dd: any = [];
         formData.append('dataRadio' + i, this.radio[i]);
       }
 
-      fetch('http://localhost/EMOODY/src/app/BackendUser/healthindex.php', {
+      fetch('http://localhost/EMOODY/src/app/BackendUser/registerHealthindex.php', {
         method: 'POST',
         body: formData
       })

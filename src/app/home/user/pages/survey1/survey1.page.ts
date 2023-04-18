@@ -62,8 +62,12 @@ result;
     const formData = new FormData();
     const id = localStorage.getItem('id');
     const date = localStorage.getItem('date');
+    const company = localStorage.getItem('company');
+
     formData.append('date', date);
     formData.append('id', id);
+
+    formData.append('company', company);
     for (let i = 1; i < 11; i++) {
       if (!this.newVal[i]){
         this.newVal[i] = 'No';
@@ -80,7 +84,7 @@ result;
         formData.append('data' + i, this.finalData[i]);
       }
 
-    fetch('http://localhost/EMOODY/src/app/BackendUser/regData2.php', {
+    fetch('http://localhost/EMOODY/src/app/BackendUser/registerDailysurvey1.php', {
       method: 'POST',
       body: formData
     })

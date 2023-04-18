@@ -10,7 +10,7 @@
     </ion-menu>
     <div class="ion-page" id="main-content" >
       <ion-header class="basehead">
-        <ion-toolbar style="background-color:#FFDA29">
+        <ion-toolbar>
           <ion-buttons slot="start">
             <ion-menu-button ></ion-menu-button>
           </ion-buttons>
@@ -29,12 +29,13 @@
           <ion-label>1. Are you satisfied with your job?</ion-label>
           <ion-checkbox [(ngModel)]="num1" (ngModelChange)="val1($event)" ></ion-checkbox>
         </ion-item>
+        <ion-label class="underline"></ion-label>
         <ion-item >
           <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>2. Do you ever worry about finances?</ion-label>
           <ion-checkbox [(ngModel)]="num2" (ngModelChange)="val2($event)"></ion-checkbox>
         </ion-item>
-        <ion-item >
+        <ion-item lines="">
           <ion-img src="./assets/Necktie.png"></ion-img>
           <ion-label>3. Do you ever feel overworked or underworked here as an employee?</ion-label>
           <ion-checkbox [(ngModel)]="num3" (ngModelChange)="val3($event)"></ion-checkbox>

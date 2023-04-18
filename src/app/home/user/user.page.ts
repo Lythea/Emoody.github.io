@@ -45,7 +45,8 @@ finalDate: any = [];
     hold1.addEventListener('touchstart', ontouchstart, { passive: true });
     const formData = new FormData();
     const id = localStorage.getItem('id');
-
+    const company = localStorage.getItem('company');
+    formData.append('company', company);
     formData.append('id', id);
     for (let i = 1; i < 3; i++) {
       this.finalDate[i] =localStorage.getItem('newDate'+i);
@@ -56,7 +57,7 @@ finalDate: any = [];
       this.holdTimer = setTimeout(() => {
         const result = confirm("Reset previous answers?");
         if (result) {
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resetSocio.php', {
+          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingSocioEconomic.php', {
                       method: 'POST',
                       body: formData
                       })
@@ -85,12 +86,14 @@ finalDate: any = [];
     const formData = new FormData();
     const id = localStorage.getItem('id');
     const date = localStorage.getItem('date');
+    const company = localStorage.getItem('company');
+    formData.append('company', company);
     formData.append('id', id);
     formData.append('date', date);
       this.holdTimer = setTimeout(() => {
         const result = confirm("Reset previous answers?");
         if (result) {
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resetMood.php', {
+          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingMoodtrack.php', {
                       method: 'POST',
                       body: formData
                       })
@@ -102,7 +105,7 @@ finalDate: any = [];
                           alert('Try Again Later');
                         }
                       });
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resetSurvey1.php', {
+          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingDailysurvey1.php', {
             method: 'POST',
             body: formData
             })
@@ -114,7 +117,7 @@ finalDate: any = [];
                 alert('Try Again Later');
               }
             });
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resetSurvey2.php', {
+          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingDailysurvey2.php', {
             method: 'POST',
             body: formData
             })
@@ -138,6 +141,8 @@ finalDate: any = [];
     const hold3 =(document.getElementById('hold3') as HTMLInputElement);
     hold3.addEventListener('touchstart', ontouchstart, { passive: true });
       const formData = new FormData();
+      const company = localStorage.getItem('company');
+      formData.append('company', company);
       const id = localStorage.getItem('id');
       formData.append('id', id);
       for (let i = 1; i < 3; i++) {
@@ -149,7 +154,7 @@ finalDate: any = [];
         this.holdTimer = setTimeout(() => {
           const result = confirm("Reset previous answers?");
           if (result) {
-            fetch('http://localhost/EMOODY/src/app/BackEnd/resetHealth.php', {
+            fetch('http://localhost/EMOODY/src/app/BackEnd/resettingHealthIndex.php', {
                         method: 'POST',
                         body: formData
                         })
@@ -176,6 +181,8 @@ finalDate: any = [];
     const formData = new FormData();
     const id = localStorage.getItem('id');
     const date = localStorage.getItem('date');
+    const company = localStorage.getItem('company');
+    formData.append('company', company);
     formData.append('id', id);
     formData.append('date', date);
     fetch('http://localhost/EMOODY/src/app/BackEnd/moodTrack.php', {
@@ -224,6 +231,8 @@ finalDate: any = [];
   socio(){
     const formData = new FormData();
     const id = localStorage.getItem('id');
+    const company = localStorage.getItem('company');
+    formData.append('company', company);
     formData.append('id', id);
     for (let i = 1; i < 4; i++) {
       this.finalDate[i] =localStorage.getItem('newDate'+i);
@@ -259,6 +268,8 @@ finalDate: any = [];
   health(){
     const formData = new FormData();
     const id = localStorage.getItem('id');
+    const company = localStorage.getItem('company');
+    formData.append('company', company);
     formData.append('id', id);
     for (let i = 1; i < 3; i++) {
       this.finalDate[i] =localStorage.getItem('newDate'+i);
@@ -274,6 +285,7 @@ finalDate: any = [];
                     .then(value => {
                       if (value.data === 'Not Found!'){
                         this.router.navigate(['health']);
+                        alert("Before you begin the survey, please understand the following: \n - Your participation in this survey is voluntary. In the course of completing this survey, you may refuse to answer specific questions. You may also choose to end the survey at any time. \n- There are no right or wrong answers, we only want to hear about your experiences and opinions.  \n- All of the answers you provide will be maintained in a secure manner. We will not disclose your responses or anything about you. Your name will not be linked to any responses you provide in this survey.  \n - Your responses will be combined with those from other employees to provide an overall average for feedback about the organization. The results will be used to guide decisions about policies and programs related to employee health, safety, and wellness. \n- There are no risks or rewards anticipated for completing the survey. However, it is possible that programs developed in the future may benefit you and your coworkers \n");
                       }else{
                         console.log(value.data);
                         const year = value.data[0].Year;
@@ -282,6 +294,7 @@ finalDate: any = [];
                         if (year == this.finalDate[1] || year < this.finalDate[1]){
                           if(month < this.finalDate[2]){
                             this.router.navigate(['health']);
+                            alert("Before you begin the survey, please understand the following: \n - Your participation in this survey is voluntary. In the course of completing this survey, you may refuse to answer specific questions. You may also choose to end the survey at any time. \n- There are no right or wrong answers, we only want to hear about your experiences and opinions.  \n- All of the answers you provide will be maintained in a secure manner. We will not disclose your responses or anything about you. Your name will not be linked to any responses you provide in this survey.  \n - Your responses will be combined with those from other employees to provide an overall average for feedback about the organization. The results will be used to guide decisions about policies and programs related to employee health, safety, and wellness. \n- There are no risks or rewards anticipated for completing the survey. However, it is possible that programs developed in the future may benefit you and your coworkers \n");
                           }else if (month == this.finalDate[2]){
                             alert("You already answered the Health Survey");
                           }
@@ -295,8 +308,9 @@ finalDate: any = [];
   }
 
   menu(){
-
     const formData = new FormData();
+    const company = localStorage.getItem('company');
+    formData.append('company', company);
     const id = localStorage.getItem('id');
     formData.append('id', id);
     fetch('http://localhost/EMOODY/src/app/BackEndAchievements/firsttimer.php', {
@@ -319,6 +333,8 @@ finalDate: any = [];
   }
   achievements(){
     const formData = new FormData();
+    const company = localStorage.getItem('company');
+    formData.append('company', company);
     const id = localStorage.getItem('id');
     formData.append('id', id);
     fetch('http://localhost/EMOODY/src/app/BackEndAchievements/firsttimer.php', {

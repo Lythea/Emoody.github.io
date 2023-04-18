@@ -1,30 +1,22 @@
 <ion-content class="body"[fullscreen]="true">
-
-  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"></script>
-
-  <script src="index.js"></script>
-
   <div class="all">
-    <div class="logo">
-      <ion-img src="assets/Logo.png"></ion-img>
-      <ion-title >E - MOODY</ion-title>
-    </div>
-
     <div class="container">
-      <ion-label><h1>WELCOME!</h1> </ion-label>
+      <ion-label><h1 >WELCOME!</h1> </ion-label>
+      <ion-label><h2 >Please enter your credentials below.</h2> </ion-label>
       <div class="input">
-        <form method="post" action="http://localhost/newmobileapp/src/app/Backend/getAcc.php" form [formGroup]="login">
+        <form method="post" action="http://localhost/EMOODY/src/app/Backend/getAcc.php" form [formGroup]="login">
         <ion-list >
           <ion-item lines="none">
-            <ion-label class="label"position="stacked">G-SUITE EMAIL:</ion-label>
-            <ion-input placeholder="G-SUITE ACCOUNT" id="email"name="email" formControlName="email"></ion-input>
+            <ion-input class="textbox"placeholder="Enter your E-mail" id="email"name="email" formControlName="email"><ion-icon name="person-circle-outline" slot="start"></ion-icon></ion-input>
           </ion-item>
           <ion-item lines="none">
-            <ion-label class="label" position="stacked">PASSWORD:</ion-label>
-            <ion-input  placeholder="SR-CODE" id="password"name="password" formControlName="password" type ="password"></ion-input>
+            <ion-input  class="textbox"placeholder="Confirm your password" id="password"name="password" formControlName="password" type ="password"><ion-icon name="key-outline" slot="start"></ion-icon></ion-input>
           </ion-item>
+          <div class="container1">
+
+            <div class="column"><ion-label>FORGOT PASSWORD?</ion-label></div>
+            <div class="column"><ion-label (click)="register()">REGISTER</ion-label></div>
+          </div>
         </ion-list>
         <ion-button color="#11013F" name ="button1" (click)="try1(login.value)" [disabled]="login.invalid">LOGIN</ion-button>
         </form>

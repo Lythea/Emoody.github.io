@@ -28,6 +28,7 @@ const routes: Routes = [
   {path: 'admin',loadChildren: () => import('./home/admin/admin.module').then( m => m.AdminPageModule)},
   {path: 'achievements',loadChildren: () => import('./SideMenu/achievements/achievements.module').then( m => m.AchievementsPageModule)},
   {path: 'aboutus',loadChildren: () => import('./SideMenu/aboutus/aboutus.module').then( m => m.AboutusPageModule)},
+  {path: 'registration',loadChildren: () => import('./home/registration/registration.module').then( m => m.RegistrationPageModule)}
 ];
 
 @NgModule({

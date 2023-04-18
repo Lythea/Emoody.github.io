@@ -24,7 +24,10 @@ ion-menu-button {
   align-items:center;
 }
 .header{
-  background-color:#FFC000;
+  background-color:#FFFFFF;
+}
+.calendar{
+  background-color: yellow;
 }
 .menu .column{
   text-align: center;
@@ -43,22 +46,23 @@ ion-datetime{
   margin-top:10%;
 }
 ion-content  {
-  --ion-background-color:#FFC000;
+  --ion-background-color:#FFFFFF;
 }
 .btns{
   border-radius:25px;
-  width:70%;
+  width:80%;
   height:90px;
-  background-color:#11013F;
+  background-color:#250381;
   color:#ffffff;
   font-size:30px;
-  margin-right:33%;
+  margin-right:38%;
+  font-family: 'Poppins', sans-serif;
 }
 h2{
   color:#ffffff;
 }
 .menu .item2 .btnpos ion-button{
-  font-family: 'Quicksand';
+  font-family: 'Poppins', sans-serif;
 }
 
 @media screen and (max-width:1366px){
@@ -159,26 +163,26 @@ h2{
 
   .btns{
     border-radius:25px;
-    width:70%;
+    width:80%;
     height:90px;
     background-color:#11013F;
     color:#ffffff;
     font-size:30px;
-    margin-right:33%;
+    margin-right:38%;
   }
   h2{
     color:#ffffff;
   }
   .menu .item2 .btnpos ion-button{
-    font-family: 'Quicksand';
-    width:40%;
+    font-family: 'Poppins', sans-serif;
+    width:70%;
     margin-top:5%;
   }
   .menu .item2{
     margin-top: 20%;
     align-items: center;
     text-align: center;
-    margin-left:20%;
+    margin-left:19%;
     width:90%;
   }
   .menu .item2 .btnpos{

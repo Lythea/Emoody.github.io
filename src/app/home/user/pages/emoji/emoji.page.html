@@ -9,7 +9,7 @@
     </ion-menu>
     <div class="ion-page" id="main-content">
       <ion-header class="basehead">
-        <ion-toolbar style="background-color:#FFDA29">
+        <ion-toolbar>
           <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
@@ -21,6 +21,7 @@
     <div class="content">
         <ion-label><h1>HOW ARE YOU?</h1></ion-label>
         <hr class="t1">
+      <div class="bg">
       <div class="emoji">
         <div class="emojis">
         <ion-img id ="e1" class="happy" src="assets/Mood Icons/Happy.png"></ion-img>
@@ -44,6 +45,7 @@
         <ion-label class="l5">ANGRY</ion-label>
         </ion-radio-group>
       </div>
+    </div>
       <div class="scale">
         <ion-label>{{value_selected}}</ion-label>
         <ion-range (ionChange)="onIonChange($event)" id="range" [min]="1" [max]="10" [value]="1" [pin]="true" [ticks]="true" [snaps]="true" disabled=""></ion-range>

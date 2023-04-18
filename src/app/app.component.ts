@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/check-alignment */
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -8,7 +9,7 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-/*
+/**
   constructor(
     private platform: Platform,
     private statusBar: StatusBar,
@@ -20,6 +21,6 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.router.navigateByUrl('splash');
     });
-  }
-  */
+  } */
+
 }

@@ -68,8 +68,11 @@ value_selected: string;
     formData.append('date', date);
     formData.append('emoji', emoji);
     formData.append('range', range);
+    const company = localStorage.getItem('company');
+    formData.append('company', company);
 
-    fetch('http://localhost/EMOODY/src/app/BackendUser/regData1.php', {
+
+    fetch('http://localhost/EMOODY/src/app/BackendUser/registerMood.php', {
       method: 'POST',
       body: formData
     })
