@@ -11,6 +11,9 @@ Monthly Survey
 Real-time Calendar 
 Mood Tracking & Scaling
 Daily User Status on Graph
+Hint Button
+Deleting Previous Data
+Proceeding to unfinish data
 
 Video Presentation: 
 	https://drive.google.com/file/d/1LvE3yM7Cm3lmi4vLhX52X08gUK_hfL0V/view?usp=sharing
