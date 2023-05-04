@@ -16,7 +16,7 @@
   </ion-menu>
   <div class="ion-page" id="main-content">
     <ion-header class="basehead">
-      <ion-toolbar style="background-color:#FFDA29">
+      <ion-toolbar>
         <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
@@ -35,7 +35,7 @@
     </div>
     <div class="column">
       <div class="item1">
-        <ion-datetime class ="calendar"size="cover" [presentation]="selectedMode" #datetime *ngIf="showPicker" [value]="date" (ionChange)="setToday()"></ion-datetime><!--(ionChange)="dateChanged(datetime.value)-->
+        <ion-datetime class ="my-datetime"size="cover" [presentation]="selectedMode" #datetime *ngIf="showPicker" [value]="date" (ionChange)="setToday()"></ion-datetime><!--(ionChange)="dateChanged(datetime.value)-->
       </div>
     </div>
       <div class="item2">

@@ -32,101 +32,24 @@ export class HealthDataPage{
   colorArray: any;
   hrzBars: any;
   val: any;
-
-  hq1 = localStorage.getItem('hq1');
-
-  hq2val1 = localStorage.getItem('hq2val1');
-  hq2val2 = localStorage.getItem('hq2val2');
-  hq2val3 = localStorage.getItem('hq2val3');
-  hq2val4 = localStorage.getItem('hq2val4');
-  hq2val5 = localStorage.getItem('hq2val5');
-  hq2val6 = localStorage.getItem('hq2val6');
-
-  hq3r1val1 = localStorage.getItem('hq3r1val1');
-  hq3r1val2 = localStorage.getItem('hq3r1val2');
-
-  hq3r2val1 = localStorage.getItem('hq3r2val1');
-  hq3r2val2 = localStorage.getItem('hq3r2val2');
-
-  hq3r3val1 = localStorage.getItem('hq3r3val1');
-  hq3r3val2 = localStorage.getItem('hq3r3val2');
-
-  hq3r4val1 = localStorage.getItem('hq3r4val1');
-  hq3r4val2 = localStorage.getItem('hq3r4val2');
-
-  hq3r5val1 = localStorage.getItem('hq3r5val1');
-  hq3r5val2 = localStorage.getItem('hq3r5val2');
-
-  hq4val1 =  localStorage.getItem('hq4val1');
-  hq4val2 =  localStorage.getItem('hq4val2');
-  hq4val3 =  localStorage.getItem('hq4val3');
-  hq4val4 =  localStorage.getItem('hq4val4');
-  hq4val5 =  localStorage.getItem('hq4val5');
-
-  hq5val1 =  localStorage.getItem('hq5val1');
-  hq5val2 =  localStorage.getItem('hq5val2');
-  hq5val3 =  localStorage.getItem('hq5val3');
-  hq5val4 =  localStorage.getItem('hq5val4');
-  hq5val5 =  localStorage.getItem('hq5val5');
-
-  hq6val1 =  localStorage.getItem('hq6val1');
-  hq6val2 =  localStorage.getItem('hq6val2');
-  hq6val3 =  localStorage.getItem('hq6val3');
-
-  hq7r1val1 = localStorage.getItem('hq7r1val1');
-  hq7r1val2 = localStorage.getItem('hq7r1val2');
-  hq7r1val3 = localStorage.getItem('hq7r1val3');
-  hq7r1val4 = localStorage.getItem('hq7r1val4');
-  hq7r1val5 = localStorage.getItem('hq7r1val5');
-
-  hq7r2val1 = localStorage.getItem('hq7r2val1');
-  hq7r2val2 = localStorage.getItem('hq7r2val2');
-  hq7r2val3 = localStorage.getItem('hq7r2val3');
-  hq7r2val4 = localStorage.getItem('hq7r2val4');
-  hq7r2val5 = localStorage.getItem('hq7r2val5');
-
-  hq7r3val1 = localStorage.getItem('hq7r3val1');
-  hq7r3val2 = localStorage.getItem('hq7r3val2');
-  hq7r3val3 = localStorage.getItem('hq7r3val3');
-  hq7r3val4 = localStorage.getItem('hq7r3val4');
-  hq7r3val5 = localStorage.getItem('hq7r3val5');
-
-  hq7r4val1 = localStorage.getItem('hq7r4val1');
-  hq7r4val2 = localStorage.getItem('hq7r4val2');
-  hq7r4val3 = localStorage.getItem('hq7r4val3');
-  hq7r4val4 = localStorage.getItem('hq7r4val4');
-  hq7r4val5 = localStorage.getItem('hq7r4val5');
-
-  hq7r5val1 = localStorage.getItem('hq7r5val1');
-  hq7r5val2 = localStorage.getItem('hq7r5val2');
-  hq7r5val3 = localStorage.getItem('hq7r5val3');
-  hq7r5val4 = localStorage.getItem('hq7r5val4');
-  hq7r5val5 = localStorage.getItem('hq7r5val5');
-
-  hq8val1 = localStorage.getItem('hq8val1');
-  hq8val2 = localStorage.getItem('hq8val2');
-  hq8val3 = localStorage.getItem('hq8val3');
-  hq8val4 = localStorage.getItem('hq8val4');
-  hq8val5 = localStorage.getItem('hq8val5');
-
-  hq9r1val1 = localStorage.getItem('hq9r1val1');
-  hq9r1val2 = localStorage.getItem('hq9r1val2');
-  hq9r1val3 = localStorage.getItem('hq9r1val3');
-  hq9r1val4 = localStorage.getItem('hq9r1val4');
-  hq9r1val5 = localStorage.getItem('hq9r1val5');
-
-  hq9r2val1 = localStorage.getItem('hq9r2val1');
-  hq9r2val2 = localStorage.getItem('hq9r2val2');
-  hq9r2val3 = localStorage.getItem('hq9r2val3');
-  hq9r2val4 = localStorage.getItem('hq9r2val4');
-  hq9r2val5 = localStorage.getItem('hq9r2val5');
-
-  hq10val1 = localStorage.getItem('hq10val1');
-  hq10val2 = localStorage.getItem('hq10val2');
-  hq10val3 = localStorage.getItem('hq10val3');
-  hq10val4 = localStorage.getItem('hq10val4');
-
-
+q2val: any =[];
+q3r1val: any =[];
+q3r2val: any =[];
+q3r3val: any =[];
+q3r4val: any =[];
+q3r5val: any =[];
+q4val: any =[];
+q5val: any =[];
+q6val: any =[];
+q7r1val: any =[];
+q7r2val: any =[];
+q7r3val: any =[];
+q7r4val: any =[];
+q7r5val: any =[];
+q8val: any =[];
+q9r1val: any =[];
+q9r2val: any =[];
+q10val: any =[];
 
   constructor(private router: Router) { }
 
@@ -134,7 +57,62 @@ export class HealthDataPage{
     this.router.navigate(['admin']);
   }
   ionViewDidEnter() {
-    this.createBarChart1();
+
+    for (let i = 1; i < 7; i++) {
+      this.q2val[i] =localStorage.getItem('q2val'+i);
+    }
+    for (let i = 1; i < 3; i++) {
+      this.q3r1val[i] =localStorage.getItem('q3r1val'+i);
+    }
+    for (let i = 1; i < 3; i++) {
+      this.q3r2val[i] =localStorage.getItem('q3r2val'+i);
+    }
+    for (let i = 1; i < 3; i++) {
+      this.q3r3val[i] =localStorage.getItem('q3r3val'+i);
+    }
+    for (let i = 1; i < 3; i++) {
+      this.q3r4val[i] =localStorage.getItem('q3r4val'+i);
+    }
+    for (let i = 1; i < 3; i++) {
+      this.q3r5val[i] =localStorage.getItem('q3r5val'+i);
+    }
+    for (let i = 1; i < 6; i++) {
+      this.q4val[i] =localStorage.getItem('q4val'+i);
+    }
+    for (let i = 1; i < 6; i++) {
+      this.q5val[i] =localStorage.getItem('q5val'+i);
+    }
+    for (let i = 1; i < 4; i++) {
+      this.q6val[i] =localStorage.getItem('q6val'+i);
+    }
+    for (let i = 1; i < 6; i++) {
+      this.q7r1val[i] =localStorage.getItem('q7r1val'+i);
+    }
+    for (let i = 1; i < 6; i++) {
+      this.q7r2val[i] =localStorage.getItem('q7r2val'+i);
+    }
+    for (let i = 1; i < 6; i++) {
+      this.q7r3val[i] =localStorage.getItem('q7r3val'+i);
+    }
+    for (let i = 1; i < 6; i++) {
+      this.q7r4val[i] =localStorage.getItem('q7r4val'+i);
+    }
+    for (let i = 1; i < 6; i++) {
+      this.q7r5val[i] =localStorage.getItem('q7r5val'+i);
+    }
+    for (let i = 1; i < 5; i++) {
+      this.q8val[i] =localStorage.getItem('q8val'+i);
+    }
+    for (let i = 1; i < 6; i++) {
+      this.q9r1val[i] =localStorage.getItem('q9r1val'+i);
+    }
+    for (let i = 1; i < 6; i++) {
+      this.q9r2val[i] =localStorage.getItem('q9r2val'+i);
+    }
+    for (let i = 1; i < 5; i++) {
+      this.q10val[i] =localStorage.getItem('q10val'+i);
+    }
+
     this.createBarChart2();
     this.createBarChart3();
     this.createBarChart4();
@@ -145,34 +123,7 @@ export class HealthDataPage{
     this.createBarChart9();
     this.createBarChart10();
   }
-  createBarChart1(){
 
-    this.bars1 = new Chart(this.barChart1.nativeElement, {
-      type: 'pie',
-      data: {
-        labels: ['Agree','Disagree'],
-        datasets: [
-        {
-          label: [],
-          data: [this.hq1,0],
-          backgroundColor: ['#ABDEE6','#CBAACB'], // array should have same number of elements as number of dataset
-        },
-      ]
-      },
-      options: {
-          yAxes: [{
-            stacked: false,
-            ticks: {
-              beginAtZero: true
-
-            }
-          }],
-          xAxes:[{
-            stacked:false,
-          }]
-      }
-    });
-  }
   createBarChart2(){
     this.bars2 = new Chart(this.barChart2.nativeElement, {
       type: 'bar',
@@ -181,42 +132,42 @@ export class HealthDataPage{
         datasets: [
         {
           label: 'Excellent',
-          data: [this.hq2val1],
+          data: [this.q2val[1]],
           backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: 'Very Good',
-          data: [this.hq2val2],
+          data: [this.q2val[2]],
           backgroundColor: '#8FCACA', // array should have same number of elements as number of dataset
           borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: 'Good',
-          data: [this.hq2val3],
+          data: [this.q2val[3]],
           backgroundColor: '#A2E1D8', // array should have same number of elements as number of dataset
           borderColor: '#55CBCD',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: 'Fair',
-          data: [this.hq2val4],
+          data: [this.q2val[4]],
           backgroundColor: '#ABDEE6', // array should have same number of elements as number of dataset
           borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: 'Poor',
-          data: [this.hq2val5],
+          data: [this.q2val[5]],
           backgroundColor: '#C6DBDA', // array should have same number of elements as number of dataset
           borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: 'Dont know / Not Sure',
-          data: [this.hq2val6],
+          data: [this.q2val[6]],
           backgroundColor: '#C6DBDA', // array should have same number of elements as number of dataset
           borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
           borderWidth: 1
@@ -247,14 +198,14 @@ export class HealthDataPage{
         datasets: [
         {
           label: ['Diagnosed'],
-          data: [this.hq3r1val1,this.hq3r2val1,this.hq3r3val1,this.hq3r4val1,this.hq3r5val1],
+          data: [this.q3r1val[1],this.q3r2val[1],this.q3r3val[1],this.q3r4val[1],this.q3r5val[1]],
           backgroundColor: 'red', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['Taking Medicine For'],
-          data: [this.hq3r1val2,this.hq3r2val2,this.hq3r3val2,this.hq3r4val2,this.hq3r5val2],
+          data:  [this.q3r1val[2],this.q3r2val[2],this.q3r3val[2],this.q3r4val[2],this.q3r5val[2]],
           backgroundColor: 'blue', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
@@ -284,7 +235,7 @@ export class HealthDataPage{
         datasets: [
         {
           label: [],
-          data: [this.hq4val1,this.hq4val2,this.hq4val3,this.hq4val4,this.hq4val5],
+          data:  [this.q4val[1],this.q4val[2],this.q4val[3],this.q4val[4],this.q4val[5]],
           backgroundColor: ['#ABDEE6','#CBAACB','#FFFFB5','#FFCCB6','#F3B0C3','#C6DBDA'],
         },
 
@@ -312,7 +263,7 @@ export class HealthDataPage{
         datasets: [
         {
           label: [],
-          data: [this.hq5val1,this.hq5val2,this.hq5val3,this.hq5val4,this.hq5val5],
+          data: [this.q5val[1],this.q5val[2],this.q5val[3],this.q5val[4],this.q5val[5]],
           backgroundColor: ['#ABDEE6','#CBAACB','#FFFFB5','#FFCCB6','#F3B0C3','#C6DBDA'],
         },
       ]
@@ -339,7 +290,7 @@ export class HealthDataPage{
         datasets: [
         {
           label: [''],
-          data: [this.hq6val1,this.hq6val2,this.hq6val3],
+          data: [this.q6val[1],this.q6val[2],this.q6val[3]],
           backgroundColor: ['#ABDEE6','#CBAACB','#FFFFB5'],
         },
 
@@ -366,35 +317,35 @@ export class HealthDataPage{
         datasets: [
         {
           label: ['None'],
-          data: [this.hq7r1val1,this.hq7r2val1,this.hq7r3val1,this.hq7r4val1,this.hq7r5val1],
+          data: [this.q7r1val[1],this.q7r2val[1],this.q7r3val[1],this.q7r4val[1],this.q7r5val[1]],
           backgroundColor: '#100d08', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['Mild'],
-          data: [this.hq7r1val2,this.hq7r2val2,this.hq7r3val2,this.hq7r4val2,this.hq7r5val2],
+          data: [this.q7r1val[2],this.q7r2val[2],this.q7r3val[2],this.q7r4val[2],this.q7r5val[2]],
           backgroundColor:'#2d231a', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['Moderate'],
-          data: [this.hq7r1val3,this.hq7r2val3,this.hq7r3val3,this.hq7r4val3,this.hq7r5val3],
+          data: [this.q7r1val[3],this.q7r2val[3],this.q7r3val[3],this.q7r4val[3],this.q7r5val[3]],
           backgroundColor: '#463626', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['Severe'],
-          data: [this.hq7r1val4,this.hq7r2val4,this.hq7r3val4,this.hq7r4val4,this.hq7r5val5],
+          data: [this.q7r1val[4],this.q7r2val[4],this.q7r3val[4],this.q7r4val[4],this.q7r5val[4]],
           backgroundColor: '#916c51', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['Extreme'],
-          data: [this.hq7r1val5,this.hq7r2val5,this.hq7r3val5,this.hq7r4val5,this.hq7r5val5],
+          data: [this.q7r1val[5],this.q7r2val[5],this.q7r3val[5],this.q7r4val[5],this.q7r5val[5]],
           backgroundColor: '#c18762', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
@@ -423,7 +374,7 @@ export class HealthDataPage{
         datasets: [
         {
           label: [''],
-          data: [this.hq8val1,this.hq8val2,this.hq8val3,this.hq8val4,this.hq8val5],
+          data: [this.q8val[1],this.q8val[2],this.q8val[3],this.q8val[4],this.q8val[5]],
           backgroundColor: ['#ABDEE6','#CBAACB','#FFFFB5','#FFCCB6','#F3B0C3','#C6DBDA'],
         },
       ]
@@ -450,35 +401,35 @@ export class HealthDataPage{
         datasets: [
         {
           label: ['6 hours or less'],
-          data: [this.hq9r1val1,this.hq9r2val1],
+          data:  [this.q9r1val[1],this.q9r2val[1]],
           backgroundColor: '#100d08', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['About 7 hours'],
-          data: [this.hq9r1val2,this.hq9r2val2],
+          data: [this.q9r1val[2],this.q9r2val[2]],
           backgroundColor: '#2d231a', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['About 8 hours'],
-          data: [this.hq9r1val3,this.hq9r2val3],
+          data: [this.q9r1val[3],this.q9r2val[3]],
           backgroundColor: '#463626', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['About 9 hours'],
-          data: [this.hq9r1val4,this.hq9r2val4],
+          data: [this.q9r1val[4],this.q9r2val[4]],
           backgroundColor: '#916c51', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: ['About 10 hours or more'],
-          data: [this.hq9r1val5,this.hq9r2val5],
+          data: [this.q9r1val[5],this.q9r2val[5]],
           backgroundColor: '#c18762', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
@@ -508,28 +459,28 @@ export class HealthDataPage{
         datasets: [
         {
           label: 'Very Good',
-          data: [this.hq10val1],
+          data: [this.q10val[1]],
           backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
           borderColor: '#FF968A',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: 'Fairly Good',
-          data: [this.hq10val2],
+          data: [this.q10val[2]],
           backgroundColor: '#8FCACA', // array should have same number of elements as number of dataset
           borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: 'Fairly Poor',
-          data: [this.hq10val3],
+          data: [this.q10val[3]],
           backgroundColor: '#A2E1D8', // array should have same number of elements as number of dataset
           borderColor: '#55CBCD',// array should have same number of elements as number of dataset
           borderWidth: 1
         },
         {
           label: 'Very Poor',
-          data: [this.hq10val4],
+          data: [this.q10val[4]],
           backgroundColor: '#A2E1D8', // array should have same number of elements as number of dataset
           borderColor: '#55CBCD',// array should have same number of elements as number of dataset
           borderWidth: 1

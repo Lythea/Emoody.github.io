@@ -1,15 +1,34 @@
 .buttons ion-button{
-
-  margin-bottom:15%;
-  width:80%;
-  height:120px;
   border-radius:15px;
   background-color:#250381;
   color:#FFFFFF;
-  font-size:55px;
   font-family: 'Poppins', sans-serif;
 }
-.buttons{
-  margin-left:18%;
-  margin-top:60%;
+
+@media screen and (max-width:1366px){
+  ion-button{
+    margin-top:13%;
+    font-size:35px;
+    margin-bottom:2%;
+    width:30%;
+    height:70px;
+    margin-left:35%;
+    font-weight:bold;
+  }
+
+}
+
+@media screen and (max-width:1080px){
+  .buttons{
+    margin-top:45%;
+  }
+  ion-button{
+    font-size:35px;
+    margin-bottom:2%;
+    width:60%;
+    height:120px;
+    margin-left:20%;
+    font-weight:bold;
+  }
+
 }

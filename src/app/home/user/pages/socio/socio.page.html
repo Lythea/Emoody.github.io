@@ -1,6 +1,6 @@
 <ion-content>
   <ion-app>
-    <ion-menu contentId="main-content">
+    <ion-menu disabled="" contentId="main-content">
       <ion-header>
         <ion-toolbar color="tertiary">
           <ion-title>Menu Content</ion-title>
@@ -10,7 +10,7 @@
     </ion-menu>
     <div class="ion-page" id="main-content">
       <ion-header class="basehead">
-        <ion-toolbar style="background-color:#250381">
+        <ion-toolbar >
           <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
@@ -38,7 +38,6 @@
                   </ion-item>
                 </ion-list>
               </ion-item>
-              <br>
               <ion-item lines="none">
                 <ion-img src="./assets/Necktie.png"></ion-img>
                 <ion-label text-wrap >2. How many people currently live in your household, including yourself?</ion-label>
@@ -115,17 +114,17 @@
                   </ion-item>
                 </ion-list>
               </ion-item>
-              <ion-item lines="none">
+              <ion-item >
                 <ion-img src="./assets/Necktie.png"></ion-img>
                 <ion-label >7. Are you employed?</ion-label>
-                <ion-checkbox [(ngModel)]="data1s3" (ngModelChange)="val7($event)" ></ion-checkbox>
+                <ion-checkbox [(ngModel)]="num7" (ngModelChange)="val7($event)"></ion-checkbox>
               </ion-item>
               <ion-item lines="none" id="opt8" >
                 <ion-img src="./assets/Necktie.png"></ion-img>
                 <ion-label text-wrap >8. If you answered No, who earns income to support your family? </ion-label>
                 <ion-list >
                   <ion-item lines="none">
-                    <ion-select class="select" interface="popover" id ="num8" placeholder="Choose: " disabled=""  (ionChange)="val8($event)" >
+                    <ion-select class="select" interface="popover" id ="num8" placeholder="Choose: "   (ionChange)="val8($event)" >
                       <ion-select-option value="A">Parents </ion-select-option>
                       <ion-select-option value="B">Guardian </ion-select-option>
                       <ion-select-option value="C">Relatives </ion-select-option>
@@ -135,7 +134,7 @@
               </ion-item>
               <ion-item lines="none">
                 <ion-img src="./assets/Necktie.png"></ion-img>
-                <ion-label text-wrap >How many hours each day do(es) the above person(s) work?   </ion-label>
+                <ion-label text-wrap >9. How many hours each day do(es) the above person(s) work?   </ion-label>
                 <ion-list >
                   <ion-item lines="none">
                     <ion-select class="select" placeholder="Choose: " interface="popover" (ionChange)="val9($event)">
@@ -150,7 +149,7 @@
               </ion-item>
               <ion-item lines="none">
                 <ion-img src="./assets/Necktie.png"></ion-img>
-                <ion-label text-wrap >What best corresponds to the above person(s) current work situation ?   </ion-label>
+                <ion-label text-wrap >10. What best corresponds to the above person(s) current work situation ?   </ion-label>
                 <ion-list >
                   <ion-item lines="none">
                     <ion-select class="select" interface="popover"placeholder="Choose: " (ionChange)="val10($event)">
@@ -166,7 +165,7 @@
               </ion-item>
               <ion-item lines="none">
                 <ion-img src="./assets/Necktie.png"></ion-img>
-                <ion-label text-wrap >What is your total combined family income for the past 12 months, before taxes, from all sources, wages, public assistance/benefits, help from relatives, alimony, and so on?  </ion-label>
+                <ion-label text-wrap >11. What is your total combined family income for the past 12 months, before taxes, from all sources, wages, public assistance/benefits, help from relatives, alimony, and so on?  </ion-label>
                 <ion-list >
                   <ion-item lines="none">
                     <ion-select class="select" interface="popover"placeholder="Choose: " (ionChange)="val11($event)">

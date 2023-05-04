@@ -1,75 +1,8 @@
-.header{
-  background-color:#FFC000;
-}
+
 ion-content  {
-  --ion-background-color:#FFC000;
+  --ion-background-color:#FFFFFF;
+  font-family: 'Poppins', sans-serif;
 }
-.menu{
-  font-family: 'Quicksand';
-  height:100%;
-  width:95%;
-}
-.menu .content{
-  margin-top:7%;
-  width:80%;
-  margin-left:17%;
-  font-family: 'Quicksand';
-}
-.menu .content .amain{
-  font-size:80px;
-  margin-left:20%;
-  color:white;
-  text-shadow: black 6px 6px;
-}
-ion-item{
-  width:90%;
-  margin-top:2%;
-}
-.a1{
-  margin-top:2%;
-  height:80px;
-}
-.a2{
-  height:80px;
-}
-.a3{
-
-  height:80px;
-}
-.a4{
-  height:80px;
-}
-.a5{
-  height:80px;
-}
-.a1 .l1{
-  margin-top:2%;
-}
-.a2 .l1{
-  margin-left:2%;
-  margin-top:2%;
-}
-.a3 .l1{
-  margin-left:2%;
-  margin-top:2%;
-}
-.a4 .l1{
-  margin-left:2%;
-  margin-top:2%;
-}
-.a5 .l1{
-  margin-left:1%;
-}
-
-.content .l1{
-  font-size:25px;
-}
-.content .l2{
-  font-size:20px;
-}
-
-
-
 .a1 ion-img{
   float: left;
   width:10%;
@@ -94,75 +27,104 @@ ion-item{
   width:7%;
   margin-left:2%;
 }
-ion-button{
-  margin-left:47%;
-  width:10%;
-  height:45px;
-  border-radius:15px;
-  background-color:#11013F;
-  color:#FFDA29;
-  font-size:25px;
-  font-family: 'Quicksand';
+.menu .container1{
+  overflow-x: hidden;
+  overflow-y: auto;
+  position:relative;
+  font-family: 'Poppins', sans-serif;
+  color:#ffffff;
 }
-
-@media screen and (max-width:1080px) {
+ion-button{
+  border-radius:25px;
+  background-color:#250381;
+  color:#ffffff;
+  font-weight:bold;
+  font-family: 'Poppins', sans-serif;
+}
+@media screen and (max-width:1366px){
+  .menu .container1{
+    overflow-x: hidden;
+    overflow-y: auto;
+    position:relative;
+    height:82%;
+    margin-left:2%;
+    margin-right:2%;
+    font-family: 'Poppins', sans-serif;
+  }
   .menu .content{
     width:100%;
-    align-items: center;
-    text-align: center;
-    margin-right:70%;
-    margin-left:0;
+    height:150%;
+    font-family: 'Poppins', sans-serif;
   }
   .menu{
-    margin-top:40%;
+    font-family: 'Poppins', sans-serif;
     width:100%;
-  }
-  .menu .content .amain{
-    margin-left:5%;
-    font-size:110px;
-  }
-  .menu .content .a1 {
+    height:85%;
+    align-items:center;
+    position:fixed;
     margin-top:5%;
-    margin-bottom:5%;
+    margin-bottom:20%;
   }
-  .menu .content .a2 {
-    margin-top:5%;
-    margin-bottom:5%;
+  .amain{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size:80px;
+    margin-left:26%;
   }
-  .menu .content .a3 {
-    margin-top:5%;
-    margin-bottom:5%;
-  }
-  .menu .content .a4 {
-    margin-top:5%;
-    margin-bottom:5%;
-  }
-  .menu .content .a5 {
-    margin-top:5%;
-    margin-bottom:5%;
-  }
-  .menu .content .a1 ion-label{
-
-    font-size:30px;
-  }
-  .menu .content .a2 ion-label{
-    font-size:30px;
-  }
-  .menu .content .a3 ion-label{
-    font-size:30px;
-  }
-  .menu .content .a4 ion-label{
-    font-size:30px;
-  }
-  .menu .content .a5 ion-label{
-    font-size:30px;
-  }
-  .menu  ion-button{
-    margin-top:10%;
-    width:20%;
+  .menu ion-button{
+    width:15%;
     height:50px;
+    font-size:30px;
+    margin-left:44%;
+    border-radius:55px;
+
+  }
+  ion-img{
+    margin-top:3%;
+  }
+
+  .content ion-label{
+    margin-top:1%;
+    font-size:20px;
+  }
+}
+@media screen and (max-width:1080px){
+  .menu{
+    margin-top:30%;
+    font-size:80px;
+    font-weight:bold;
+    font-family: 'Poppins', sans-serif;
+  }
+  .amain{
+    margin-left:21%;
+  }
+  .menu ion-button{
+    width:35%;
+    height:70px;
     font-size:50px;
-    color:white;
-    margin-left:41%;
+    margin-left:33%;
+    margin-bottom:30%;
+    border-radius:55px;
+  }
+  ion-img{
+    margin-top:3%;
+  }
+  .menu .container1{
+    overflow-x: hidden;
+    overflow-y: auto;
+    position:relative;
+    height:60%;
+    margin-left:2%;
+    margin-right:2%;
+    font-family: 'Poppins', sans-serif;
+  }
+  .menu .content{
+    width:100%;
+    height:100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  .content ion-label{
+    margin-top:5%;
+    font-size:40px;
   }
 }

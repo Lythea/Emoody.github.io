@@ -29,5 +29,8 @@ gotoyanrei(){
 gotodianne(){
   this.router.navigate(['dianne']);
 }
+gotomenu(){
+  this.router.navigate(['user']);
+}
 
 }

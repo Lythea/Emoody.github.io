@@ -2,7 +2,7 @@
 
 <ion-content>
   <ion-app>
-    <ion-menu contentId="main-content">
+    <ion-menu disabled= ""contentId="main-content">
       <ion-header>
         <ion-toolbar color="tertiary">
           <ion-title>Menu Content</ion-title>
@@ -23,8 +23,12 @@
     </ion-app>
 
     <div class="menu">
+      <ion-label class="amain">ACHIEVEMENTS!</ion-label>
+      <div class="container1">
+
+        
       <div class="content">
-        <ion-label class="amain">ACHIEVEMENTS!</ion-label>
+
         <div class="a1">
           <ion-item disabled="" id="achievement1">
             <ion-img src="assets/Achievements/First Timer.png"></ion-img>
@@ -61,6 +65,7 @@
         </ion-item>
         </div>
       </div>
+    </div>
       <ion-button (click)="disable()">Done</ion-button>
     </div>
 </ion-content>

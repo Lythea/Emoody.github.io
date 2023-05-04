@@ -1,3 +1,5 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { getElement } from 'ionicons/dist/types/stencil-public-runtime';
@@ -8,11 +10,12 @@ import { getElement } from 'ionicons/dist/types/stencil-public-runtime';
 })
 export class SocioPage implements OnInit {
   logs: string[] = [];
-  data1s3: any;
+  num7: any;
   val: any = [];
   finalData: any = [];
   newDate: any = [] ;
   finalDate: any= [];
+data7: any;
   constructor(private router: Router) { }
   ngOnInit() {
   }
@@ -35,15 +38,22 @@ export class SocioPage implements OnInit {
   val6(data6) {
     this.val[6] =data6.detail.value;
   }
-  val7(data7) {
-    this.val[7]= data7 ? 'Yes' : 'No';
-      if(this.val[7]=== 'Yes'){
-        const num8 = document.getElementById('num8') as HTMLInputElement;
-        num8.disabled=false;
-      }else if(this.val[7]=== 'No'){
-        const num8 = document.getElementById('num8') as HTMLInputElement;
-        num8.disabled=true;
-      }
+
+  val7(value: boolean): void {
+    this.val[7] = value ? 'Yes' : 'No';
+    if (typeof this.val[7] === 'undefined' || !this.val[7]) {
+      // Handle undefined value
+      this.val[7]='No';
+    } else if (this.val[7] === 'Yes') {
+      const num8 = document.getElementById('num8') as HTMLInputElement;
+      num8.disabled = true;
+    } else if (this.val[7] === 'No') {
+      const num8 = document.getElementById('num8') as HTMLInputElement;
+      num8.disabled = false;
+    } else {
+      console.log('Unexpected value:', this.val[7]);
+    }
+
   }
   val8(data8) {
     this.val[8] =data8.detail.value;
@@ -58,6 +68,9 @@ export class SocioPage implements OnInit {
     this.val[11] =data11.detail.value;
   }
   next(): void{
+    console.log('Value of val[7]:', this.val[7]);
+    if(!this.val[8] || this.val[8] === 'No'){
+      this.val[8]='Me';}
     if(!this.val[1] || !this.val[2] || !this.val[3] || !this.val[4] || !this.val[5] || !this.val[6] ||
        !this.val[9] || !this.val[10] || !this.val[11] ){
         alert('You must answer all the questions');
@@ -86,10 +99,8 @@ export class SocioPage implements OnInit {
                       });
 
       }else{
-        if(!this.val[7]){
-          this.val[7]='Yes';}
-        if(!this.val[8] || this.val[8] === 'No'){
-          this.val[8]='Me';}
+
+
         const formData = new FormData();
         const id = localStorage.getItem('id');
         const dateVal = localStorage.getItem('finaldate');
@@ -124,6 +135,7 @@ export class SocioPage implements OnInit {
         });
 
       }
+      console.log(this.val[7]);
       }
 
   }

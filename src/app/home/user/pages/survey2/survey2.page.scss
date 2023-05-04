@@ -1,135 +1,142 @@
 
+ion-content  {
+  --ion-background-color:#ffffff;
+}
+ion-menu-button {
+  font-size: 40px !important;
+  color:#250381;
+}
+.sc-ion-buttons-md-h {
+  display: block !important;
+}
+ion-checkbox {
+  --size: 25px;
+  --background-checked: #F8E4A5;
+  border-radius: 6px;
+  border: 1px solid #000000;
+  margin-right:3%;
+}
 .menu .container1{
   overflow-x: hidden;
   overflow-y: auto;
   position:relative;
-  height:75%;
-  margin-top:2%;
-  margin-left:2%;
-  margin-right:2%;
-  font-family:'Quicksand';
-  color:#FFC000;
+  font-family: 'Poppins', sans-serif;
+  color:#ffffff;
 }
 .menu .container{
-  width:100%;
-
-  font-family:'Quicksand';
-  color:#FFC000;
-}
-.menu{
-  --ion-item-background:#FFC000;
-  font-family:'Quicksand';
-  width:100%;
-  margin-top:10%;
-  align-items:center;
-  position:fixed;
-  margin-bottom:20%;
+  font-family: 'Poppins', sans-serif;
+  color:#ffffff;
 }
 ion-item {
-  --ion-item-background:#FFC000;
-  margin-right:2%;
-  margin-left:2%;
-  border-radius:30px;
+  --ion-item-background:#F8E4A5;
+  border-radius:20px;
 }
 ion-label{
-  margin-top:5%;
-  margin-bottom:5%;
+  color:#250381;
 }
-ion-img{
-  width:30px;
-  height:150px;
+
+.menu {
+  font-family: 'Poppins', sans-serif;
+  color: #250381;
+}
+.menu .container1 .container ion-label{
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
 }
 ion-button{
   align-items:center;
   text-align: center;
-  margin-top:3%;
-  margin-left:35%;
-  margin-right:40%;
-  font-size:45px;
-  width:30%;
-  height:65px;
   background-color:#250381;
   border-radius:25px;
   color:#ffffff;
 }
-h1{
-  text-align:center;
-}
-.menu ion-img{
-  width:2%;
-}
-.header{
-  background-color:#FFC000;
-}
-h3{
-  text-align:center;
- height:50%;
-}
-ion-content  {
-  --ion-background-color:#FFC000;
-  font-family: 'Quicksand';
-}
 
-ion-select{
-  margin-top:5px ;
-  width:200px;
-}
-
-ion-menu-button {
-  font-size: 40px !important;
-}
-.menu h1{
-  margin-bottom:3%;
-}
-.menu ion-item{
-  margin-bottom:1.5%;
-}
 @media screen and (max-width:1366px){
-  h1{
-    font-size:50px;
-  }
-
-  .menu .btn1 ion-button{
-    width:10%;
-    font-size:20px;
-    margin-left:45%;
-  }
-}
-
-@media screen and (max-width:1080px){
-  .sc-ion-buttons-md-h {
-    display: block !important;
-  }
-  .ion-page ion-header ion-toolbar ion-buttons ion-menu-button {
-    font-size:70px !important;
-  }
   .menu{
-    height:100%;
-    margin-top:15%;
+    margin-top:5%;
+    height:90%;
+  }
+  .menu .container1{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height:80%;
+  }
+  .menu .container{
+    font-family: 'Poppins', sans-serif;
+    height:150%;
   }
   .menu h1{
-    font-size:100px;
-  }
-  .menu ion-img{
-    width:5%;
-  }
-  .menu .btn1 ion-button{
-    margin-top:4%;
-    margin-left:36%;
-    width:30%;
-    height:70px;
+    margin-left:37%;
     font-size:50px;
+    font-weight:bold;
   }
-  .menu ion-label{
-
-    font-size:40px;
+  .menu .container1 .container ion-item{
+    height:70px;
+    margin-bottom:1%;
+    margin-left:2%;
+    margin-right:2%;
   }
-
+  ion-img{
+    width:2%;
+  }
+  ion-button{
+    margin-top:1%;
+    margin-bottom:2%;
+    margin-left:42%;
+    width:14%;
+    height:38px;
+    font-weight:bold;
+  }
   ion-select{
+    width:100px;
+  }
+}
+@media screen and (max-width:1080px){
+  .menu .container{
+    font-family: 'Poppins', sans-serif;
+    height:120%;
+  }
+  .menu .container1 .container ion-item{
+    font-size:35px;
+    height:280px;
+  }
+  ion-img{
+    width:10%;
+  }
+  ion-menu-button {
+    font-size: 70px !important;
+    color:#250381;
+  }
+  .menu{
+    margin-top:5%;
+    height:102%;
+  }
+  .menu h1{
+    text-align:center;
+    margin-left:1px;
+    margin-top:5%;
+    font-size:90px;
+    font-weight:bold;
+    font-style: italic;
+  }
+  ion-checkbox {
+    margin-top:120px;
+    margin-bottom:150px;
+    margin-right:5%;
+    margin-left:7%;
+    --size: 45px;
+    --background-checked: #250381;
+  }
+  ion-button{
+    margin-top:3%;
+    margin-left:33%;
+    width:35%;
+    height:70px;
+    font-weight:bold;
     font-size:30px;
   }
-
-  .radio-icon label{
-    font-size:50px;
+  ion-select{
+    margin-top:100px;
+    width:200px;
   }
 }

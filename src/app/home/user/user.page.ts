@@ -223,6 +223,7 @@ finalDate: any = [];
                   console.log('Error');
                 }});
           }else{
+
           };
         }else {
           console.log('Error');
@@ -287,7 +288,6 @@ finalDate: any = [];
                         this.router.navigate(['health']);
                         alert("Before you begin the survey, please understand the following: \n - Your participation in this survey is voluntary. In the course of completing this survey, you may refuse to answer specific questions. You may also choose to end the survey at any time. \n- There are no right or wrong answers, we only want to hear about your experiences and opinions.  \n- All of the answers you provide will be maintained in a secure manner. We will not disclose your responses or anything about you. Your name will not be linked to any responses you provide in this survey.  \n - Your responses will be combined with those from other employees to provide an overall average for feedback about the organization. The results will be used to guide decisions about policies and programs related to employee health, safety, and wellness. \n- There are no risks or rewards anticipated for completing the survey. However, it is possible that programs developed in the future may benefit you and your coworkers \n");
                       }else{
-                        console.log(value.data);
                         const year = value.data[0].Year;
                         const month = value.data[0].Month;
                         const day = value.data[0].Day;
@@ -302,11 +302,9 @@ finalDate: any = [];
                         console.log('Error');
                       }
                       }
-
                     });
 
   }
-
   menu(){
     const formData = new FormData();
     const company = localStorage.getItem('company');
@@ -319,7 +317,6 @@ finalDate: any = [];
     })
     .then(response => response.json())
     .then(value => {
-
       if (value.data === 'Not Found!'){
         const num1 =document.getElementById('achievement1') as HTMLInputElement;
         num1.disabled=true;

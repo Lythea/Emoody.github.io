@@ -1,3 +1,7 @@
+/* eslint-disable prefer-arrow/prefer-arrow-functions */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable prefer-const */
+/* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable eqeqeq */
 /* eslint-disable @typescript-eslint/quotes */
 /* eslint-disable @typescript-eslint/naming-convention */
@@ -32,8 +36,10 @@ date = new Date();
 formattedDate: any;
 newDate: any = [];
 finalDate: any =[];
-domain: any = ['@g.batstate-u.edu.ph','@ub.edu.ph','@lpu.edu.ph'];
+domain: any;
 company: any;
+finalData: any =[];
+token: any = '';
   constructor(private router: Router,private http: HttpClient, private fb: FormBuilder) { this.setToday();}
   ngOnInit(): void{
     this.login = this.fb.group({
@@ -44,135 +50,202 @@ company: any;
   setToday(){
     this.formattedDate =  this.date.toISOString().slice(0, 10);
   }
+
   register(){
     this.router.navigate(['option']);
   }
+  generateRandomString(length: number): string {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    for (let i = 0; i < length; i++) {
+      this.token += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return this.token;
+  }
   try1(data: any): void{
 
-    if (data.email.includes(this.domain[0]) || data.email.includes(this.domain[1]) || data.email.includes(this.domain[2]) ){
-      if(data.email.includes(this.domain[0])){
-        this.domain[0]='BSU';
-        this.company= this.domain[0];
-      }else if(data.email.includes(this.domain[1])){
-        this.domain[1]='UB';
-        this.company= this.domain[1];
-      }else if(data.email.includes(this.domain[2])){
-        this.domain[2]='LPU';
-        this.company= this.domain[2];
-      }
-    }else{
-      alert('You domain email is not registered');
-    }
-      const formData = new FormData();
-      formData.append('user', data.email);
-      formData.append('pass', data.password);
-      formData.append('company', this.company);
-      fetch('http://localhost/EMOODY/src/app/BackendUser/gettingAccountInfo.php', {
+    this.token = this.generateRandomString(32);
+    console.log(this.token);
+    const formData = new FormData();
+    formData.append('user', data.email);
+    formData.append('pass', data.password);
+
+    fetch('http://localhost/EMOODY/src/app/BackendUser/companyDomain.php', {
       method: 'POST',
-      body: formData
+      body: formData,
+
       })
-    .then(response => response.json())
-    .then(value => {
-      if(value.data[0].position ==='EMPLOYEE'){
-        console.log(value.data[0]);
-        this.router.navigate(['user']);
-        localStorage.setItem('id', value.data[0].id);
-        localStorage.setItem('company',value.data[0].company);
-        localStorage.setItem('date',this.formattedDate);
+      .then(response => response.json())
+      .then(value => {
+      let result1Data = value.result1;
+      let result2Data = value.result2;
 
-        this.val1=  localStorage.getItem('id');
-        this.val2=  localStorage.getItem('date');
-        this.val3=  localStorage.getItem('company');
-
-        formData.append('id', this.val1);
-        formData.append('date', this.val2);
-        formData.append('company', this.val3);
-
-        this.newDate = new Date();
-        this.newDate[1] = this.newDate.getFullYear();
-        this.newDate[2] = this.newDate.getMonth()+1;
-        this.newDate[3] = this.newDate.getDate();
-
-        for (let i = 1; i < 4; i++) {
-          localStorage.setItem('newDate'+i, this.newDate[i]);
-        }
-        for (let i = 1; i < 4; i++) {
-          this.finalDate[i] =localStorage.getItem('newDate'+i);
-        }
-        for (let i = 1; i < 4; i++) {
-          formData.append('date' + i, this.finalDate[i]);
-        }
-          fetch('http://localhost/EMOODY/src/app/BackEnd/moodTrack.php', {
-            method: 'POST',
-            body: formData
-            })
-            .then(response => response.json())
-            .then(value1 => {
-              if (value1.data === 'Not Found!'){
-                alert("'You haven't answer daily survey yet'");
-              }else{
-
-              }});
-          fetch('http://localhost/EMOODY/src/app/BackEnd/dateSocio.php', {
-            method: 'POST',
-            body: formData
-            })
-            .then(response => response.json())
-            .then(value2 => {
-                if(value2.data==='Not Found!'){
-                  alert("You haven't answer the Socio Survey yet");
-                }else{
-                  const year = value2.data[0].Year;
-                  const month = value2.data[0].Month;
-                  const day = value2.data[0].Day;
-                    if (year == this.finalDate[1] || year < this.finalDate[1]){
-                      if(month < this.finalDate[2]){
-                        if(day %7==0){
-                          alert("You haven't answer the Socio Survey yet");
-                        }
-                      }else if (month == this.finalDate[2]){
-                        alert("You already answered the Socio Survey");
-                      }
-                    }else {
-                      console.log('Error');
-                    }
-                }
-
-             });
-
-             fetch('http://localhost/EMOODY/src/app/BackEnd/dateHealth.php', {
-              method: 'POST',
-              body: formData
-              })
-              .then(response => response.json())
-              .then(value2 => {
-                if(value2.data==='Not Found!'){
-                  alert("You haven't answer the Health Survey yet");
-                }else{
-                  const year = value2.data[0].Year;
-                  const month = value2.data[0].Month;
-                  const day = value2.data[0].Day;
-                    if (year == this.finalDate[1] || year < this.finalDate[1]){
-                      if(month < this.finalDate[2]){
-                        if(day %7==0){
-                          alert("You haven't answer the Health Survey yet");
-                        }
-                      }else if (month == this.finalDate[2]){
-                        alert("You already answered the Socio Survey");
-                      }
-                    }else {
-                      console.log('Error');
-                    }
-                }
-               });
-
-      }else if(value.data[0].position ==='ADMIN'){
-        this.router.navigate(['admin']);
-        console.log('Logging in as Admin');
-      }else {
-        console.log('Error');
+    for (let i = 0; i < result2Data[0].count; i++) {
+      if(data.email.includes(result1Data[i].domain) == true){
+       this.domain=result1Data[i].domain;
+       this.company=result1Data[i].company;
       }
-    });
     }
-}
+    if(!this.domain || !this.company){
+      alert('Domain Email is not registerd');
+    }
+        if(this.company !==''&& this.domain!==''){
+          formData.append('company',this.company);
+          formData.append('email', data.email);
+          formData.append('pass', data.password);
+          fetch('http://localhost/EMOODY/src/app/BackendUser/gettingAccountInfo.php', {
+            method: 'POST',
+            body: formData
+            })
+          .then(response => response.json())
+            .then(value => {
+              this.finalData[0] = value.data[0].id;
+              this.finalData[1] = value.data[0].company;
+              this.finalData[2] = value.data[0].position;
+              this.finalData[3] = value.data[0].email;
 
+              if(this.finalData[2]=='employee'){
+
+                this.router.navigate(['user']);
+                this.newDate = new Date();
+                this.newDate[1] = this.newDate.getFullYear();
+                this.newDate[2] = this.newDate.getMonth()+1;
+                this.newDate[3] = this.newDate.getDate();
+
+                localStorage.setItem('id', this.finalData[0]);
+                localStorage.setItem('company',this.finalData[1]);
+                localStorage.setItem('position',this.finalData[2]);
+                localStorage.setItem('date',this.formattedDate);
+                localStorage.setItem('email',this.finalData[3]);
+                for (let i = 1; i < 4; i++) {
+                  localStorage.setItem('newDate'+i, this.newDate[i]);
+                }
+                for (let i = 1; i < 4; i++) {
+                  formData.append('date' + i, this.newDate[i]);
+                }
+                formData.append('id', this.finalData[0]);
+                formData.append('date', this.formattedDate);
+                formData.append('company',this.finalData[1]);
+                formData.append('email',this.finalData[3]);
+                fetch('http://localhost/EMOODY/src/app/BackEnd/dailyloginTrack.php', {
+                  method: 'POST',
+                  body: formData
+                  })
+                  .then(response => response.json())
+                  .then(value0 => {
+                    if(value0.data ==='Not Found!'){
+
+                      for (let i = 1; i < 4; i++) {
+                        formData.append('date' + i, this.newDate[i]);
+                      }
+                      formData.append('id', this.finalData[0]);
+                      formData.append('date', this.formattedDate);
+                      formData.append('company',this.finalData[1]);
+                      formData.append('email',this.finalData[3]);
+
+
+                      fetch('http://localhost/EMOODY/src/app/BackendUser/dailyloginRegistration.php', {
+                        method: 'POST',
+                        body: formData
+                        })
+                        .then(response => response.json())
+                        .then(value1 => {
+                          });
+                    }
+                    });
+                fetch('http://localhost/EMOODY/src/app/BackEnd/moodTrack.php', {
+                  method: 'POST',
+                  body: formData
+                  })
+                  .then(response => response.json())
+                  .then(value1 => {
+                    if (value1.data === 'Not Found!'){
+                      alert("'You haven't answer daily survey yet'");
+                    }else{
+
+                    }});
+                fetch('http://localhost/EMOODY/src/app/BackEnd/dateSocio.php', {
+                  method: 'POST',
+                  body: formData
+                  })
+                  .then(response => response.json())
+                  .then(value2 => {
+                      if(value2.data==='Not Found!'){
+                        alert("You haven't answer the Socio Survey yet");
+                      }else{
+                        const year = value2.data[0].Year;
+                        const month = value2.data[0].Month;
+                        const day = value2.data[0].Day;
+                          if (year == this.finalDate[1] || year < this.finalDate[1]){
+                            if(month < this.finalDate[2]){
+                              if(day %7==0){
+                                alert("You haven't answer the Socio Survey yet");
+                              }
+                            }else if (month == this.finalDate[2]){
+                              alert("You already answered the Socio Survey");
+                            }
+                          }
+                      }
+
+                   });
+
+                   fetch('http://localhost/EMOODY/src/app/BackEnd/dateHealth.php', {
+                    method: 'POST',
+                    body: formData
+                    })
+                    .then(response => response.json())
+                    .then(value2 => {
+                      if(value2.data==='Not Found!'){
+                        alert("You haven't answer the Health Survey yet");
+                      }else{
+                        const year = value2.data[0].Year;
+                        const month = value2.data[0].Month;
+                        const day = value2.data[0].Day;
+                          if (year == this.finalDate[1] || year < this.finalDate[1]){
+                            if(month < this.finalDate[2]){
+                              if(day %7==0){
+                                alert("You haven't answer the Health Survey yet");
+                              }
+                            }else if (month == this.finalDate[2]){
+                              alert("You already answered the Socio Survey");
+                            }
+                          }
+                      }
+                     });
+
+              }else if(this.finalData[2] ==='admin'){
+                this.newDate = new Date();
+                this.newDate[1] = this.newDate.getFullYear();
+                this.newDate[2] = this.newDate.getMonth()+1;
+                this.newDate[3] = this.newDate.getDate();
+
+                localStorage.setItem('id', this.finalData[0]);
+                localStorage.setItem('company',this.finalData[1]);
+                localStorage.setItem('date',this.formattedDate);
+                localStorage.setItem('position',this.finalData[2]);
+                for (let i = 1; i < 4; i++) {
+                  localStorage.setItem('newDate'+i, this.newDate[i]);
+                }
+                for (let i = 1; i < 4; i++) {
+                  formData.append('date' + i, this.newDate[i]);
+                }
+                formData.append('id', this.finalData[0]);
+                formData.append('date', this.formattedDate);
+                formData.append('company',this.finalData[1]);
+                formData.append('position',this.finalData[2]);
+                      this.router.navigate(['admin']);
+                      console.log('Logging in as Admin');
+                    }
+
+
+            });
+          }
+      });
+
+
+
+
+    }
+
+
+}

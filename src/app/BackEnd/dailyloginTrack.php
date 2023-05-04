@@ -15,10 +15,14 @@ $company = $_POST['company'];
     die("Connection failed: " . $conn->connect_error);}
 
 
-  $id = $_POST['id'];
-  $date = $_POST['date'];
+    $id = $_POST['id'];
+    $year = $_POST['date1'];
+    $month= $_POST['date2'];
+    $day= $_POST['date3'];
+    $email= $_POST['email'];
+    $date=$_POST['date'];
 
-  $sql = "SELECT id,date,q1,q1,q3,q4,q5,q6,q7,q8,q9,q10 FROM dailysurvey1 WHERE id= '$id' and date = '$date'";
+  $sql = "SELECT id,Year,Month,Day,email,reg_date FROM dailylogin WHERE id= '$id' and Year = '$year' and Month = '$month' and Day ='$day' and reg_date = '$date'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       $data = $result->fetch_all(MYSQLI_ASSOC);
@@ -26,6 +30,10 @@ $company = $_POST['company'];
     } else {
       echo json_encode(['data'=> 'Not Found!']);
   }
+
+
+
+
   $conn->close();
   exit();
 ?>

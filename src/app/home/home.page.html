@@ -1,7 +1,12 @@
 <ion-content class="body"[fullscreen]="true">
   <div class="all">
     <div class="container">
-      <ion-label><h1 >WELCOME!</h1> </ion-label>
+      <div class="logo">
+        <ion-img src="assets\Logo.png "></ion-img>
+        <ion-label>E - MOODY</ion-label>
+      </div>
+
+      <ion-label class="welcome"><h1 >WELCOME!</h1> </ion-label>
       <ion-label><h2 >Please enter your credentials below.</h2> </ion-label>
       <div class="input">
         <form method="post" action="http://localhost/EMOODY/src/app/Backend/getAcc.php" form [formGroup]="login">
@@ -14,8 +19,8 @@
           </ion-item>
           <div class="container1">
 
-            <div class="column"><ion-label>FORGOT PASSWORD?</ion-label></div>
-            <div class="column"><ion-label (click)="register()">REGISTER</ion-label></div>
+           <ion-label class="column1">FORGOT PASSWORD?</ion-label>
+           <ion-label class="column2" (click)="register()">REGISTER</ion-label>
           </div>
         </ion-list>
         <ion-button color="#11013F" name ="button1" (click)="try1(login.value)" [disabled]="login.invalid">LOGIN</ion-button>

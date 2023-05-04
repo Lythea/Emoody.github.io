@@ -1,17 +1,10 @@
 <ion-content>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <ion-list-header color="#FFC000"><ion-button (click)="next()">NEXT</ion-button></ion-list-header>
+  <ion-list-header color="#FFC000"></ion-list-header>
+
   <ion-card class="welcome-card">
     <div class="chartBox">
-      <ion-label>1. If you would like to participate, please click "Agree" to indicate you have read the information on this page. </ion-label>
-    <ion-card-content>
-      <canvas #barChart1></canvas>
-    </ion-card-content>
-   </div>
-  </ion-card>
-  <ion-card class="welcome-card">
-    <div class="chartBox">
-      <ion-label>2. Would you say that in general, your health is?</ion-label>
+      <ion-label>1. Would you say that in general, your health is?</ion-label>
     <ion-card-content>
       <canvas #barChart2 ></canvas>
     </ion-card-content>
@@ -19,7 +12,7 @@
   </ion-card>
   <ion-card class="welcome-card">
     <div class="chartBox">
-      <ion-label>3. Has a doctor or other healthcare provider told you that you have any of the following conditions? If so, is this condition currently being treated? Check all that apply.</ion-label>
+      <ion-label>2. Has a doctor or other healthcare provider told you that you have any of the following conditions? If so, is this condition currently being treated? Check all that apply.</ion-label>
     <ion-card-content>
       <canvas #barChart3 ></canvas>
     </ion-card-content>
@@ -27,7 +20,7 @@
   </ion-card>
   <ion-card class="welcome-card">
     <div class="chartBox">
-      <ion-label>4. Nutrition experts recommend filling half your plate with fruits and vegetables at every meal and snacking occasion. How often do you meet this goal?</ion-label>
+      <ion-label>3. Nutrition experts recommend filling half your plate with fruits and vegetables at every meal and snacking occasion. How often do you meet this goal?</ion-label>
     <ion-card-content>
       <canvas #barChart4 ></canvas>
     </ion-card-content>
@@ -35,7 +28,7 @@
   </ion-card>
   <ion-card class="welcome-card">
     <div class="chartBox">
-      <ion-label>5. Health experts say that you should do strength training exercises twice a week plus do other activities that increase your heart rate and breathing several days each week. How often do you meet this goal?</ion-label>
+      <ion-label>4. Health experts say that you should do strength training exercises twice a week plus do other activities that increase your heart rate and breathing several days each week. How often do you meet this goal?</ion-label>
     <ion-card-content>
       <canvas #barChart5 ></canvas>
     </ion-card-content>
@@ -43,7 +36,7 @@
   </ion-card>
   <ion-card class="welcome-card">
     <div class="chartBox">
-      <ion-label>6. Do you now smoke cigarettes every day, some days, or not at all?</ion-label>
+      <ion-label>5. Do you now smoke cigarettes every day, some days, or not at all?</ion-label>
     <ion-card-content>
       <canvas #barChart6 ></canvas>
     </ion-card-content>
@@ -51,7 +44,7 @@
   </ion-card>
   <ion-card class="welcome-card">
     <div class="chartBox">
-      <ion-label>7. During the past 3 months, to what extent have you had pain, aching, numbness or tingling in any of these body areas?     </ion-label>
+      <ion-label>6. During the past 3 months, to what extent have you had pain, aching, numbness or tingling in any of these body areas?     </ion-label>
     <ion-card-content>
       <canvas #barChart7 ></canvas>
     </ion-card-content>
@@ -59,7 +52,7 @@
   </ion-card>
   <ion-card class="welcome-card">
     <div class="chartBox">
-      <ion-label>8. During the past week, to what extent have you had difficulty sleeping because of any physical or emotional problem?</ion-label>
+      <ion-label>7. During the past week, to what extent have you had difficulty sleeping because of any physical or emotional problem?</ion-label>
     <ion-card-content>
       <canvas #barChart8 ></canvas>
     </ion-card-content>
@@ -67,7 +60,7 @@
   </ion-card>
   <ion-card class="welcome-card">
     <div class="chartBox">
-      <ion-label>9. Please answer the following questions about sleep. </ion-label>
+      <ion-label>8. Please answer the following questions about sleep. </ion-label>
     <ion-card-content>
       <canvas #barChart9 ></canvas>
     </ion-card-content>
@@ -75,10 +68,11 @@
   </ion-card>
   <ion-card class="welcome-card">
     <div class="chartBox">
-      <ion-label>10. How would you describe the quality of your sleep on a typical night? </ion-label>
+      <ion-label>9. How would you describe the quality of your sleep on a typical night? </ion-label>
     <ion-card-content>
       <canvas #barChart10 ></canvas>
     </ion-card-content>
    </div>
   </ion-card>
+  <ion-button (click)="next()">NEXT</ion-button>
 </ion-content>

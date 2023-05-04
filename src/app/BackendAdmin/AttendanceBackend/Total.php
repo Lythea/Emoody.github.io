@@ -7,15 +7,19 @@ header ('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "dataStorage";
+$company = $_POST['company'];
 // Connect with the database.
-$conn= new mysqli($servername, $username, $password,$database);
+$conn= new mysqli($servername, $username, $password,$company);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
   }
 
-  $date = $_POST['dateToday'];
-  $sql = "SELECT count(id) as TOTAL FROM datalogin WHERE profile='user'";
+
+  $year = $_POST['date1'];
+  $month = $_POST['date2'];
+  $day = $_POST['date3'];
+
+  $sql = "SELECT count(id) as TOTAL FROM accounts WHERE position='employee'";
   $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       $data = $result->fetch_all(MYSQLI_ASSOC);

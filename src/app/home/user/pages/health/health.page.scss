@@ -1,226 +1,162 @@
 ion-content  {
-  --ion-background-color:#FFC000;
+  --ion-background-color:#ffffff;
 }
-.header{
-  background-color:#FFC000;
+ion-menu-button {
+  font-size: 70px !important;
+  color:#250381;
 }
-ion-select{
-  margin-top:5px ;
-  width:200px;
-}
+
 .menu .container1{
   overflow-x: hidden;
   overflow-y: auto;
   position:relative;
-  height:82%;
-  margin-left:2%;
-  margin-right:2%;
-  font-family:'Quicksand';
-}
-.menu .container{
-  width:100%;
-  height:150%;
-  font-family:'Quicksand';
-
-}
-
-.menu{
-  font-family:'Quicksand';
-  width:100%;
-  height:100%;
-  align-items:center;
-  position:fixed;
-  margin-bottom:20%;
+  font-family: 'Poppins', sans-serif;
 }
 h1{
   text-align:center;
-  font-size:100px;
-  margin-top:10%;
-}
-.rule{
-  margin-top:10%;
-  font-size:35px;
-  margin-right:5%;
-  margin-left:5%;
-}
-.step1{
-  margin-left:10%;
-  width:80%;
-  text-align:center;
-  align-items: center;
-  height:10%;
-  font-size:40px;
-}
-.step1 .num1{
-  width:80%;
-  text-align:center;
-  align-items: center;
 }
 ion-button{
   align-items: center;
   border-radius:25px;
-  width:10%;
-  height:40px;
-  background-color:#11013F;
+  background-color:#250381;
   color:#ffffff;
-  margin-left:35%;
-  margin-bottom:20%;
-  margin-top:2%;
-}
-.questions{
-  width:90%;
+  font-weight:bold;
 
-  text-align: left;
-  height:100%;
 }
-.align1{
-  text-align: center;
-}
-.grid1 ion-grid{
-  width:65%;
-}
-.grid1 ion-col{
-height:30px;
-border: 1px solid #000000;
-}
-.grid1 ion-radio{
-  margin-left:46%;
-}
-.grid2 ion-grid{
-  width:90%;
-  margin-left:5%;
-}
-.grid2 ion-col{
-height:30px;
-border: 1px solid #000000;
-}
-.grid3 ion-radio{
-  margin-left:46%;
-}
-.grid3 ion-grid{
-  width:90%;
-
-  margin-left:4%;
-}
-.grid3 ion-col{
-height:57px;
-border: 1px solid #000000;
-}
-.grid3 ion-radio{
-  margin-left:46%;
-}
-
-
-@media screen and (max-width:1080px){
-  .sc-ion-buttons-md-h {
-    display: block !important;
+@media screen and (max-width:1366px){
+  ion-select{
+    margin-top:5px ;
+    width:200px;
   }
-  .ion-page ion-header ion-toolbar ion-buttons ion-menu-button {
-    font-size:70px !important;
+  ion-menu-button {
+    font-size: 90px !important;
+    color:#250381;
+  }
+  .menu .container1{
+    overflow-x: hidden;
+    overflow-y: auto;
+    position:relative;
+    height:82%;
+    margin-left:2%;
+    margin-right:2%;
+    font-family: 'Poppins', sans-serif;
+  }
+  .menu .container{
+    width:100%;
+    height:150%;
+    font-family: 'Poppins', sans-serif;
   }
   .menu{
-    height:100%;
+    font-family: 'Poppins', sans-serif;
     width:100%;
-    font-size:30px;
+    height:85%;
+    align-items:center;
+    position:fixed;
+    margin-bottom:20%;
   }
-  .menu .step1{
+  h1{
+    text-align:center;
+    font-size:80px;
     margin-top:5%;
   }
-  .menu .step1 ion-radio{
-    margin-top:2%;
+  ion-button{
+    width:10%;
+    height:40px;
+    margin-left:45%;
+    margin-top:1%;
   }
-  .questions{
-    width:100%;
-    margin-top:8%;
+  .grid1 ion-col{
+    height:30px;
+    border: 1px solid #000000;
+    }
+  .grid2 ion-col{
+    height:30px;
+    border: 1px solid #000000;
+    }
+  .grid3 ion-col{
+    height:40px;
+    border: 1px solid #000000;
+    }
+  .align1{
+    text-align: center;
+  }
+  .grid1 ion-radio{
+    margin-left:46%;
+  }
+  .grid2 ion-radio{
+    margin-left:46%;
+  }
+  .grid3 ion-radio{
+    margin-left:46%;
+  }
+
+}
+@media screen and (max-width:1080px){
+  .menu {
+    font-size:40px;
+    height:105%;
+    font-family: 'Poppins', sans-serif;
+  }
+  ion-menu-button {
+    font-size: 70px !important;
+    color:#250381;
+  }
+  h1{
+    text-align:center;
+    font-size:100px;
+    margin-top:5%;
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
   }
   .questions ion-label{
-    font-size:30px;
+    font-size:40px;
     margin-bottom:5%;
-
+    font-family: 'Poppins', sans-serif;
+  }
+  .grid1 ion-col{
+    height:95px;
+    border: 1px solid #000000;
+    }
+  .grid2 ion-col{
+    height:95px;
+    border: 1px solid #000000;
+    }
+  .grid3 ion-col{
+    height:230px;
+    border: 1px solid #000000;
+    }
+  .align1{
+    text-align: center;
+  }
+  .grid1 ion-radio{
+    margin-top:5%;
+    margin-left:42%;
+    width:20%;
+    height:55%;
+  }
+  .grid2 ion-radio{
+    margin-top:10%;
+    margin-left:36%;
+    width:30%;
+    height:40%;
+  }
+  .grid3 ion-radio{
+    margin-top:65%;
+    margin-left:38%;
+    width:30%;
+    height:20%;
+  }
+  ion-button{
+    width:20%;
+    height:60px;
+    margin-left:40%;
+    margin-top:1%;
+    font-size:30px;
+    font-weight:bold;
   }
   ion-select{
     width:200px;
     font-size:30px;
   }
-  .grid1 ion-grid{
-    width:90%;
-  }
-  .grid1 ion-col{
-    height:85px;
-    border: 1px solid #000000;
-  }
-  .grid1 .align1 ion-col{
-      height:80px;
-  }
-  .grid1 ion-radio {
-    margin-right:7%;
-    margin-top:8%;
-    width: 30px;
-    height: 30px;
-}
-  .radmain{
-    margin-top:5%;
-  }
-  .grid2 ion-grid{
-    margin-left:0;
-    width:95%;
-    font-size:25px;
-  }
-  .grid2 ion-col{
-    height:65px;
-    border: 1px solid #000000;
-  }
-  .grid2 .align1 ion-col{
-      height:80px;
-  }
-  .grid2 ion-radio {
-    margin-top:80%;
-    margin-left:35%;
-    margin-top:8%;
-    width: 30px;
-    height: 30px;
-}
-  .questions .num8{
-    margin-top:5%;
-  }
-.grid3 ion-grid{
-  margin-left:0;
-  width:95%;
-  font-size:25px;
-}
-.grid3 ion-col{
-  height:130px;
-  border: 1px solid #000000;
-}
-.grid3 .align1 ion-col{
-    height:90px;
-}
-.grid3 ion-radio {
-  margin-top:80%;
-  margin-left:35%;
-  margin-top:8%;
-  width: 30px;
-  height: 30px;
-}
-.questions ion-select-option{
-  margin-left:10%;
-  max-width:200px;
-  text-align:center;
-  font-size:105px;
-  width: 80%;;
 }
 
-ion-select{
-  width:200px;
-  font-size:30px;
-}
-.questions .num10{
-  margin-top:5%;
-}
-ion-button{
-  width:30%;
-  height:60px;
-  font-size:50px;
-  margin-left:34%;
-}
-}

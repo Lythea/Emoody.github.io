@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .chartMenu {
   width: 100vw;
@@ -32,13 +32,25 @@
   margin-top:2%;
 }
 ion-content  {
-  --ion-background-color:#FFC000;
+  --ion-background-color:#FFFFFF;
 }
 ion-label{
   font-size:15px;
   color:black;
 }
+@media screen and (max-width:1366px){
 
+  ion-button{
+    margin-left:48%;
+    width:10%;
+    height:45px;
+    border-radius:15px;
+    background-color:#11013F;
+    color:#FFFFFF;
+    font-size:25px;
+    font-family: 'Quicksand';
+  }
+}
 @media screen and (max-width:1080px){
   .chartBox{
     width:800px;
@@ -50,12 +62,14 @@ ion-label{
     font-size: 30px;
   }
   ion-button{
-    width:10%;
-    height:45px;
+    margin-left:40%;
+    margin-top:2%;
+    width:20%;
+    height:55px;
     border-radius:15px;
     background-color:#11013F;
-    color:#FFDA29;
-    font-size:25px;
-    font-family: 'Quicksand';
+    color:#FFFFFF;
+    font-size:35px;
+    font-family: 'Poppins', sans-serif;
   }
 }

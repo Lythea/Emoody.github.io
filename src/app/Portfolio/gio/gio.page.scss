@@ -1,5 +1,5 @@
 ion-content {
-  --ion-background-color:#FFC000;
+  --ion-background-color:#Ffffff;
 }
 .sc-ion-buttons-md-h {
   display: block !important;
@@ -7,13 +7,13 @@ ion-content {
 ion-menu-button {
   font-size: 70px !important;
 }
-ion-button{width:100%;}
+
 .menu{
   position: relative;
   font-family: 'Quicksand';
   margin-top:7.5%;
-  background-color:#11013F ;
-  color:#FFC000;
+  background-color:#Ffffff ;
+  color:#000000;
   align-items: center;
   text-align: center;
   height:100%;
@@ -25,7 +25,6 @@ ion-button{width:100%;}
 }
 .menu .greet{
   font-size:90px;
-  text-shadow:black 5px 5px;
 }
 .menu ion-img{
   margin-top: 3%;
@@ -35,32 +34,30 @@ ion-button{width:100%;}
 }
 .menu .content .intro1{
   font-size:15px;
-  color:white;
+  color:#000000;
 }
 .menu .content .intro2{
   font-size:45px;
-  color:#FFC000;
-  text-shadow:black 5px 5px;
+  color:#000000;
+
   margin-bottom:5%;
 }
 .menu .content{
   margin-top:5%;
   height:50%;
 }
-
 .menu .content .part2{
-  color:white;
+  color:#000000;
   margin-top:5%;
   font-size:30px;
   height:100%;
-  margin-bottom:50%;
+  margin-bottom:1%;
 }
 .part2{
   height:100%;
 }
 .part2 .set1 ion-label{
   margin-top: 9%;
-
 }
 .part2 .set1 ion-img{
   margin-left:35%;
@@ -72,16 +69,21 @@ width:30%;
   margin-left: 5%;
 }
 .part2 .set2 ion-img{
-  margin-left:5%;
-  margin-right:55%;
-width:100%;
+  margin-left:25%;
+width:60%;
+}
+.part2 .set2 .item1{
+  margin-left:70%;
+}
+.part2 .set2 .item2{
+  margin-left:50%;
 }
 .part2 .set2{
   grid-row: 1 ;
 }
 .part2 .set2{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto ;
 }
 .item1 {
   width:30px;
@@ -93,20 +95,20 @@ width:100%;
 }
 .menu .content .intro3{
   font-size:65px;
-  color:#FFC000;
-  text-shadow:black 5px 5px;
+  color:#000000;
+
   margin-bottom:5%;
 }
 .part3{
   width:90%;
-  color:white;
+  color:#000000;
   margin-left:5%;
   height:100%;
 }
 
 .s1 ion-img{
   float:left;
-  width:70%;
+  width:50%;
 }
 .s1 ion-label{
   margin-top:20%;
@@ -116,16 +118,16 @@ width:100%;
 }
 .part3 .s1{
   display: grid;
-  grid-template-columns: auto auto ;
+  grid-template-columns: auto auto auto;
 }
-
+ion-button{width:100%;}
 .s2 ion-img{
   float:left;
-  width:60%;
+  width:50%;
   margin-right:30%;
 }
 .s2 ion-label{
-  margin-top:25%;
+  margin-top:15%;
 }
 .part3 .s2{
   grid-row: 1 ;

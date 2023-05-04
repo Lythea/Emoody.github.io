@@ -21,7 +21,7 @@ export class OptionPage implements OnInit {
   company(){
 const  option = confirm('Do you want to proceed to Company Registration?');
     if(option){
-      this.router.navigate(['owners']);
+      this.router.navigate(['company']);
     }else{
       this.router.navigate(['home']);
     }

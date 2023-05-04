@@ -31,56 +31,10 @@ export class Survey2DataPage{
   colorArray: any;
   hrzBars: any;
 
- q1sd = localStorage.getItem('q1val1');
- q1d = localStorage.getItem('q1val2');
- q1sa = localStorage.getItem('q1val3');
- q1a = localStorage.getItem('q1val4');
-
- q2sd = localStorage.getItem('q2val1');
- q2d = localStorage.getItem('q2val2');
- q2sa = localStorage.getItem('q2val3');
- q2a = localStorage.getItem('q2val4');
-
- q3sd = localStorage.getItem('q3val1');
- q3d = localStorage.getItem('q3val2');
- q3sa = localStorage.getItem('q3val3');
- q3a = localStorage.getItem('q3val4');
-
- q4sd = localStorage.getItem('q4val1');
- q4d = localStorage.getItem('q4val2');
- q4sa = localStorage.getItem('q4val3');
- q4a = localStorage.getItem('q4val4');
-
- q5sd = localStorage.getItem('q5val1');
- q5d = localStorage.getItem('q5val2');
- q5sa = localStorage.getItem('q5val3');
- q5a = localStorage.getItem('q5val4');
-
- q6sd = localStorage.getItem('q6val1');
- q6d = localStorage.getItem('q6val2');
- q6sa = localStorage.getItem('q6val3');
- q6a = localStorage.getItem('q6val4');
-
- q7sd = localStorage.getItem('q7val1');
- q7d = localStorage.getItem('q7val2');
- q7sa = localStorage.getItem('q7val3');
- q7a = localStorage.getItem('q7val4');
-
- q8sd = localStorage.getItem('q8val1');
- q8d = localStorage.getItem('q8val2');
- q8sa = localStorage.getItem('q8val3');
- q8a = localStorage.getItem('q8val4');
-
- q9sd = localStorage.getItem('q9val1');
- q9d = localStorage.getItem('q9val2');
- q9sa = localStorage.getItem('q9val3');
- q9a = localStorage.getItem('q9val4');
-
- q10sd = localStorage.getItem('q10val1');
- q10d = localStorage.getItem('q10val2');
- q10sa = localStorage.getItem('q10val3');
- q10a = localStorage.getItem('q10val4');
-
+  saq: any =[];
+  aq: any =[];
+  sdq: any =[];
+  dq: any =[];
 
   constructor(private router: Router) { }
 
@@ -89,7 +43,12 @@ next(): void{
   this.router.navigate(['admin']);
 }
 ionViewDidEnter() {
-
+  for (let i = 1; i < 11; i++) {
+    this.sdq[i] =localStorage.getItem('SDQ'+i);
+    this.dq[i] =localStorage.getItem('DQ'+i);
+    this.saq[i] =localStorage.getItem('SAQ'+i);
+    this.aq[i] =localStorage.getItem('AQ'+i);
+  }
   this.createBarChart1();
   this.createBarChart2();
   this.createBarChart3();
@@ -111,28 +70,28 @@ createBarChart1() {
       datasets: [
       {
         label: 'Strongly Disagree',
-        data: [this.q1sd],
+        data: [this.sdq[1]],
         backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
         borderColor: '#FF968A',// array should have same number of elements as number of dataset
         borderWidth: 1
       },
       {
         label: 'Disagree',
-        data: [this.q1d],
+        data: [this.dq[1]],
         backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
         borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
         borderWidth: 1
       },
       {
         label: 'Strongly Agree',
-        data: [this.q1sa],
+        data: [this.saq[1]],
         backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
         borderColor: '#55CBCD',// array should have same number of elements as number of dataset
         borderWidth: 1
       },
       {
         label: 'Agree',
-        data: [this.q1a],
+        data: [this.aq[1]],
         backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
         borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
         borderWidth: 1
@@ -159,34 +118,34 @@ createBarChart2() {
     data: {
       labels: ['Users'],
       datasets: [
-      {
-        label: 'Strongly Disagree',
-        data: [this.q2sd],
-        backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
-        borderColor: '#FF968A',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Disagree',
-        data: [this.q2d],
-        backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
-        borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Strongly Agree',
-        data: [this.q2sa],
-        backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
-        borderColor: '#55CBCD',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Agree',
-        data: [this.q2a],
-        backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
-        borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      }]
+        {
+          label: 'Strongly Disagree',
+          data: [this.sdq[2]],
+          backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
+          borderColor: '#FF968A',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Disagree',
+          data: [this.dq[2]],
+          backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
+          borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Strongly Agree',
+          data: [this.saq[2]],
+          backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
+          borderColor: '#55CBCD',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Agree',
+          data: [this.aq[2]],
+          backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
+          borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
     },
     options: {
       scales: {
@@ -209,34 +168,34 @@ createBarChart3() {
     data: {
       labels: ['Users'],
       datasets: [
-      {
-        label: 'Strongly Disagree',
-        data: [this.q3sd],
-        backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
-        borderColor: '#FF968A',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Disagree',
-        data: [this.q3d],
-        backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
-        borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Strongly Agree',
-        data: [this.q3sa],
-        backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
-        borderColor: '#55CBCD',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Agree',
-        data: [this.q3a],
-        backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
-        borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      }]
+        {
+          label: 'Strongly Disagree',
+          data: [this.sdq[3]],
+          backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
+          borderColor: '#FF968A',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Disagree',
+          data: [this.dq[3]],
+          backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
+          borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Strongly Agree',
+          data: [this.saq[3]],
+          backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
+          borderColor: '#55CBCD',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Agree',
+          data: [this.aq[3]],
+          backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
+          borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
     },
     options: {
       scales: {
@@ -259,34 +218,34 @@ createBarChart4() {
     data: {
       labels: ['Users'],
       datasets: [
-      {
-        label: 'Strongly Disagree',
-        data: [this.q4sd],
-        backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
-        borderColor: '#FF968A',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Disagree',
-        data: [this.q4d],
-        backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
-        borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Strongly Agree',
-        data: [this.q4sa],
-        backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
-        borderColor: '#55CBCD',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Agree',
-        data: [this.q4a],
-        backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
-        borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      }]
+        {
+          label: 'Strongly Disagree',
+          data: [this.sdq[4]],
+          backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
+          borderColor: '#FF968A',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Disagree',
+          data: [this.dq[4]],
+          backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
+          borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Strongly Agree',
+          data: [this.saq[4]],
+          backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
+          borderColor: '#55CBCD',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Agree',
+          data: [this.aq[4]],
+          backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
+          borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
     },
     options: {
       scales: {
@@ -309,34 +268,34 @@ createBarChart5() {
     data: {
       labels: ['Users'],
       datasets: [
-      {
-        label: 'Strongly Disagree',
-        data: [this.q5sd],
-        backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
-        borderColor: '#FF968A',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Disagree',
-        data: [this.q5d],
-        backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
-        borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Strongly Agree',
-        data: [this.q5sa],
-        backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
-        borderColor: '#55CBCD',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Agree',
-        data: [this.q5a],
-        backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
-        borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      }]
+        {
+          label: 'Strongly Disagree',
+          data: [this.sdq[5]],
+          backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
+          borderColor: '#FF968A',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Disagree',
+          data: [this.dq[5]],
+          backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
+          borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Strongly Agree',
+          data: [this.saq[5]],
+          backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
+          borderColor: '#55CBCD',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Agree',
+          data: [this.aq[5]],
+          backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
+          borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
     },
     options: {
       scales: {
@@ -359,34 +318,34 @@ createBarChart6() {
     data: {
       labels: ['Users'],
       datasets: [
-      {
-        label: 'Strongly Disagree',
-        data: [this.q6sd],
-        backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
-        borderColor: '#FF968A',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Disagree',
-        data: [this.q6d],
-        backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
-        borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Strongly Agree',
-        data: [this.q6sa],
-        backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
-        borderColor: '#55CBCD',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Agree',
-        data: [this.q6a],
-        backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
-        borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      }]
+        {
+          label: 'Strongly Disagree',
+          data: [this.sdq[6]],
+          backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
+          borderColor: '#FF968A',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Disagree',
+          data: [this.dq[6]],
+          backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
+          borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Strongly Agree',
+          data: [this.saq[6]],
+          backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
+          borderColor: '#55CBCD',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Agree',
+          data: [this.aq[6]],
+          backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
+          borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
     },
     options: {
       scales: {
@@ -409,34 +368,34 @@ createBarChart7() {
     data: {
       labels: ['Users'],
       datasets: [
-      {
-        label: 'Strongly Disagree',
-        data: [this.q7sd],
-        backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
-        borderColor: '#FF968A',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Disagree',
-        data: [this.q7d],
-        backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
-        borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Strongly Agree',
-        data: [this.q7sa],
-        backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
-        borderColor: '#55CBCD',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Agree',
-        data: [this.q7a],
-        backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
-        borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      }]
+        {
+          label: 'Strongly Disagree',
+          data: [this.sdq[7]],
+          backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
+          borderColor: '#FF968A',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Disagree',
+          data: [this.dq[7]],
+          backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
+          borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Strongly Agree',
+          data: [this.saq[7]],
+          backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
+          borderColor: '#55CBCD',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Agree',
+          data: [this.aq[7]],
+          backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
+          borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
     },
     options: {
       scales: {
@@ -459,34 +418,34 @@ createBarChart8() {
     data: {
       labels: ['Users'],
       datasets: [
-      {
-        label: 'Strongly Disagree',
-        data: [this.q8sd],
-        backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
-        borderColor: '#FF968A',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Disagree',
-        data: [this.q8d],
-        backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
-        borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Strongly Agree',
-        data: [this.q8sa],
-        backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
-        borderColor: '#55CBCD',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Agree',
-        data: [this.q8a],
-        backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
-        borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      }]
+        {
+          label: 'Strongly Disagree',
+          data: [this.sdq[8]],
+          backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
+          borderColor: '#FF968A',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Disagree',
+          data: [this.dq[8]],
+          backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
+          borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Strongly Agree',
+          data: [this.saq[8]],
+          backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
+          borderColor: '#55CBCD',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Agree',
+          data: [this.aq[8]],
+          backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
+          borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
     },
     options: {
       scales: {
@@ -509,34 +468,34 @@ createBarChart9() {
     data: {
       labels: ['Users'],
       datasets: [
-      {
-        label: 'Strongly Disagree',
-        data: [this.q9sd],
-        backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
-        borderColor: '#FF968A',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Disagree',
-        data: [this.q9d],
-        backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
-        borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Strongly Agree',
-        data: [this.q9sa],
-        backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
-        borderColor: '#55CBCD',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Agree',
-        data: [this.q9a],
-        backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
-        borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      }]
+        {
+          label: 'Strongly Disagree',
+          data: [this.sdq[9]],
+          backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
+          borderColor: '#FF968A',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Disagree',
+          data: [this.dq[9]],
+          backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
+          borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Strongly Agree',
+          data: [this.saq[9]],
+          backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
+          borderColor: '#55CBCD',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Agree',
+          data: [this.aq[9]],
+          backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
+          borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
     },
     options: {
       scales: {
@@ -559,34 +518,34 @@ createBarChart10() {
     data: {
       labels: ['Users'],
       datasets: [
-      {
-        label: 'Strongly Disagree',
-        data: [this.q10sd],
-        backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
-        borderColor: '#FF968A',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Disagree',
-        data: [this.q10d],
-        backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
-        borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Strongly Agree',
-        data: [this.q10sa],
-        backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
-        borderColor: '#55CBCD',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      },
-      {
-        label: 'Agree',
-        data: [this.q10a],
-        backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
-        borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
-        borderWidth: 1
-      }]
+        {
+          label: 'Strongly Disagree',
+          data: [this.sdq[7]],
+          backgroundColor: '#FF968A', // array should have same number of elements as number of dataset
+          borderColor: '#FF968A',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Disagree',
+          data: [this.dq[7]],
+          backgroundColor: '#FFC5BF', // array should have same number of elements as number of dataset
+          borderColor: '#FFC5BF',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Strongly Agree',
+          data: [this.saq[10]],
+          backgroundColor: '#55CBCD', // array should have same number of elements as number of dataset
+          borderColor: '#55CBCD',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        },
+        {
+          label: 'Agree',
+          data: [this.aq[10]],
+          backgroundColor: '#A2E1DB', // array should have same number of elements as number of dataset
+          borderColor: '#A2E1DB',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
     },
     options: {
       scales: {

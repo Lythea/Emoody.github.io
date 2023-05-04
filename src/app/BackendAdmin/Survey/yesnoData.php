@@ -7,52 +7,42 @@ header ('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "dataStorage";
+$database = $_POST['company'];
 // Connect with the database.
 $conn= new mysqli($servername, $username, $password,$database);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
   }
 
-  $date = $_POST['dateToday'];
-  $sql = "SELECT (SELECT COUNT(id) FROM dataset2 WHERE q1='Yes' AND date='$date') as q1Yes,
-  (SELECT COUNT(id) FROM dataset2 WHERE q1='No' AND date='$date') as q1No,
+  $date = $_POST['date'];
+  $data['result1'] = array();
+  $data['result2'] = array();
 
-  (SELECT COUNT(id) FROM dataset2 WHERE q2='Yes' AND date='$date') as q2Yes,
-  (SELECT COUNT(id) FROM dataset2 WHERE q2='No' AND date='$date') as q2No,
+  for ($i = 1; $i < 11; $i++) {
+    $sql = "SELECT ";
+    // add the "Yes" count for this question to the query
+    $sql .= "(SELECT COUNT(id) FROM dailysurvey1 WHERE q{$i}='Yes' AND date='$date') as q{$i}Yes, ";
+    // add the "No" count for this question to the query
+    $sql .= "(SELECT COUNT(id) FROM dailysurvey1 WHERE q{$i}='No' AND date='$date') as q{$i}No, ";
+    $sql = rtrim($sql, ", ");
 
-  (SELECT COUNT(id) FROM dataset2 WHERE q3='Yes' AND date='$date') as q3Yes,
-  (SELECT COUNT(id) FROM dataset2 WHERE q3='No' AND date='$date') as q3No,
+    // add the semicolon to the end of the query
+    $sql .= ";";
 
-  (SELECT COUNT(id) FROM dataset2 WHERE q4='Yes' AND date='$date') as q4Yes,
-  (SELECT COUNT(id) FROM dataset2 WHERE q5='No' AND date='$date') as q4No,
-
-  (SELECT COUNT(id) FROM dataset2 WHERE q5='Yes' AND date='$date') as q5Yes,
-  (SELECT COUNT(id) FROM dataset2 WHERE q5='No' AND date='$date') as q5No,
-
-  (SELECT COUNT(id) FROM dataset2 WHERE q6='Yes' AND date='$date') as q6Yes,
-  (SELECT COUNT(id) FROM dataset2 WHERE q6='No' AND date='$date') as q6No,
-
-  (SELECT COUNT(id) FROM dataset2 WHERE q7='Yes' AND date='$date') as q7Yes,
-  (SELECT COUNT(id) FROM dataset2 WHERE q7='No' AND date='$date') as q7No,
-
-  (SELECT COUNT(id) FROM dataset2 WHERE q8='Yes' AND date='$date') as q8Yes,
-  (SELECT COUNT(id) FROM dataset2 WHERE q8='No' AND date='$date') as q8No,
-
-  (SELECT COUNT(id) FROM dataset2 WHERE q9='Yes' AND date='$date') as q9Yes,
-  (SELECT COUNT(id) FROM dataset2 WHERE q9='No' AND date='$date') as q9No,
-
-  (SELECT COUNT(id) FROM dataset2 WHERE q10='Yes' AND date='$date') as q10Yes,
-  (SELECT COUNT(id) FROM dataset2 WHERE q10='No' AND date='$date') as q10No
-  ;";
-
-  $result = $conn->query($sql);
+    // execute the query and process the results as needed
+    $result = $conn->query($sql);
     if ($result->num_rows > 0) {
-      $data = $result->fetch_all(MYSQLI_ASSOC);
-      echo json_encode(['data' => $data]);
+      while($row = mysqli_fetch_assoc($result)) {
+        $data['result1'][$i] = $row["q{$i}Yes"];;
+        $data['result2'][$i] = $row["q{$i}No"];;
+      }
     } else {
-      echo json_encode(['data'=> 'Not Found!']);
+      echo "No results found.";
+    }
   }
+
+
+echo json_encode($data);
 $conn->close();
 exit();
 ?>

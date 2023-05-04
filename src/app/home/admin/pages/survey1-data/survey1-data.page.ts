@@ -34,38 +34,8 @@ export class Survey1DataPage {
   hrzBars: any;
   val: any;
 
-  q1Yes: any = localStorage.getItem('q1Yes');
-  q1No: any = localStorage.getItem('q1No');
-
-  q2Yes: any = localStorage.getItem('q2Yes');
-  q2No: any = localStorage.getItem('q2No');
-
-  q3Yes: any = localStorage.getItem('q3Yes');
-  q3No: any = localStorage.getItem('q3No');
-
-  q4Yes: any = localStorage.getItem('q4Yes');
-  q4No: any = localStorage.getItem('q4No');
-
-  q5Yes: any = localStorage.getItem('q5Yes');
-  q5No: any = localStorage.getItem('q5No');
-
-  q6Yes: any = localStorage.getItem('q6Yes');
-  q6No: any = localStorage.getItem('q6No');
-
-  q7Yes: any = localStorage.getItem('q7Yes');
-  q7No: any = localStorage.getItem('q7No');
-
-  q8Yes: any = localStorage.getItem('q8Yes');
-  q8No: any = localStorage.getItem('q8No');
-
-  q9Yes: any = localStorage.getItem('q9Yes');
-  q9No: any = localStorage.getItem('q9No');
-
-  q10Yes: any = localStorage.getItem('q10Yes');
-  q10No: any = localStorage.getItem('q10No');
-
-
-
+  yesQ: any =[];
+  noQ: any =[];
   constructor(private router: Router) { }
 
   ionViewDidEnter() {
@@ -81,69 +51,38 @@ export class Survey1DataPage {
     this.createPieChart9();
     this.createPieChart10();
   }
-  next(): void{const formData = new FormData();
-    const dateFinal = localStorage.getItem('dateToday');
-    formData.append('dateToday', dateFinal);
-    fetch('http://localhost/newmobileapp/src/app/BackendAdmin/Survey/agreeData.php', {
+  next(): void{
+
+
+    const formData = new FormData();
+    const company= localStorage.getItem('company');
+    const date = localStorage.getItem('date');
+    formData.append('company', company);
+
+    formData.append('date', date);
+    fetch('http://localhost/EMOODY/src/app/BackendAdmin/Survey/agreeData.php', {
       method: 'POST',
       body: formData
     })
     .then(response => response.json())
     .then(value => {
-      localStorage.setItem('q1val1', value.data[0].q1val1);
-      localStorage.setItem('q1val2', value.data[0].q1val2);
-      localStorage.setItem('q1val3', value.data[0].q1val3);
-      localStorage.setItem('q1val4', value.data[0].q1val4);
 
-      localStorage.setItem('q2val1', value.data[0].q2val1);
-      localStorage.setItem('q2val2', value.data[0].q2val2);
-      localStorage.setItem('q2val3', value.data[0].q2val3);
-      localStorage.setItem('q2val4', value.data[0].q2val4);
-
-      localStorage.setItem('q3val1', value.data[0].q3val1);
-      localStorage.setItem('q3val2', value.data[0].q3val2);
-      localStorage.setItem('q3val3', value.data[0].q3val3);
-      localStorage.setItem('q3val4', value.data[0].q3val4);
-
-      localStorage.setItem('q4val1', value.data[0].q4val1);
-      localStorage.setItem('q4val2', value.data[0].q4val2);
-      localStorage.setItem('q4val3', value.data[0].q4val3);
-      localStorage.setItem('q4val4', value.data[0].q4val4);
-
-      localStorage.setItem('q5val1', value.data[0].q5val1);
-      localStorage.setItem('q5val2', value.data[0].q5val2);
-      localStorage.setItem('q5val3', value.data[0].q5val3);
-      localStorage.setItem('q5val4', value.data[0].q5val4);
-
-      localStorage.setItem('q6val1', value.data[0].q6val1);
-      localStorage.setItem('q6val2', value.data[0].q6val2);
-      localStorage.setItem('q6val3', value.data[0].q6val3);
-      localStorage.setItem('q6val4', value.data[0].q6val4);
-
-      localStorage.setItem('q7val1', value.data[0].q7val1);
-      localStorage.setItem('q7val2', value.data[0].q7val2);
-      localStorage.setItem('q7val3', value.data[0].q7val3);
-      localStorage.setItem('q7val4', value.data[0].q7val4);
-
-      localStorage.setItem('q8val1', value.data[0].q8val1);
-      localStorage.setItem('q8val2', value.data[0].q8val2);
-      localStorage.setItem('q8val3', value.data[0].q8val3);
-      localStorage.setItem('q8val4', value.data[0].q8val4);
-
-      localStorage.setItem('q9val1', value.data[0].q9val1);
-      localStorage.setItem('q9val2', value.data[0].q9val2);
-      localStorage.setItem('q9val3', value.data[0].q9val3);
-      localStorage.setItem('q9val4', value.data[0].q9val4);
-
-      localStorage.setItem('q10val1', value.data[0].q10val1);
-      localStorage.setItem('q10val2', value.data[0].q10val2);
-      localStorage.setItem('q10val3', value.data[0].q10val3);
-      localStorage.setItem('q10val4', value.data[0].q10val4);
-
+      for (let i = 1; i < 11; i++) {
+        localStorage.setItem('SDQ'+i,value.result1[i]);
+        localStorage.setItem('DQ'+i,value.result2[i]);
+        localStorage.setItem('SAQ'+i,value.result3[i]);
+        localStorage.setItem('AQ'+i,value.result4[i]);
+      }
     });
     this.router.navigate(['survey2-data']);
   }
   createPieChart1() {
+    for (let i = 1; i < 11; i++) {
+      this.yesQ[i] =localStorage.getItem('YesQ'+i);
+      this.noQ[i] =localStorage.getItem('NoQ'+i);
+
+    }
+
     this.bars1 = new Chart(this.barChart1.nativeElement, {
 
       type: 'pie',
@@ -151,7 +90,7 @@ export class Survey1DataPage {
         labels: ['Yes', 'No'],
         datasets: [{
           label: '',
-          data: [this.q1Yes,this.q1No],
+          data: [this.yesQ[1],this.noQ[1]],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',
@@ -180,7 +119,7 @@ export class Survey1DataPage {
         labels: ['Yes', 'No'],
         datasets: [{
           label: '1',
-          data: [this.q2Yes,this.q2No],
+          data: [this.yesQ[2],this.noQ[2]],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',
@@ -209,7 +148,7 @@ export class Survey1DataPage {
         labels: ['Yes', 'No'],
         datasets: [{
           label: '1',
-          data: [this.q3Yes,this.q3No],
+          data: [this.yesQ[3],this.noQ[3]],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',
@@ -239,7 +178,7 @@ export class Survey1DataPage {
         labels: ['Yes', 'No'],
         datasets: [{
           label: '1',
-          data: [this.q4Yes,this.q4No],
+          data: [this.yesQ[4],this.noQ[4]],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',
@@ -269,7 +208,7 @@ export class Survey1DataPage {
         labels: ['Yes', 'No'],
         datasets: [{
           label: '1',
-          data: [this.q5Yes,this.q5No],
+          data: [this.yesQ[5],this.noQ[5]],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',
@@ -299,7 +238,7 @@ export class Survey1DataPage {
         labels: ['Yes', 'No'],
         datasets: [{
           label: '1',
-          data: [this.q6Yes,this.q6No],
+          data: [this.yesQ[6],this.noQ[6]],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',
@@ -329,7 +268,7 @@ export class Survey1DataPage {
         labels: ['Yes', 'No'],
         datasets: [{
           label: '1',
-          data: [this.q7Yes,this.q7No],
+          data: [this.yesQ[7],this.noQ[7]],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',
@@ -359,7 +298,7 @@ export class Survey1DataPage {
         labels: ['Yes', 'No'],
         datasets: [{
           label: '1',
-          data: [this.q8Yes,this.q8No],
+          data: [this.yesQ[8],this.noQ[8]],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',
@@ -388,7 +327,7 @@ export class Survey1DataPage {
         labels: ['Yes', 'No'],
         datasets: [{
           label: '1',
-          data: [this.q9Yes,this.q9No],
+          data: [this.yesQ[9],this.noQ[9]],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',
@@ -418,7 +357,7 @@ export class Survey1DataPage {
         labels: ['Yes', 'No'],
         datasets: [{
           label: '1',
-          data: [this.q10Yes,this.q10No],
+          data: [this.yesQ[10],this.noQ[10]],
           backgroundColor: [
             '#ABDEE6',
             '#CBAACB',

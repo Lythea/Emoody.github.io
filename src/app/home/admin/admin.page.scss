@@ -7,19 +7,17 @@
   align-items:center;
   margin-left:5%;
   margin-right:5%;
-  color:#ffffff;
-  font-family:'Quicksand';
+  color:#000000;
+  font-family: 'Poppins', sans-serif;
 }
 ion-content  {
-  --ion-background-color:#FFC000;
+  --ion-background-color:#ffffff;
 }
 h1{
   font-size:50px;
-  text-shadow: #000000 10px 10px;
+  font-family: 'Poppins', sans-serif;
 }
-h3{
-  text-shadow: #000000 5px 5px;
-}
+
 ion-button{
   border-radius:25px;
   width:50%;
@@ -40,9 +38,7 @@ ion-button{
   margin-right:px;
   width:100%;
 }
-.header{
-  background-color:#FFC000;
-}
+
 @media screen and (max-width:1366px){
   .sc-ion-buttons-md-h {
     display: block !important;
@@ -68,11 +64,10 @@ ion-button{
   }
   ion-content .menu h1{
     font-size:70px;
-    text-shadow: #000000 5px 5px;
   }
   ion-content .menu h3{
     font-size:30px;
-    text-shadow: #000000 3px 3px;
+
   }
 }
 
