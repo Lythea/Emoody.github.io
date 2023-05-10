@@ -88,7 +88,7 @@ createBarChart1() {
     this.sq8[i] =localStorage.getItem('sq8val'+i);
   }
   for (let i = 1; i < 6; i++) {
-    this.sq1[9] =localStorage.getItem('sq9val'+i);
+    this.sq9[i] =localStorage.getItem('sq9val'+i);
   }
   for (let i = 1; i < 7; i++) {
     this.sq10[i] =localStorage.getItem('sq10val'+i);

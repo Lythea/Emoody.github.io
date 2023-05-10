@@ -24,7 +24,7 @@ export class SuccessPage implements OnInit {
     formData.append('id', id);
     formData.append('email', email);
     formData.append('pass', pass);
-    fetch('http://localhost/EMOODY/src/app/BackendUser/suggestions.php', {
+    fetch('http://api.emoody.online/BackendUser/suggestions.php', {
       method: 'POST',
       body: formData
     })

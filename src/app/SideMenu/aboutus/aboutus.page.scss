@@ -19,7 +19,104 @@ ion-button{
   font-weight:bold;
   font-family: 'Poppins', sans-serif;
 }
+@media screen and (max-width:1920px){
+  .menu{
+    margin-top:5%;
+  }
+  ion-img{
+    height:90%;
+    width:100%;
+    margin-bottom:0;
+  }
+  .profile ion-img{
+    grid-row: 1 / 6;
+    height:200px;
+    margin-top:10%;
+  }
+  .menucontent .label{
+    height:100px;
+  }
+  p{
+    margin-right:10%;
+    margin-left:10%;
+    font-size:25px;
+    font-family: 'Poppins', sans-serif;
+    text-align:center;
+  }
+  .label1{
+    font-size: 90px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 40%;
+  }
+  .label2{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 33%;
 
+  }
+  .menu .label .l1{
+    margin-left:6%;
+  }
+  .menu .label .l2{
+    margin-left:10%;
+  }
+  .menu .label .l3{
+    margin-left:9%;
+  }
+  .menu .label .l4{
+    margin-left:9%;
+  }
+  .menu .label .l5{
+    margin-left:9%;
+  }
+  .menu .label .l6{
+    margin-left:10%;
+  }
+  .menu .menucontent .roles .r1{
+    margin-left:5.5%;
+  }
+  .menu .menucontent .roles .r2{
+    margin-left:10%;
+  }
+  .menu .menucontent .roles .r3{
+    margin-left:10.5%;
+  }
+  .menu .menucontent .roles .r4{
+    margin-left:10%;
+  }
+  .menu .menucontent .roles .r5{
+    margin-left:8%;
+  }
+  .menu .menucontent .roles .r6{
+    margin-left:11%;
+  }
+  ion-button{
+    margin-top:2%;
+    width:130px;
+    height:40px;
+    font-size:20px;
+  }
+  ion-label{
+    margin-top:1%;
+    font-weight:bold;
+    font-size:20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .roles{
+    height:10%;
+  }
+  .l7{
+    margin-left:40%;
+    width:20%;
+    height:50px;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:5%;
+    font-family: 'Poppins', sans-serif;
+  }
+}
 @media screen and (max-width:1366px){
   .menu{
     margin-top:5%;
@@ -139,7 +236,7 @@ ion-button{
   p{
     margin-right:10%;
     margin-left:10%;
-    font-size:40px;
+    font-size:30px;
     font-family: 'Poppins', sans-serif;
     text-align:center;
   }
@@ -147,49 +244,49 @@ ion-button{
     font-size: 150px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    margin-left: 20%;
+    margin-left: 17%;
   }
   .label2{
     font-size: 70px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    margin-left: 17%;
+    margin-left: 13%;
   }
   .menu .label .l1{
     margin-left:4%;
   }
   .menu .label .l2{
-    margin-left:6%;
+    margin-left:4%;
   }
   .menu .label .l3{
-    margin-left:3%;
+    margin-left:1%;
   }
   .menu .label .l4{
-    margin-left:3%;
+    margin-left:2%;
   }
   .menu .label .l5{
-    margin-left:3%;
+    margin-left:1%;
   }
   .menu .label .l6{
-    margin-left:5%;
+    margin-left:4%;
   }
   .menu .menucontent .roles .r1{
     margin-left:3%;
   }
   .menu .menucontent .roles .r2{
-    margin-left:5%;
+    margin-left:3%;
   }
   .menu .menucontent .roles .r3{
-    margin-left:5.5%;
+    margin-left:4%;
   }
   .menu .menucontent .roles .r4{
     margin-left:4.5%;
   }
   .menu .menucontent .roles .r5{
-    margin-left:2%;
+    margin-left:1%;
   }
   .menu .menucontent .roles .r6{
-    margin-left:7%;
+    margin-left:5%;
   }
   ion-button{
     width:130px;
@@ -202,12 +299,213 @@ ion-button{
     font-family: 'Poppins', sans-serif;
   }
   .l7{
-    margin-left:33%;
+    margin-left:36%;
     width:30%;
     height:70px;
     font-size:30px;
     font-weight:bold;
     margin-top:20%;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+@media screen and (max-width:800px){
+  ion-img{
+    height:70%;
+    width:100%;
+  }
+  .menucontent{
+    margin-top: 5%;;
+  }
+  ion-img{
+    height:50%;
+    width:80%;
+    margin-bottom:0;
+  }
+  .profile ion-img{
+    grid-row: 1 / 6;
+    height:200px;
+  }
+  .menucontent .label{
+    height:70px;
+  }
+  p{
+    margin-right:10%;
+    margin-left:10%;
+    font-size:17px;
+    font-family: 'Poppins', sans-serif;
+    text-align:center;
+  }
+  .label1{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 36%;
+  }
+  .label2{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 30%;
+  }
+  .menu .label .l1{
+    margin-left:2%;
+  }
+  .menu .label .l2{
+    margin-left:6%;
+  }
+  .menu .label .l3{
+    margin-left:6%;
+  }
+  .menu .label .l4{
+    margin-left:7%;
+  }
+  .menu .label .l5{
+    margin-left:6%;
+  }
+  .menu .label .l6{
+    margin-left:6%;
+  }
+  .menu .menucontent .roles .r1{
+    margin-left:1%;
+  }
+  .menu .menucontent .roles .r2{
+    margin-left:7%;
+  }
+  .menu .menucontent .roles .r3{
+    margin-left:8%;
+  }
+  .menu .menucontent .roles .r4{
+    margin-left:9%;
+  }
+  .menu .menucontent .roles .r5{
+    margin-left:5%;
+  }
+  .menu .menucontent .roles .r6{
+    margin-left:8%;
+  }
+  ion-button{
+    width:80px;
+    height:30px;
+    margin-bottom: 0;
+    margin-top:0;
+    font-size:12px;
+  }
+  ion-label{
+    margin-bottom: 0;
+    margin-top:0;
+    font-weight:bold;
+    font-size:12px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .l7{
+
+    margin-left:36%;
+    width:30%;
+    height:30px;
+    font-size:15px;
+    font-weight:bold;
+    margin-top:1%;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+@media screen and (max-width:500px){
+  ion-img{
+    height:70%;
+    width:100%;
+  }
+  .menucontent{
+    margin-top: 15%;;
+  }
+  ion-img{
+    height:50%;
+    width:80%;
+    margin-bottom:0;
+  }
+  .profile ion-img{
+    grid-row: 1 / 6;
+    height:200px;
+  }
+  .menucontent .label{
+    height:40px;
+  }
+  p{
+    margin-right:10%;
+    margin-left:10%;
+    font-size:12px;
+    font-family: 'Poppins', sans-serif;
+    text-align:center;
+  }
+  .label1{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 34%;
+  }
+  .label2{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 23%;
+  }
+  .menu .label .l1{
+    margin-left:2%;
+  }
+  .menu .label .l2{
+    margin-left:4%;
+  }
+  .menu .label .l3{
+    margin-left:4%;
+  }
+  .menu .label .l4{
+    margin-left:6%;
+  }
+  .menu .label .l5{
+    margin-left:5%;
+  }
+  .menu .label .l6{
+    margin-left:5%;
+  }
+  .menu .menucontent .roles .r1{
+    margin-left:1%;
+  }
+  .menu .menucontent .roles .r2{
+    margin-left:2%;
+  }
+  .menu .menucontent .roles .r3{
+    margin-left:5%;
+  }
+  .menu .menucontent .roles .r4{
+    margin-left:7%;
+  }
+  .menu .menucontent .roles .r5{
+    margin-left:3%;
+  }
+  .menu .menucontent .roles .r6{
+    margin-left:6%;
+
+  }
+  ion-button{
+    width:40px;
+    height:20px;
+    margin-bottom: 0;
+    margin-top:0;
+    font-size:5px;
+  }
+  ion-label{
+    margin-bottom: 0;
+    margin-top:0;
+    font-weight:bold;
+    font-size:7px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .l7{
+
+    margin-left:36%;
+    width:30%;
+    height:30px;
+    font-size:10px;
+    font-weight:bold;
+    margin-top:7%;
     font-family: 'Poppins', sans-serif;
   }
 }

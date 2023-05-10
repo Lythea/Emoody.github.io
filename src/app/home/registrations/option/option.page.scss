@@ -5,6 +5,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
+@media screen and (max-width:1920px){
+  ion-button{
+    margin-top:13%;
+    font-size:35px;
+    margin-bottom:2%;
+    width:30%;
+    height:70px;
+    margin-left:35%;
+    font-weight:bold;
+  }
+
+}
 @media screen and (max-width:1366px){
   ion-button{
     margin-top:13%;
@@ -20,7 +32,7 @@
 
 @media screen and (max-width:1080px){
   .buttons{
-    margin-top:45%;
+    margin-top:55%;
   }
   ion-button{
     font-size:35px;
@@ -28,6 +40,36 @@
     width:60%;
     height:120px;
     margin-left:20%;
+    font-weight:bold;
+  }
+
+}
+@media screen and (max-width:800px){
+  .buttons{
+    margin-top:15%;
+  }
+  ion-button{
+    margin-top:13%;
+    font-size:35px;
+    margin-bottom:2%;
+    width:30%;
+    height:70px;
+    margin-left:35%;
+    font-weight:bold;
+  }
+
+}
+@media screen and (max-width:500px){
+  .buttons{
+    margin-top:45%;
+  }
+  ion-button{
+    margin-top:13%;
+    font-size:35px;
+    margin-bottom:2%;
+    width:80%;
+    height:70px;
+    margin-left:9%;
     font-weight:bold;
   }
 

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/quotes */
+/* eslint-disable max-len */
 /* eslint-disable no-cond-assign */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable eqeqeq */
@@ -94,49 +96,31 @@ codeUser: any;
     authentication(event: any){
       this.infoC[6]= this.registrationForm.value.authenticator;
       this.infoC[6].toLowerCase();
-      if(this.infoC[6].length<5 || this.infoC[6].length > 10 || this.infoC[6] ==''){
-        this.icon[6]=false;
-      }else{
+      if(this.infoC[6] =='BSCS-3202'){
         this.icon[6]=true;
+      }else{
+        this.icon[6]=false;
       }
     }
     register() {
 
-    if(this.icon[1]==false|| !this.infoC[1]){
-      this.error[1]='Name must have 5-30 characters';
-    }else {
-      this.error[1]='Success';
-    }
-    if(this.icon[2]==false|| !this.infoC[2]){
-      this.error[2]='Company name must have 4-15 characters';
-    }else {
-      this.error[2]='Success';
-    }
-    if(this.icon[3]==false|| !this.infoC[3]){
-      this.error[3]='Email must have 10-30 characters';
-    }else {
-      this.error[3]='Success';
-    }
-    if(this.icon[4]==false|| !this.infoC[4]){
-      this.error[4]='Admin code must have 4-10 characters';
-    }else {
-      this.error[4]='Success';
-    }
-    if(this.icon[5]==false || !this.infoC[5]){
-      this.error[5]='Employee code must have 4-10 characters';
-    }else {
-      this.error[5]='Success';
-    }
-    if(this.icon[6]==false|| !this.infoC[6]){
-      this.error[6]='Authenticator code must have 6-10 characters';
-    }else {
-      this.error[6]='Success';
-    }
+      if(this.icon[1]==true && this.icon[2]==true && this.icon[3]==true && this.icon[4]==true && this.icon[5]==true && this.icon[6]==true){
+        this.error[6] = true;
+      }else if(this.icon[1]==false || this.icon[2]==false ||this.icon[3]==false ||this.icon[4]==false ||this.icon[5]==false ||this.icon[6]==false ||
+        !this.icon[1] ||  !this.icon[2] ||  !this.icon[3] ||  !this.icon[4] ||  !this.icon[5] ||!this.icon[6] ||
+        this.icon[1]==undefined ||  this.icon[2]==undefined || this.icon[3]==undefined || this.icon[4]==undefined || this.icon[5]==undefined|| this.icon[6]==undefined || this.icon[6]!='BSCS-3202'){
+        this.error[6] = false;
+        this.error[1] = '*Name must have 5-30 characters*';
+        this.error[2] = '*Company name must have 4-15 characters*';
+        this.error[3] = '*Email must have 10-30 characters*';
+        this.error[4] = '*Admin code must have 4-10 characters*';
+        this.error[5] = "*Employee code must have 4-10 characters*";
+        this.error[6] = "*Authenticator code must be from the administrators*";
 
-    if(this.error[1] =='Success' && this.error[2] =='Success' && this.error[3] =='Success' && this.error[4] =='Success' &&
-    this.error[5] =='Success' &&this.error[6] =='Success' && this.infoC[6]=='BSCS-3202'){
+      }
+
       const formData = new FormData();
-
+      console.log(this.infoC[1] + this.infoC[2] + this.infoC[3] + this.infoC[4] + this.infoC[5] + this.infoC[6]);
       for (let i = 1; i < 7; i++) {
         localStorage.setItem('dataCompany'+i, this.infoC[i]);
       }
@@ -146,30 +130,33 @@ codeUser: any;
       for (let i = 1; i < 7; i++) {
         formData.append('dataCompany' + i, this.dataCompany[i]);
       }
-      fetch('http://localhost/EMOODY/src/app/BackendUser/companyRegistration.php', {
+      fetch('http://api.emoody.online/BackendUser/insertCompany.php', {
         method: 'POST',
         body: formData
       })
       .then(response => response.json())
       .then(value => {
-
-      });
-      fetch('http://localhost/EMOODY/src/app/BackendUser/insertCompany.php', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(value => {
-
-
       });
       this.router.navigate(['home']);
-    }else {
-      alert(this.error[1] + '\n' + this.error[2] + '\n' + this.error[3] + '\n' +
-        this.error[4] + '\n' + this.error[5] + '\n' + this.error[6] + '\n');
-    }
     }
     cancel(){
       this.router.navigate(['home']);
+    }
+    hint(){
+      if(this.icon[1]==true && this.icon[2]==true && this.icon[3]==true && this.icon[4]==true && this.icon[5]==true && this.icon[6]==true){
+        this.error[6] = true;
+      }else if(this.icon[1]==false || this.icon[2]==false ||this.icon[3]==false ||this.icon[4]==false ||this.icon[5]==false ||this.icon[6]==false ||
+        !this.icon[1] ||  !this.icon[2] ||  !this.icon[3] ||  !this.icon[4] ||  !this.icon[5] ||!this.icon[6] ||
+        this.icon[1]==undefined ||  this.icon[2]==undefined || this.icon[3]==undefined || this.icon[4]==undefined || this.icon[5]==undefined|| this.icon[6]==undefined || this.icon[6]!='BSCS-3202'){
+        this.error[6] = false;
+        this.error[1] = '*Name must have 5-30 characters*';
+        this.error[2] = '*Company name must have 4-15 characters*';
+        this.error[3] = '*Email must have 10-30 characters*';
+        this.error[4] = '*Admin code must have 4-10 characters*';
+        this.error[5] = "*Employee code must have 4-10 characters*";
+        this.error[6] = "*Authenticator code must be from the administrators*";
+
+      }
+      alert(this.error[1] + "\n" +this.error[2] + "\n" +this.error[3] + "\n" +this.error[4] + "\n" +this.error[5]+ "\n" +this.error[6]);
     }
 }

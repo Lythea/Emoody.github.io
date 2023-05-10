@@ -14,26 +14,20 @@
   display: block !important;
 }
 ion-menu-button {
-  font-size: 90px !important;
+  font-size: 40px !important;
   color:#250381;
 }
 .menu .part1{
-  margin-top:10%;
-  margin-left:12%;
-  width:80%;
   text-align: center;
   align-items:center;
-
 }
 .header{
   background-color:#FFFFFF;
 }
-
-
 ::ng-deep   .my-datetime {
   --ion-font-size: 30px;
   font-size: 40px !important;
-  color:#250381;
+  color:#000000;
 }
 .menu .column{
   text-align: center;
@@ -45,7 +39,7 @@ ion-menu-button {
   border-radius:25px;
   height:600px;
   width:80%;
-  margin-left:12%;
+
 }
 ion-datetime{
   font-size:100px;
@@ -56,22 +50,51 @@ ion-content  {
 }
 .btns{
   border-radius:25px;
-  width:80%;
-  height:90px;
   background-color:#250381;
   color:#ffffff;
-  font-size:30px;
-  margin-right:38%;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
 }
 h2{
   color:#ffffff;
 }
-.menu .item2 .btnpos ion-button{
-  font-family: 'Poppins', sans-serif;
-}
+@media screen and (max-width:1920px){
+  .menu{
+    height:100%;
+    margin-bottom:90%;
+  }
+  .menu .part1{
+    height:2%;
+    width:70%;
+    margin-top:2%;
+    margin-left:15%;
+  }
+  .menu .column .item1 ion-datetime{
+    border-radius:25px;
+    height:400px;
+    width:50%;
+    margin-left:25%;
+  }
+  ion-datetime{
+    font-size:100px;
+    margin-top:5%;
+  }
+  .menu ion-item{
+    font-size:30px;
+  }
 
+  .item2 .btnpos{
+    margin-top:15%;
+    margin-left:8%;
+    margin-bottom:10px;
+  }
+  ion-button{
+    margin-right:5%;
+    width:20%;
+    height:70px;
+    font-size:20px;
+  }
+}
 @media screen and (max-width:1366px){
   .menu{
     height:100%;
@@ -81,12 +104,89 @@ h2{
     height:2%;
     width:70%;
     margin-top:2%;
+    margin-left:15%;
   }
   .menu .column .item1 ion-datetime{
     border-radius:25px;
     height:400px;
     width:50%;
-    margin-left:22%;
+    margin-left:25%;
+  }
+  ion-datetime{
+    font-size:100px;
+    margin-top:5%;
+  }
+  .menu ion-item{
+    font-size:30px;
+  }
+
+  .item2 .btnpos{
+    margin-top:15%;
+    margin-left:8%;
+    margin-bottom:10px;
+  }
+  ion-button{
+    margin-right:5%;
+    width:20%;
+    height:50px;
+    font-size:12px;
+  }
+}
+
+@media screen and (max-width:1080px){
+  .menu{
+    height:100%;
+    margin-top:50%;
+  }
+  .menu .part1{
+    height:2%;
+    width:80%;
+
+    margin-top:2%;
+    margin-left:10%;
+  }
+  .menu .column .item1 ion-datetime{
+    border-radius:25px;
+    height:400px;
+    width:70%;
+    margin-left:15%;
+
+  }
+  ion-datetime{
+    font-size:300px;
+    margin-top:10%;
+  }
+  .menu ion-item{
+    font-size:50px;
+  }
+  .item2 .btnpos{
+    margin-top:25%;
+    margin-left:5%;
+    margin-bottom:10px;
+  }
+  ion-button{
+    width:60%;
+    height:80px;
+    font-size:20px;
+  }
+}
+@media screen and (max-width:800px){
+  .menu{
+    height:100%;
+    margin-top:10%;
+  }
+  .menu .part1{
+    height:2%;
+    width:70%;
+    margin-top:2%;
+    margin-left:15%;
+  }
+  .menu .column .item1 ion-datetime{
+    border-radius:25px;
+    height:400px;
+    width:70%;
+    margin-left:15%;
+
   }
   ion-datetime{
     font-size:100px;
@@ -96,111 +196,50 @@ h2{
     font-size:30px;
   }
   .item2 .btnpos{
-    margin-top:15%;
-    grid-row: 1 / 3;
-  }
-  .item2 .btnpos{
-    display: grid;
-    width:20%;
-    grid-template-columns: auto auto auto ;
-  }
-  .menu .item2 .btnpos{
-    margin-left:5%;
+    margin-top:20%;
+    width:60%;
+    margin-left:23%;
     margin-bottom:10px;
-    width:90%;
-    height:30%;
-    font-size:80px;
+  }
+  ion-button{
+    width:50%;
+    height:40px;
+    font-size:12px;
   }
 }
-
-@media screen and (max-width:1080px){
-  menu{
-    margin-top:10%;
-    text-align: center;
-    height:20%;
-    width:100%;
-    align-items:center;
-  }
-  .sc-ion-buttons-md-h {
-    display: block !important;
-  }
-  ion-menu-button {
-    font-size: 90px !important;
-  }
-
-  .menu .part1{
+@media screen and (max-width:500px){
+  .menu{
+    height:100%;
     margin-top:20%;
-    margin-left:10%;
-    width:80%;
-    text-align: center;
-    align-items:center;
   }
-  .menu .part1 ion-item {
-    font-size:60px;
-
+  .menu .part1{
+    height:2%;
+    width:90%;
+    margin-top:2%;
+    margin-left:4%;
   }
-  .menu .column .item1{
-    margin-top:10%;
-  }
-
-  .menu .column{
-    text-align: center;
-    align-items:center;
-    width:100%;
-    height:40%;
-  }
-  .menu .item1{
-    height:10px;
-    width:95%;
-    text-align: center;
-    align-items:center;
-    margin-right:500px;
-  }
-
   .menu .column .item1 ion-datetime{
     border-radius:25px;
-    height:600px;
-    width:80%;
-    margin-left:12%;
+    height:400px;
+    width:70%;
+    margin-left:15%;
   }
   ion-datetime{
     font-size:100px;
-    margin-top:30%;
+    margin-top:10%;
   }
-
-  .btns{
-    border-radius:25px;
-    width:80%;
-    height:90px;
-    background-color:#11013F;
-    color:#ffffff;
-    font-size:30px;
-    margin-right:38%;
+  .menu ion-item{
+    font-size:15px;
   }
-  h2{
-    color:#ffffff;
+  .item2 .btnpos{
+    margin-top:40%;
+    margin-left:22%;
+    margin-bottom:10px;
   }
-  .menu .item2 .btnpos ion-button{
-    font-family: 'Poppins', sans-serif;
-    width:70%;
-    margin-top:5%;
-  }
-  .menu .item2{
-    margin-top: 20%;
-    align-items: center;
-    text-align: center;
-    margin-left:19%;
+  ion-button{
+    margin-right:5%;
     width:90%;
+    height:40px;
+    font-size:12px;
   }
-  .menu .item2 .btnpos{
-    height:30%;
-    margin-top:35%;
-    grid-column: 3/ 1;
-  }
-  .menu .item2 .btnpos{
-    display: contents;
-    width:30%;
-    grid-template-columns: auto auto auto ;
-  }
-
 }

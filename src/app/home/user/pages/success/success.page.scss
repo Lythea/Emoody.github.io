@@ -11,21 +11,50 @@ ion-menu-button {
   font-size: 350px !important;
   color:#250381;
 }
+@media screen and (max-width:1920px){
+  .menu{
+    margin-top:5%;
+
+  }
+  ion-label{
+    font-size:150px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-left:30%;
+    font-style: italic;
+  }
+  ion-img{
+    margin-top:5%;
+    margin-bottom:5%;
+    height:40%;
+    width:40%;
+    margin-left:30%;
+  }
+  ion-button{
+    font-size:30px;
+    margin-right:38%;
+    border-radius:25px;
+    width:30%;
+    height:90px;
+    margin-left:35%;
+  }
+
+}
 
 @media screen and (max-width:1366px){
   .menu{
-    margin-top:14%;
+    margin-top:5%;
   }
   ion-label{
-    font-size:90px;
+    font-size:110px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    margin-left:34%;
+    margin-left:30%;
   }
   ion-img{
-    width:30%;
+    width:40%;
     height:40%;
-    margin-left:35%;
+    margin-left:30%;
   }
   ion-button{
     font-size:20px;
@@ -44,11 +73,14 @@ ion-menu-button {
     font-size:150px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    margin-left:16%;
+    margin-left:10%;
   }
   ion-img{
     margin-top:5%;
     margin-bottom:5%;
+    height:60%;
+    width:100%;
+    margin-left:1%;
   }
   ion-button{
     font-size:30px;
@@ -57,6 +89,56 @@ ion-menu-button {
     width:50%;
     height:90px;
     margin-left:25%;
+  }
+
+}
+@media screen and (max-width:800px){
+  .menu{
+    margin-top:10%;
+  }
+  ion-label{
+    font-size:90px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-left:20%;
+  }
+  ion-img{
+    height:45%;
+    width:70%;
+    margin-left:16%;
+  }
+  ion-button{
+    font-size:20px;
+    margin-right:38%;
+    border-radius:25px;
+    width:40%;
+    height:60px;
+    margin-left:31%;
+  }
+
+}
+@media screen and (max-width:500px){
+  .menu{
+    margin-top:40%;
+  }
+  ion-label{
+    font-size:50px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-left:12%;
+  }
+  ion-img{
+    height:45%;
+    width:80%;
+    margin-left:9%;
+  }
+  ion-button{
+    font-size:15px;
+    margin-right:38%;
+    border-radius:25px;
+    width:40%;
+    height:40px;
+    margin-left:31%;
   }
 
 }

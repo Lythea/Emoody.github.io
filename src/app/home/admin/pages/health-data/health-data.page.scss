@@ -22,39 +22,39 @@
   justify-content: center;
 }
 .chartBox {
-  width: 550px;
+  width: 500px;
   padding: 20px;
   border-radius: 20px;
   border: solid 3px rgba(255, 26, 104, 1);
   background: white;
-  margin-left:32%;
-  margin-bottom:5%;
-  margin-top:5%;
+  margin-left:35%;
+  margin-bottom:2%;
+  margin-top:2%;
 }
 ion-content  {
-  --ion-background-color:#FFC000;
+  --ion-background-color:#FFFFFF;
 }
 ion-label{
-  color:black;
   font-size:15px;
+  color:black;
 }
-@media screen and (max-width:1080px){
+@media screen and (max-width:1366px){
+
   ion-button{
-    margin-left:40%;
-    margin-top:2%;
-    width:20%;
-    height:55px;
+    margin-left:48%;
+    width:10%;
+    height:45px;
     border-radius:15px;
     background-color:#11013F;
     color:#FFFFFF;
-    font-size:35px;
-    font-family: 'Poppins', sans-serif;
+    font-size:25px;
+    font-family: 'Quicksand';
   }
 }
 @media screen and (max-width:1080px){
   .chartBox{
     width:800px;
-    height:600px;
+    height:500px;
     margin-left:13%;
   }
   ion-label{

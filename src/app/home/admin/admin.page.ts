@@ -45,7 +45,7 @@ formattedString='';
     formData.append('company',this.company);
     formData.append('position',this.position);
 
-    fetch('http://localhost/EMOODY/src/app/BackendAdmin/AttendanceBackend/Active.php', {
+    fetch('http://api.emoody.online/BackendAdmin/AttendanceBackend/Active.php', {
       method: 'POST',
       body: formData
     })
@@ -54,7 +54,7 @@ formattedString='';
       const userActive = value.data[0].TOTAL;
       localStorage.setItem('userActive',userActive);
     });
-    fetch('http://localhost/EMOODY/src/app/BackendAdmin/AttendanceBackend/Total.php', {
+    fetch('http://api.emoody.online/BackendAdmin/AttendanceBackend/Total.php', {
       method: 'POST',
       body: formData
     })
@@ -79,7 +79,7 @@ formattedString='';
     formData.append('date2', this.date2);
     formData.append('company', this.company);
 
-    fetch('http://localhost/EMOODY/src/app/BackendAdmin/Monthly/socioData.php', {
+    fetch('http://api.emoody.online/BackendAdmin/Monthly/socioData.php', {
       method: 'POST',
       body: formData
     })
@@ -130,7 +130,7 @@ formattedString='';
     formData.append('date1', this.date1);
     formData.append('date2', this.date2);
     formData.append('company', this.company);
-    fetch('http://localhost/EMOODY/src/app/BackendAdmin/Monthly/healthData.php', {
+    fetch('http://api.emoody.online/BackendAdmin/Monthly/healthData.php', {
       method: 'POST',
       body: formData
     })

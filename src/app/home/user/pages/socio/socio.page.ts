@@ -83,7 +83,7 @@ data7: any;
           formData.append('id', id);
           formData.append('date1', date1);
           formData.append('date2', date2);
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingSocioEconomic.php', {
+          fetch('http://api.emoody.online/BackEnd/resettingSocioEconomic.php', {
                       method: 'POST',
                       body: formData
                       })
@@ -124,7 +124,7 @@ data7: any;
         for (let i = 1; i < 12; i++) {
             formData.append('data' + i, this.finalData[i]);
           }
-        fetch('http://localhost/EMOODY/src/app/BackendUser/socio.php', {
+        fetch('http://api.emoody.online/BackendUser/socio.php', {
           method: 'POST',
           body: formData
         })

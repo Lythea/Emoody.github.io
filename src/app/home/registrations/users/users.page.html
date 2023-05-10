@@ -1,20 +1,24 @@
 <ion-content>
   <div class="menu">
-    <ion-label><h1>REGISTRATION</h1></ion-label>
+    <ion-label class="label-container">
+      <h1>REGISTRATION</h1>
+      <ion-icon class="hint" name="search-circle-outline" (click)="hint()"></ion-icon>
+    </ion-label>
+
     <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
       <ion-list class="container">
         <ion-item lines="none">
           <ion-label position="stacked">Name</ion-label>
           <ion-input class="textbox" (ionChange)="name()"  placeholder="Enter your Name" id="name"name="name" formControlName="name" type="text">
-            <ion-icon name="person-outline" slot="start"></ion-icon>
-            <ion-icon class="icon1"slot="end" name="{{icon[1] ? 'checkmark' : 'close'}}" (click)="nameHint()"></ion-icon>
+            <ion-icon name="person-outline" slot="start"> </ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[1] ? 'checkmark' : 'close'}}" ></ion-icon>
           </ion-input>
         </ion-item>
         <ion-item lines="none">
           <ion-label position="stacked">Company</ion-label>
           <ion-input (ionChange)="companyname($event)" class="textbox"placeholder="Company Name" id="companyname"name="companyname"formControlName="company" type="text" >
             <ion-icon name="people-circle-outline" slot="start"></ion-icon>
-            <ion-icon class="icon1"slot="end" name="{{icon[2] ? 'checkmark' : 'close'}}" (click)="companyHint()"></ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[2] ? 'checkmark' : 'close'}}"></ion-icon>
           </ion-input>
         </ion-item>
         <ion-item lines="none">
@@ -28,21 +32,21 @@
           <ion-label position="stacked">Code</ion-label>
           <ion-input (ionChange)="code($event)" id ="code"class="textbox" placeholder="code {{codecompany}}"  type="text" formControlName="code" >
             <ion-icon name="code-outline" slot="start"></ion-icon>
-            <ion-icon class="icon1"slot="end" name="{{icon[3]? 'checkmark' : 'close'}}" (click)="codeHint()"></ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[3]? 'checkmark' : 'close'}}"></ion-icon>
           </ion-input>
         </ion-item>
         <ion-item lines="none" >
           <ion-label position="stacked">Email</ion-label>
           <ion-input (ionChange)="email($event)" class ="email"class="textbox"placeholder="Enter your E-mail" id="email" formControlName="email" type="email" value="{{domain}}" >
             <ion-icon name="person-circle-outline" slot="start"></ion-icon>
-            <ion-icon class="icon1"slot="end" name="{{icon[4] ? 'checkmark' : 'close'}}" (click)="emailHint()"></ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[4] ? 'checkmark' : 'close'}}" ></ion-icon>
           </ion-input>
         </ion-item>
         <ion-item lines="none">
           <ion-label position="stacked">Password</ion-label>
           <ion-input class="textbox" placeholder="Confirm password" (ionChange)="password($event)" formControlName="password" type="password" >
             <ion-icon name="key-outline" slot="start"></ion-icon>
-            <ion-icon class="icon1"slot="end" name="{{icon[5] ? 'checkmark' : 'close'}}" (click)="passwordHint()"></ion-icon>
+            <ion-icon class="icon1"slot="end" name="{{icon[5] ? 'checkmark' : 'close'}}" ></ion-icon>
           </ion-input>
         </ion-item>
         <div class="buttons">

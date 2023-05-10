@@ -42,7 +42,7 @@ export class AttendanceDataPage {
 
     formData.append('date', date);
     formData.append('company', company);
-    fetch('http://localhost/EMOODY/src/app/BackendAdmin/Emojis/Happy.php', {
+    fetch('http://api.emoody.online/BackendAdmin/Emojis/Happy.php', {
       method: 'POST',
       body: formData
     })

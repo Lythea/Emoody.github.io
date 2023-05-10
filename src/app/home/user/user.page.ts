@@ -57,7 +57,7 @@ finalDate: any = [];
       this.holdTimer = setTimeout(() => {
         const result = confirm("Reset previous answers?");
         if (result) {
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingSocioEconomic.php', {
+          fetch('http://api.emoody.online/BackEnd/resettingSocioEconomic.php', {
                       method: 'POST',
                       body: formData
                       })
@@ -93,7 +93,7 @@ finalDate: any = [];
       this.holdTimer = setTimeout(() => {
         const result = confirm("Reset previous answers?");
         if (result) {
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingMoodtrack.php', {
+          fetch('http://api.emoody.online/BackEnd/resettingMoodtrack.php', {
                       method: 'POST',
                       body: formData
                       })
@@ -105,7 +105,7 @@ finalDate: any = [];
                           alert('Try Again Later');
                         }
                       });
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingDailysurvey1.php', {
+          fetch('http://api.emoody.online/BackEnd/resettingDailysurvey1.php', {
             method: 'POST',
             body: formData
             })
@@ -117,7 +117,7 @@ finalDate: any = [];
                 alert('Try Again Later');
               }
             });
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingDailysurvey2.php', {
+          fetch('http://api.emoody.online/BackEnd/resettingDailysurvey2.php', {
             method: 'POST',
             body: formData
             })
@@ -154,7 +154,7 @@ finalDate: any = [];
         this.holdTimer = setTimeout(() => {
           const result = confirm("Reset previous answers?");
           if (result) {
-            fetch('http://localhost/EMOODY/src/app/BackEnd/resettingHealthIndex.php', {
+            fetch('http://api.emoody.online/BackEnd/resettingHealthIndex.php', {
                         method: 'POST',
                         body: formData
                         })
@@ -185,7 +185,7 @@ finalDate: any = [];
     formData.append('company', company);
     formData.append('id', id);
     formData.append('date', date);
-    fetch('http://localhost/EMOODY/src/app/BackEnd/moodTrack.php', {
+    fetch('http://api.emoody.online/BackEnd/moodTrack.php', {
       method: 'POST',
       body: formData
       })
@@ -196,7 +196,7 @@ finalDate: any = [];
         }else if (value1.data !==''){
           const option = confirm('Do you want to verify your Daily survey?');
           if (option){
-              fetch('http://localhost/EMOODY/src/app/BackEnd/survey1Track.php', {
+              fetch('http://api.emoody.online/BackEnd/survey1Track.php', {
               method: 'POST',
               body: formData
               })
@@ -205,7 +205,7 @@ finalDate: any = [];
                 if (value3.data === 'Not Found!'){
                     this.router.navigate(['survey1']);
                 }else if (value3.data !==''){
-                  fetch('http://localhost/EMOODY/src/app/BackEnd/survey2Track.php', {
+                  fetch('http://api.emoody.online/BackEnd/survey2Track.php', {
                     method: 'POST',
                     body: formData
                     })
@@ -241,7 +241,7 @@ finalDate: any = [];
     for (let i = 1; i < 4; i++) {
       formData.append('date' + i, this.finalDate[i]);
     }
-  fetch('http://localhost/EMOODY/src/app/BackEnd/dateSocio.php', {
+  fetch('http://api.emoody.online/BackEnd/dateSocio.php', {
                       method: 'POST',
                       body: formData
                       })
@@ -278,7 +278,7 @@ finalDate: any = [];
     for (let i = 1; i < 3; i++) {
       formData.append('date' + i, this.finalDate[i]);
     }
-    fetch('http://localhost/EMOODY/src/app/BackEnd/dateHealth.php', {
+    fetch('http://api.emoody.online/BackEnd/dateHealth.php', {
                     method: 'POST',
                     body: formData
                     })
@@ -311,7 +311,7 @@ finalDate: any = [];
     formData.append('company', company);
     const id = localStorage.getItem('id');
     formData.append('id', id);
-    fetch('http://localhost/EMOODY/src/app/BackEndAchievements/firsttimer.php', {
+    fetch('http://api.emoody.online/BackEndAchievements/firsttimer.php', {
       method: 'POST',
       body: formData
     })
@@ -334,7 +334,7 @@ finalDate: any = [];
     formData.append('company', company);
     const id = localStorage.getItem('id');
     formData.append('id', id);
-    fetch('http://localhost/EMOODY/src/app/BackEndAchievements/firsttimer.php', {
+    fetch('http://api.emoody.online/BackEndAchievements/firsttimer.php', {
       method: 'POST',
       body: formData
     })
@@ -349,7 +349,7 @@ finalDate: any = [];
         num1.disabled=false;
       }
     });
-    fetch('http://localhost/EMOODY/src/app/BackEndAchievements/ineedaid.php', {
+    fetch('http://api.emoody.online/BackEndAchievements/ineedaid.php', {
       method: 'POST',
       body: formData
     })
@@ -364,7 +364,7 @@ finalDate: any = [];
       }
 
     });
-    fetch('http://localhost/EMOODY/src/app/BackEndAchievements/healthyliving.php', {
+    fetch('http://api.emoody.online/BackEndAchievements/healthyliving.php', {
       method: 'POST',
       body: formData
     })
@@ -390,7 +390,7 @@ finalDate: any = [];
         }
       }
     });
-    fetch('http://localhost/EMOODY/src/app/BackEndAchievements/loyalty.php', {
+    fetch('http://api.emoody.online/BackEndAchievements/loyalty.php', {
       method: 'POST',
       body: formData
     })
@@ -412,7 +412,7 @@ finalDate: any = [];
         console.log(this.valNeed + ' more to go to achieve Loyalty!');
       }
     });
-    fetch('http://localhost/EMOODY/src/app/BackEndAchievements/respondent.php', {
+    fetch('http://api.emoody.online/BackEndAchievements/respondent.php', {
       method: 'POST',
       body: formData
     })

@@ -72,7 +72,7 @@ dd: any = [];
           for (let i = 1; i < 4; i++) {
             formData.append('date' + i, this.finalDate[i]);
           }
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingHealthIndex.php', {
+          fetch('http://api.emoody.online/BackEnd/resettingHealthIndex.php', {
                       method: 'POST',
                       body: formData
                       })
@@ -124,7 +124,7 @@ dd: any = [];
         formData.append('dataRadio' + i, this.radio[i]);
       }
 
-      fetch('http://localhost/EMOODY/src/app/BackendUser/registerHealthindex.php', {
+      fetch('http://api.emoody.online/BackendUser/registerHealthindex.php', {
         method: 'POST',
         body: formData
       })

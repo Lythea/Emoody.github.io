@@ -1,23 +1,21 @@
 <?php
-
-header ('Access-Control-Allow-Origin: *');
-header ('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Content-Type: application/json, X-Auth-Token, Authorization, Origin');
 header ('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
-$servername = "localhost";
-$username = "root";
-$password = "";
-$bsu = "bsu";
-$ub = "ub";
-$lpu = "lpu";
-// Connect with the database.
-$company = $_POST['company'];
-if ($company == 'BSU'){
-  $conn= new mysqli($servername, $username, $password,$bsu);
+header('Content-Type: application/json');
+$servername = "preast.iad1-mysql-e2-17b.dreamhost.com";
+$port = "3306";
+$username = "pph_moody";
+$password = "PPH_Student@2023";
+$db="moody";
+// Create connection
+$conn = new mysqli($servername, $username, $password,$db,$port);
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);}
 
     $id = $_POST['id'];
-    $sql = "SELECT id,date,emoji,scale FROM moodtrack WHERE id='$id'";
+    $companyname = $_POST['company'];
+    $sql = "SELECT id,date,emoji,scale,companyname FROM moodtrack WHERE id='$id' and companyname ='$companyname'";
       $result = $conn->query($sql);
       if ($result->num_rows > 0) {
         $data = $result->fetch_all(MYSQLI_ASSOC);
@@ -27,42 +25,6 @@ if ($company == 'BSU'){
     }
     $conn->close();
     exit();
-}else if($company == 'UB'){
-
-  $conn= new mysqli($servername, $username, $password,$ub);
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);}
-
-    $id = $_POST['id'];
-    $sql = "SELECT id,date,emoji,scale FROM moodtrack WHERE id='$id'";
-      $result = $conn->query($sql);
-      if ($result->num_rows > 0) {
-        $data = $result->fetch_all(MYSQLI_ASSOC);
-        echo json_encode(['data' => $data]);
-      } else {
-        echo json_encode(['data'=> 'Not Found!']);
-    }
-    $conn->close();
-    exit();
-
-}else if($company == 'LPU'){
-
-  $conn= new mysqli($servername, $username, $password,$lpu);
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);}
-
-    $id = $_POST['id'];
-    $sql = "SELECT id,date,emoji,scale FROM moodtrack WHERE id='$id'";
-      $result = $conn->query($sql);
-      if ($result->num_rows > 0) {
-        $data = $result->fetch_all(MYSQLI_ASSOC);
-        echo json_encode(['data' => $data]);
-      } else {
-        echo json_encode(['data'=> 'Not Found!']);
-    }
-    $conn->close();
-    exit();
-}
 
 ?>
 

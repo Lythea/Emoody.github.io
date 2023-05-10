@@ -1,6 +1,10 @@
 <ion-content>
   <div class="menu">
-    <ion-label><h1>REGISTRATION</h1></ion-label>
+    <ion-label class="label-container">
+      <h1>REGISTRATION</h1>
+      <ion-icon class="hint" name="search-circle-outline" (click)="hint()"></ion-icon>
+    </ion-label>
+
     <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
       <ion-list class="container">
         <ion-item lines="none">

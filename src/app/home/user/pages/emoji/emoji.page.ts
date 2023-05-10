@@ -72,7 +72,7 @@ value_selected: string;
     formData.append('company', company);
 
 
-    fetch('http://localhost/EMOODY/src/app/BackendUser/registerMood.php', {
+    fetch('http://api.emoody.online/BackendUser/registerMood.php', {
       method: 'POST',
       body: formData
     })

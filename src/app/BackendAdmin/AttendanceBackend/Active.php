@@ -1,15 +1,15 @@
 <?php
-
-header ('Access-Control-Allow-Origin: *');
-header ('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Content-Type: application/json, X-Auth-Token, Authorization, Origin');
 header ('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$company = $_POST['company'];
-// Connect with the database.
-$conn= new mysqli($servername, $username, $password,$company);
+header('Content-Type: application/json');
+$servername = "preast.iad1-mysql-e2-17b.dreamhost.com";
+$port = "3306";
+$username = "pph_moody";
+$password = "PPH_Student@2023";
+$db="moody";
+// Create connection
+$conn = new mysqli($servername, $username, $password,$db,$port);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
   }
@@ -17,8 +17,8 @@ if ($conn->connect_error) {
   $year = $_POST['date1'];
   $month = $_POST['date2'];
   $day = $_POST['date3'];
-
-  $sql = "SELECT count(id) as TOTAL FROM dailylogin WHERE Year='$year' and Month ='$month' and Day ='$day'";
+  $companyname = $_POST['company'];
+  $sql = "SELECT count(id) as TOTAL FROM dailylogin WHERE Year='$year' and Month ='$month' and Day ='$day' and companyname ='$companyname' ";
   $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       $data = $result->fetch_all(MYSQLI_ASSOC);

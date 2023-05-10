@@ -11,7 +11,7 @@ ion-menu-button {
 }
 ion-checkbox {
   --size: 25px;
-  --background-checked: #F8E4A5;
+  --background-checked: #250381;
   border-radius: 6px;
   border: 1px solid #000000;
   margin-right:3%;
@@ -50,8 +50,7 @@ ion-button{
   border-radius:25px;
   color:#ffffff;
 }
-
-@media screen and (max-width:1366px){
+@media screen and (max-width:1920px){
   .menu{
     margin-top:5%;
     height:90%;
@@ -63,25 +62,67 @@ ion-button{
   }
   .menu .container{
     font-family: 'Poppins', sans-serif;
-    height:150%;
+    height:110%;
   }
   .menu h1{
-    margin-left:37%;
-    font-size:50px;
+    margin-left:32%;
+    font-size:100px;
     font-weight:bold;
+    font-style: italic;
   }
   .menu .container1 .container ion-item{
-    height:70px;
+    height:65px;
     margin-bottom:1%;
     margin-left:2%;
     margin-right:2%;
+    font-size:30px;
   }
   ion-img{
     width:2%;
   }
   ion-button{
     margin-top:1%;
-    margin-bottom:2%;
+    margin-left:42%;
+    width:14%;
+    height:38px;
+    font-weight:bold;
+  }
+  ion-select{
+    width:100px;
+  }
+}
+@media screen and (max-width:1366px){
+  .menu{
+    margin-top:5%;
+    height:87%;
+  }
+  .menu .container1{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height:80%;
+  }
+  .menu .container{
+    font-family: 'Poppins', sans-serif;
+    height:130%;
+  }
+  .menu h1{
+    font-style: italic;
+    margin-left:32%;
+    font-size:80px;
+    font-weight:bold;
+  }
+  .menu .container1 .container ion-item{
+    height:60px;
+    margin-bottom:1%;
+    margin-left:2%;
+    margin-right:2%;
+    font-size:20px;
+  }
+  ion-img{
+    width:2%;
+  }
+  ion-button{
+    margin-top:1%;
     margin-left:42%;
     width:14%;
     height:38px;
@@ -98,14 +139,10 @@ ion-button{
   }
   .menu .container1 .container ion-item{
     font-size:35px;
-    height:280px;
+    height:170px;
   }
   ion-img{
     width:10%;
-  }
-  ion-menu-button {
-    font-size: 70px !important;
-    color:#250381;
   }
   .menu{
     margin-top:10%;
@@ -120,8 +157,7 @@ ion-button{
     font-style: italic;
   }
   ion-checkbox {
-    margin-top:120px;
-    margin-bottom:150px;
+
     margin-right:5%;
     margin-left:7%;
     --size: 45px;
@@ -134,6 +170,91 @@ ion-button{
     height:70px;
     font-weight:bold;
     font-size:30px;
+  }
+  ion-select{
+    margin-top:100px;
+    width:200px;
+  }
+}
+@media screen and (max-width:800px){
+  .menu .container{
+    font-family: 'Poppins', sans-serif;
+    height:90%;
+  }
+  .menu .container1 .container ion-item{
+    font-size:15px;
+    height:60px;
+  }
+  ion-img{
+    width:5%;
+  }
+  .menu{
+    margin-top:10%;
+    height:85%;
+  }
+  .menu h1{
+    text-align:center;
+    margin-left:1px;
+    margin-top:5%;
+    font-size:50px;
+    font-weight:bold;
+    font-style: italic;
+  }
+  ion-checkbox {
+    margin-right:5%;
+    margin-left:7%;
+    --size: 25px;
+    --background-checked: #250381;
+  }
+  ion-button{
+    margin-left:33%;
+    width:35%;
+    height:40px;
+    font-weight:bold;
+    font-size:20px;
+  }
+  ion-select{
+    margin-top:100px;
+    width:200px;
+  }
+}
+@media screen and (max-width:500px){
+  .menu .container{
+    font-family: 'Poppins', sans-serif;
+    height:90%;
+  }
+  .menu .container1 .container ion-item{
+    font-size:15px;
+    height:60px;
+  }
+  ion-img{
+    width:5%;
+  }
+  .menu{
+    margin-top:20%;
+    height:89%;
+  }
+  .menu h1{
+    text-align:center;
+    margin-left:1px;
+    margin-top:5%;
+    font-size:30px;
+    font-weight:bold;
+    font-style: italic;
+  }
+  ion-checkbox {
+    margin-right:5%;
+    margin-left:7%;
+    --size: 25px;
+    --background-checked: #250381;
+  }
+  ion-button{
+    margin-top:10%;
+    margin-left:28%;
+    width:40%;
+    height:30px;
+    font-weight:bold;
+    font-size:15px;
   }
   ion-select{
     margin-top:100px;

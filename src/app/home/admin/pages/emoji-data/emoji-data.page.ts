@@ -133,7 +133,7 @@ export class EmojiDataPage {
     formData.append('company', company);
 
     formData.append('date', date);
-    fetch('http://localhost/EMOODY/src/app/BackendAdmin/Survey/yesnoData.php', {
+    fetch('http://api.emoody.online/BackendAdmin/Survey/yesnoData.php', {
       method: 'POST',
       body: formData
     })

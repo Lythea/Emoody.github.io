@@ -84,7 +84,7 @@ result;
         formData.append('data' + i, this.finalData[i]);
       }
 
-    fetch('http://localhost/EMOODY/src/app/BackendUser/registerDailysurvey1.php', {
+    fetch('http://api.emoody.online/BackendUser/registerDailysurvey1.php', {
       method: 'POST',
       body: formData
     })

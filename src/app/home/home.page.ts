@@ -46,6 +46,7 @@ token: any = '';
       email:['',Validators.compose([Validators.required,Validators.email])],
       password:['',Validators.required]
     });
+
   }
   setToday(){
     this.formattedDate =  this.date.toISOString().slice(0, 10);
@@ -63,27 +64,27 @@ token: any = '';
     return this.token;
   }
   try1(data: any): void{
-
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+alert(`Viewport width: ${viewportWidth}px x ${viewportHeight}px`);
     this.token = this.generateRandomString(32);
-    console.log(this.token);
     const formData = new FormData();
+    data.email = this.login.value.email.toLowerCase();
     formData.append('user', data.email);
     formData.append('pass', data.password);
 
-    fetch('http://localhost/EMOODY/src/app/BackendUser/companyDomain.php', {
+    fetch('http://api.emoody.online/BackendUser/companyDomain.php', {
       method: 'POST',
       body: formData,
-
       })
       .then(response => response.json())
       .then(value => {
       let result1Data = value.result1;
       let result2Data = value.result2;
-
     for (let i = 0; i < result2Data[0].count; i++) {
       if(data.email.includes(result1Data[i].domain) == true){
        this.domain=result1Data[i].domain;
-       this.company=result1Data[i].company;
+       this.company=result1Data[i].companyname;
       }
     }
     if(!this.domain || !this.company){
@@ -93,7 +94,7 @@ token: any = '';
           formData.append('company',this.company);
           formData.append('email', data.email);
           formData.append('pass', data.password);
-          fetch('http://localhost/EMOODY/src/app/BackendUser/gettingAccountInfo.php', {
+          fetch('http://api.emoody.online/BackendUser/gettingAccountInfo.php', {
             method: 'POST',
             body: formData
             })
@@ -127,14 +128,14 @@ token: any = '';
                 formData.append('date', this.formattedDate);
                 formData.append('company',this.finalData[1]);
                 formData.append('email',this.finalData[3]);
-                fetch('http://localhost/EMOODY/src/app/BackEnd/dailyloginTrack.php', {
+                fetch('http://api.emoody.online/BackEnd/dailyloginTrack.php', {
                   method: 'POST',
                   body: formData
                   })
                   .then(response => response.json())
                   .then(value0 => {
                     if(value0.data ==='Not Found!'){
-
+                      console.log(value.data);
                       for (let i = 1; i < 4; i++) {
                         formData.append('date' + i, this.newDate[i]);
                       }
@@ -142,18 +143,17 @@ token: any = '';
                       formData.append('date', this.formattedDate);
                       formData.append('company',this.finalData[1]);
                       formData.append('email',this.finalData[3]);
-
-
-                      fetch('http://localhost/EMOODY/src/app/BackendUser/dailyloginRegistration.php', {
+                      fetch('http://api.emoody.online/BackendUser/dailyloginRegistration.php', {
                         method: 'POST',
                         body: formData
                         })
                         .then(response => response.json())
                         .then(value1 => {
+                          console.log(value1.data);
                           });
                     }
                     });
-                fetch('http://localhost/EMOODY/src/app/BackEnd/moodTrack.php', {
+                fetch('http://api.emoody.online/BackEnd/moodTrack.php', {
                   method: 'POST',
                   body: formData
                   })
@@ -164,7 +164,7 @@ token: any = '';
                     }else{
 
                     }});
-                fetch('http://localhost/EMOODY/src/app/BackEnd/dateSocio.php', {
+                fetch('http://api.emoody.online/BackEnd/dateSocio.php', {
                   method: 'POST',
                   body: formData
                   })
@@ -189,7 +189,7 @@ token: any = '';
 
                    });
 
-                   fetch('http://localhost/EMOODY/src/app/BackEnd/dateHealth.php', {
+                   fetch('http://api.emoody.online/BackEnd/dateHealth.php', {
                     method: 'POST',
                     body: formData
                     })
@@ -240,12 +240,8 @@ token: any = '';
 
             });
           }
+      }) .catch(error => {
+        console.error('Error:', error);
       });
-
-
-
-
     }
-
-
 }

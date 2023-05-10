@@ -50,7 +50,49 @@ ion-button{
   border-radius:25px;
   color:#ffffff;
 }
-
+@media screen and (max-width:1920px){
+  .menu{
+    margin-top:5%;
+    height:90%;
+  }
+  .menu .container1{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height:80%;
+  }
+  .menu .container{
+    font-family: 'Poppins', sans-serif;
+    height:150%;
+  }
+  .menu h1{
+    margin-left:15%;
+    font-size:90px;
+    font-weight:bold;
+    font-style: italic;
+  }
+  .menu .container1 .container ion-item{
+    height:110px;
+    margin-bottom:1%;
+    margin-left:2%;
+    margin-right:2%;
+    font-size:30px;
+  }
+  ion-img{
+    width:4%;
+  }
+  ion-button{
+    margin-top:1%;
+    margin-bottom:2%;
+    margin-left:42%;
+    width:14%;
+    height:50px;
+    font-weight:bold;
+    font-size:30px;
+  }
+  ion-select{
+    width:200px;
+  }
+}
 @media screen and (max-width:1366px){
   .menu{
     margin-top:5%;
@@ -75,17 +117,19 @@ ion-button{
     margin-bottom:1%;
     margin-left:2%;
     margin-right:2%;
+    font-size:20px;
   }
   ion-img{
-    width:2%;
+    width:3%;
   }
   ion-button{
     margin-top:1%;
     margin-bottom:2%;
     margin-left:42%;
-    width:14%;
-    height:38px;
+    width:15%;
+    height:40px;
     font-weight:bold;
+    font-size:18px;
   }
   ion-select{
     width:100px;
@@ -138,5 +182,95 @@ ion-button{
   ion-select{
     margin-top:100px;
     width:200px;
+  }
+}
+@media screen and (max-width:800px){
+  .menu .container{
+    font-family: 'Poppins', sans-serif;
+    height:120%;
+  }
+  .menu .container1 .container ion-item{
+    font-size:25px;
+    height:130px;
+  }
+  ion-img{
+    width:10%;
+  }
+  .menu{
+    margin-top:5%;
+    height:70%;
+  }
+  .menu h1{
+    text-align:center;
+    margin-left:1px;
+    margin-top:5%;
+    font-size:60px;
+    font-weight:bold;
+    font-style: italic;
+  }
+  ion-checkbox {
+    margin-top:50px;
+    margin-bottom:50px;
+    margin-right:5%;
+    margin-left:7%;
+    --size: 45px;
+    --background-checked: #250381;
+  }
+  ion-button{
+    margin-top:1%;
+    margin-left:33%;
+    width:35%;
+    height:40px;
+    font-weight:bold;
+    font-size:20px;
+  }
+  ion-select{
+    margin-top:50px;
+    width:200px;
+  }
+}
+@media screen and (max-width:800px){
+  .menu .container{
+    font-family: 'Poppins', sans-serif;
+    height:120%;
+  }
+  .menu .container1 .container ion-item{
+    font-size:15px;
+    height:130px;
+  }
+  ion-img{
+    width:10%;
+  }
+  .menu{
+    margin-top:15%;
+    height:90%;
+  }
+  .menu h1{
+    text-align:center;
+    margin-left:1px;
+    margin-top:5%;
+    font-size:30px;
+    font-weight:bold;
+    font-style: italic;
+  }
+  ion-checkbox {
+    margin-top:50px;
+    margin-bottom:50px;
+    margin-right:5%;
+    margin-left:7%;
+    --size: 25px;
+    --background-checked: #250381;
+  }
+  ion-button{
+    margin-top:1%;
+    margin-left:33%;
+    width:35%;
+    height:30px;
+    font-weight:bold;
+    font-size:15px;
+  }
+  ion-select{
+    margin-top:50px;
+    width:100px;
   }
 }

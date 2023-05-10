@@ -1,15 +1,15 @@
 <?php
-
-header ('Access-Control-Allow-Origin: *');
-header ('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Content-Type: application/json, X-Auth-Token, Authorization, Origin');
 header ('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
-$servername = "localhost";
-$username = "root";
-$password = "";
-// Connect with the database.
-$company = $_POST['company'];
-
-  $conn= new mysqli($servername, $username, $password,$company);
+header('Content-Type: application/json');
+$servername = "preast.iad1-mysql-e2-17b.dreamhost.com";
+$port = "3306";
+$username = "pph_moody";
+$password = "PPH_Student@2023";
+$db="moody";
+// Create connection
+$conn = new mysqli($servername, $username, $password,$db,$port);
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);}
 
@@ -26,10 +26,11 @@ $company = $_POST['company'];
     $data8 = $_POST['data8'];
     $data9 = $_POST['data9'];
     $data10 = $_POST['data10'];
-
-    $sql = "INSERT into dailysurvey2 (id,date,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)
+    $companyname = $_POST['company'];
+    $sql = "INSERT into dailysurvey2 (id,companyname,date,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)
     VALUES (
       '$id',
+      '$companyname',
       '$date',
       '$data1',
       '$data2',

@@ -60,7 +60,7 @@ export class Survey1DataPage {
     formData.append('company', company);
 
     formData.append('date', date);
-    fetch('http://localhost/EMOODY/src/app/BackendAdmin/Survey/agreeData.php', {
+    fetch('http://api.emoody.online/BackendAdmin/Survey/agreeData.php', {
       method: 'POST',
       body: formData
     })

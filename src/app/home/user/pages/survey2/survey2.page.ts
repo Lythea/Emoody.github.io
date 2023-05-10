@@ -57,7 +57,7 @@ export class Survey2Page implements OnInit {
           formData.append('id', id);
           formData.append('date', date);
           formData.append('company', company);
-          fetch('http://localhost/EMOODY/src/app/BackEnd/resettingDailysurvey2.php', {
+          fetch('http://api.emoody.online/BackEnd/resettingDailysurvey2.php', {
                       method: 'POST',
                       body: formData
                       })
@@ -90,7 +90,7 @@ export class Survey2Page implements OnInit {
         for (let i = 1; i < 11; i++) {
             formData.append('data' + i, this.finalData[i]);
           }
-        fetch('http://localhost/EMOODY/src/app/BackendUser/registerDailysurvey2.php', {
+        fetch('http://api.emoody.online/BackendUser/registerDailysurvey2.php', {
           method: 'POST',
           body: formData
         })

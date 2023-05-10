@@ -1,14 +1,15 @@
 <?php
-header ('Access-Control-Allow-Origin: *');
-header ('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Content-Type: application/json, X-Auth-Token, Authorization, Origin');
 header ('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db ="developers";
+header('Content-Type: application/json');
+$servername = "preast.iad1-mysql-e2-17b.dreamhost.com";
+$port = "3306";
+$username = "pph_moody";
+$password = "PPH_Student@2023";
+$db="moody";
 // Create connection
-$conn = new mysqli($servername, $username, $password,$db);
+$conn = new mysqli($servername, $username, $password,$db,$port);
 
 // Check connection
 if ($conn->connect_error) {
@@ -18,7 +19,7 @@ if ($conn->connect_error) {
 $companyname = $_POST['rawCompany'];
 
 
-$sql = "SELECT domain,company FROM companies WHERE company ='$companyname'";
+$sql = "SELECT domain,companyname FROM companies WHERE companyname ='$companyname'";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
     $data = $result->fetch_all(MYSQLI_ASSOC);
